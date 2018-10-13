@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="https://www.komons-japan.com">
+	<title>医師一覧 | Doctor Match</title>
+	<meta name="description" content="aaaa">
+	<link href="img/common/favicon.png" rel="apple-touch-icon" sizes="180x180">
+	<link rel="shortcut icon" href="img/common/favicon.png">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="aaaa">
+	<meta property="og:url" content="https://www.komons-japan.com">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="医師一覧 | Doctor Match">
+	<meta property="og:description" content="aaaa">
+	<meta property="og:url" content="aaaa">
+	<meta property="og:site_name" content="ドクターマッチ">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/layout.js"></script>
+</head>
+<body id="user">
+<header>
+	<div class="header_inner">
+		<div class="header_logo">
+			<a href="/"></a>
+		</div>
+		<div id="headerNav">
+			<a href="javascript:void(0);"></a>
+		</div>
+	</div>
+	<div id="slideMenu">
+		<div id="slideBg"></div>
+		<div class="contents">
+			<div id="closeButton">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<div class="inner">
+				<div class="form_wrap">
+					<div class="serch_word">
+						<form action="aaaa" method="post">
+						<input type="text" value="大腸ガン" placeholder="疾患名で医師を検索">
+						<div class="submit_wrap">
+							<span class="search_icon"></span>
+							<input type="submit">
+							</form>
+						</div>
+					</div>
+				</div><!-- form_wrap -->
+				<div class="popular_word">
+					<span class="common_ttl">よく検索されているワード</span>
+					<div class="word_list">
+						<a href="aaaa">麻疹<span class="num">7</span></a>
+						<a href="aaaa">手足口病<span class="num">12</span></a>
+						<a href="aaaa">帯状疱疹<span class="num">9</span></a>
+						<a href="aaaa">うつ病<span class="num">5</span></a>
+						<a href="aaaa">子宮筋腫<span class="num">4</span></a>
+						<a href="aaaa">逆流性食道炎<span class="num">10</span></a>
+						<a href="aaaa">梅毒<span class="num">6</span></a>
+						<a href="aaaa">ギラン・バレー症候群<span class="num">6</span></a>
+						<a href="aaaa">大腸がん<span class="num">6</span></a>
+						<a href="aaaa">認知症<span class="num">6</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<article id="doctorList">
+	<section id="bread">
+		<div class="inner">
+			<div class="step">
+				<ul>
+					<li class="step01"><span>1 疾患名を入力し、医師を検索</span></li>
+					<li class="step02"><span>2 検索結果より、受診希望の医師を選択</span></li>
+					<li class="step03"><span>3 情報を入力し、マッチング結果を待つ</span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="main">
+		<div class="fill"></div>
+		<div class="main_content">
+			<h1 class="main_ttl">医師一覧</h1>
+			<div class="sub_ttl">
+				<h2>検索ワード：<span class="word">大腸ガン</span>
+			</div>
+		</div><!-- main_content -->
+	</section>
+	<section id="searchForm">
+		<div class="result">
+			<span class="txt">検索結果：</span><span class="num">10</span><span class="txt">名の医師がヒットしました。</span>
+		</div>
+		<div class="search_form">
+			<form action=“aaaa” method="post">
+				<div class="form_wrap">
+					<input type="text" name="keywords" value="大腸ガン" placeholder="疾患名で医師を検索" class="search_word">
+					<div class="submit_wrap">
+						<input type="submit" value="別の疾患名で検索し直す" class="submit_word">
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<section id="list">
+		<form action=“aaaa” method="post">
+		<div class="inner">
+				<h2 class="ttl01"><span>“大腸ガン” の診療が可能な医師一覧</span></h2>
+			<div class="filter">
+				<h3 class="common_ttl">医師のエリアを絞り込む</h3>
+				<div class="form_wrap">
+					<span id="filter" class="form_radio">
+						<span class="radio_item first">
+							<label class="selected"><input type="checkbox" name="tokyo" value="東京" checked="checked" class="checkbox"><span class="radio_label">東京</span>
+							</label>
+						</span>
+						<span class="radio_item">
+							<label class="selected">
+								<input type="checkbox" name="fukuoka" value="福岡" checked="checked" class="checkbox"><span class="radio_label">福岡</span>
+							</label>
+						</span>
+					</span>
+				</div><!-- form_wrap -->
+			</div><!-- filter -->
+			<div id="doctors">
+				<ul>
+					<li class="tokyo">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" checked="checked" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="fukuoka">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" checked="checked" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="tokyo" >
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="fukuoka">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="tokyo">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="fukuoka">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="tokyo">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="fukuoka">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="tokyo">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+					<li class="fukuoka">
+						<div class="doctor_icon">
+							<div style="background-image: url(img/common/doctor.png)"></div>
+						</div>
+						<div class="info_wrap">
+							<div class="hospital">国際医療福祉大学三田病院</div>
+							<div class="name"><span>宮崎 勝</span></div>
+							<div class="area"></div>
+						</div><!-- info_wrap -->
+						<div class="form_wrap">
+							<span class="form_radio">
+								<span class="radio_item first">
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									</label>
+								</span>
+							</span>
+							<div class="detail_button">
+								<a href="javascript:void(0)">詳細を見る</a>
+							</div>
+						</div><!-- form_wrap -->
+					</li>
+				</ul>
+			</div><!-- doctors -->
+		</div><!-- inner -->
+		<div id="submitWrap">
+			<div><h2 class="submit_ttl">受診のお申し込みはこちらから</h2></div>
+			<div class="current_state">
+				現在<span class="all">10</span>人中<span class="selected">10</span>人の医師を選択中
+			</div>
+			<div class="submit_wrap">
+				<span class="submit_label"><span class="arrow">受診をお申し込み</span></span>
+				<input type="submit" class="submit" value="受診をお申し込み">
+			</div>
+		</div>
+	</form>
+	</section>
+</article>
+<footer>
+	<div class="footer_inner">
+		<div class="footer_logo">
+			<img src="img/common/footer_logo.png">
+		</div>
+		<div class="footer_nav">
+			<nav>
+				<ul>
+					<li>
+						<a href="/"><span>Service</span>サービスについて</a>
+					</li>
+					<li>
+						<a href="aaaa"><span>Terms</span>ご利用規約</a>
+					</li>
+					<li>
+						<a href="/"><span>Policy</span>プライバシーポリシー</a>
+					</li>
+					<li>
+						<a href="/"><span>Contact</span>お問い合わせ</a>
+					</li>
+					<li>
+						<a href="/"><span>Company</span>運営会社</a>
+					</li>
+				</ul>
+			</nav>
+	</div>
+	<div class="footer_copy">
+		<p>©Medical Note, Inc. All Rights Reserved.</p>
+	</div>
+</div>
+</footer>
+</body>
+</html>

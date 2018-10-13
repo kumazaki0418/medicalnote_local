@@ -1,0 +1,377 @@
+#doctorList{
+	#bread{}
+	#main{
+		width: 100%;
+		height: 300px;
+		position: relative;
+		@include flexSet;
+		background-image: url(../img/doctor_list/main.jpg);
+		background-size: cover;
+		.fill{
+			position: absolute;
+			top: 0;
+			bottom:0;
+			left:0;
+			right:0;
+			margin: auto;
+			background-color: rgba(51, 51, 51, 0.3);
+		}
+		.main_content{
+			position: absolute;
+			width: 100%;
+			height: 120px;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			margin: auto;
+			z-index: 10;
+			text-align: center;
+			color: #fff;
+			.main_ttl{
+				font-size: 45px;
+ 				font-weight: bold;
+ 				letter-spacing: 0.9px;
+				margin-bottom: 50px;
+				position: relative;
+				&::after{
+					position: absolute;
+					bottom: -25px;
+					left:0;
+					right:0;
+					margin: auto;
+					display: block;
+					content: "";
+					width: 300px;
+					height: 2px;
+					background: #fff;
+				}
+			}
+			.sub_ttl{
+				font-size: 25px;
+  			font-weight: bold;
+  			letter-spacing: 0.9px;
+			}
+		}
+	}
+	#searchForm{
+		.result{
+			width: 100%;
+			height: 60px;
+			background: #fc9792;
+			color: #fff;
+			text-align: center;
+			font-weight: bold;
+			letter-spacing: 0.5px;
+			@include flexSet;
+			align-items: center;
+			justify-content: center;
+			span.txt{
+				display: block;
+				font-size: 22px;
+			}
+			span.num{
+				display: block;
+				font-size: 35px;
+				height: 1.1em;
+				padding: 0 0.2em 0 0;
+			}
+		}
+		.search_form{
+			@include dotBg;
+			padding: 40px 0;
+
+			.form_wrap{
+				width: 900px;
+				margin: 0 auto;
+				position: relative;
+				text-align: center;
+				.search_word{
+					width: 100%;
+				}
+				.submit_wrap{
+					position: absolute;
+					top:0;
+					bottom:0;
+					right:0;
+					margin: auto;
+					&::before{
+						display: block;
+						content: "";
+						position: absolute;
+						z-index: 10;
+						width: 30px;
+						height: 30px;
+						top:0;
+						bottom:0;
+						left:10px;
+						margin: auto;
+						@include bgSet;
+						background-image: url(../img/common/search.png);
+						background-size: 20px;
+					}
+					.submit_word{
+						height:40px;
+						@include blueGrad;
+						border: 0;
+						box-shadow: 0;
+						border-radius: 0 10px 10px 0;
+						padding: 0 20px 0 45px;
+						color: #fff;
+						font-weight: bold;
+						transition: opacity 1s;
+						&:hover{
+							opacity: 0.7;
+						}
+					}
+				}
+			}
+		}
+	}
+	#list{
+		margin: 60px 0 0;
+		.filter{
+			margin-top: 30px;
+			padding: 25px 30px;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+			border: solid 1px #d8d8d8;
+			background-color: #f4f4f4;
+		}
+		#doctors{
+			ul{
+				@include flexSet;
+				margin-top: 100px;
+				li{
+					position: relative;
+					width: 255px;
+					margin-bottom: 90px;
+					box-sizing: border-box;
+					margin-right: 20px;
+					border-radius: 10px;
+					box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+					border: solid 2px #4cbee0;
+					background-color: #ebf7fa;
+					padding: 90px 20px 20px 20px;
+					text-align: center;
+					transition: background-color .5s, border .5s;
+					&:nth-child(4n){
+						margin-right: 0;
+					}
+					.doctor_icon{
+						position: absolute;
+						left:0;
+						right:0;
+						top: -60px;
+
+						div{
+							display: inline-block;
+							width: 120px;
+							height: 120px;
+							border-radius: 50%;
+							background-color: #f1f1f1;
+							box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+							border: solid 2px #fff;
+							@include bgSet;
+							background-size: cover;
+						}
+					}
+					.info_wrap{
+						.hospital{
+							font-size: 16px;
+							margin-bottom: 10px;
+						}
+						.name{
+							font-size: 16px;
+							font-weight: bold;
+							&::after{
+								display: inline-block;
+								padding-left: 0.2em;
+								content: "先生";
+							}
+							span{
+								display: inline-block;
+								font-size: 22px;
+							}
+						}
+						.area{
+							display: inline-block;
+							margin: 15px 0;
+							padding: 5px 15px;
+							border-radius: 30px;
+							box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+							color: #fff;
+							font-size: 14px;
+							font-weight: bold;
+							transition: background .5s;
+						}
+					}
+					.form_wrap{
+						.form_radio{
+							@include flexSet;
+							justify-content: center;
+							label{
+								font-size: 18px;
+								font-weight: bold;
+								color: $basicBlue01;
+								margin: 0;
+								transition: color .5s;
+							}
+						}
+						.detail_button{
+							margin-top: 20px;
+							a{
+								display: block;
+								padding: 10px 0;
+								@include blueGrad;
+								font-size: 18px;
+								font-weight: bold;
+								color: #fff;
+								border-radius: 100px;
+								transition: background .5s, background-image .5s, opacity .5s;
+								&:hover{
+									opacity: 0.7;
+								}
+							}
+						}
+					}
+					&.removed{
+						opacity: 0.6;
+						border: solid 2px $basicGray01;
+						background-color: $basicGray03;
+						.info_wrap{
+							.area{
+								background-color: $basicBlack02 !important;
+							}
+						}
+						.form_wrap{
+							.form_radio{
+								@include flexSet;
+								justify-content: center;
+								label{
+									color: $basicBlack03;
+								}
+							}
+							.detail_button{
+								margin-top: 20px;
+								a{
+									background: $basicBlack02;
+								}
+							}
+						}
+					}
+					&.tokyo{
+						.info_wrap{
+							.area{
+								background-color: $basicBlue01;
+								&::after{
+									display: inline-block;
+									content: "東京";
+								}
+							}
+						}
+					}
+					&.fukuoka{
+						.info_wrap{
+							.area{
+								background-color: $basicRed;
+								&::after{
+									display: inline-block;
+									content: "福岡";
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#submitWrap{
+			@include dotBg;
+			padding-bottom: 25px;
+			text-align: center;
+			.submit_ttl{
+				font-size: 22px;
+				padding: 10px 0;
+				color: #fff;
+				background: $basicRed;
+			}
+			.current_state{
+				margin: 25px 0;
+				font-size: 22px;
+				.all{
+					display: inline-block;
+					padding: 0 0.2em;
+					font-weight: bold;
+				}
+				.selected{
+					display: inline-block;
+					font-size: 30px;
+					padding: 0 0.2em;
+					font-weight: bold;
+					color: $basicRed;
+				}
+			}
+			.submit_wrap{
+				width: 800px;
+				margin: 0 auto;
+				position: relative;
+				.submit_label{
+					width: 100%;
+					box-sizing: border-box;
+					padding: 15px 0;
+ 					border-radius: 100px;
+					@include blueGrad;
+					text-align: center;
+					display: inline-block;
+					font-size: 22px;
+  				font-weight: bold;
+  				letter-spacing: 1px;
+					color: #fff;
+					pointer-events: none;
+					span.arrow{
+						position: relative;
+						display: inline-block;
+						padding-right: 100px;
+						&::after{
+							display: block;
+							content: "";
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							right: 0;
+							margin: auto;
+							background-repeat: no-repeat;
+							background-position: center center;
+							background-image: url(../img/common/arrow.png);
+							background-size: 70px;
+							width: 70px;
+							height: 10px;
+							transition: right .5s;
+						}
+					}
+				}
+				input[type="submit"]{
+					opacity: 0;
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top:0;
+					bottom:0;
+					left:0;
+					right:0;
+					margin: auto;
+				}
+				&:hover{
+					.submit_label{
+						span.arrow{
+							&::after{
+									right: -15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

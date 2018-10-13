@@ -1,0 +1,173 @@
+@charset "UTF-8";
+$basicBlue01: #4cbee0;
+$basicBlue02: #79e0f2;
+$basicRed: #fc9792;
+$basicBlack01: #333;
+$basicBlack02: #666;
+$basicBlack03: #999;
+$basicGray01: #e6e6e6;
+$basicGray02: #eee;
+$basicGray03: #f4f4f4;
+$basicGray03: #f8f8f8;
+
+$basicGreen: #00381f;
+/* ----- Google Fonts ----- */
+@font-face {
+    font-family: 'poppins';
+		font-weight: 400;
+    src: url('../fonts/poppins.eot'),url('../fonts/poppins.woff') format('woff'),
+    url('../fonts/poppins.ttf') format('truetype'),
+}
+@mixin poppins {
+  font-family: 'poppins', 'Libre Baskerville', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+@mixin waku{
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 1150px){
+    max-width: 750px;
+  }
+  @media screen and (max-width: 750px){
+    width: 84%;
+  }
+}
+@mixin flexSet {
+	display: flex;
+	flex-wrap: wrap;
+}
+@mixin bgSet{
+  background:{
+    repeat: no-repeat;
+    position: center center;
+  }
+}
+@mixin hover{
+  transition: opacity .5s;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+@mixin dotBg{
+  position: relative;
+  &::before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url(../img/common/dott_bg.png);
+    background-size: 2px;
+  }
+  div{
+    position: relative;
+    z-index: 10;
+  }
+}
+@mixin indentRight {
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: calc(50vw - 540px);
+    height: 100%;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    @media screen and(max-width: 1100px){
+      width: calc(50vw - 360px);
+    }
+    @media screen and(max-width: 750px){
+      width: 4vw;
+    }
+  }
+}
+@mixin indentRight2 {
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: calc(50vw - 540px);
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    @media screen and(max-width: 1100px){
+      width: calc(50vw - 360px);
+    }
+    @media screen and(max-width: 750px){
+      width: 4vw;
+    }
+  }
+}
+@mixin indentLeft {
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: calc(50vw - 540px);
+    height: 100%;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    @media screen and(max-width: 1100px){
+      width: calc(50vw - 360px);
+    }
+    @media screen and(max-width: 750px){
+      width: 4vw;
+    }
+  }
+}
+@mixin indentLeft2 {
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: calc(50vw - 540px);
+    height: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    @media screen and(max-width: 1100px){
+      width: calc(50vw - 360px);
+    }
+    @media screen and(max-width: 750px){
+      width: 4vw;
+    }
+  }
+}
+@mixin blueGrad{
+  background-image: linear-gradient(to left, $basicBlue02, $basicBlue01);
+}
+/*デフォルトCSSのリセット*/
+@import 'reset.scss';
+/*ヘッダー部分*/
+@import 'header.scss';
+/*フッター部分*/
+@import 'footer.scss';
+/*共通部分*/
+@import 'common.scss';
+/*フォーム部分共通*/
+@import 'form.scss';
+/*パンくず部分*/
+@import 'bread.scss';
+
+/*医師一覧ページ*/
+@import 'doctor_list.scss';

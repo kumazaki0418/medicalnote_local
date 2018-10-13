@@ -1,0 +1,1016 @@
+@charset "UTF-8";
+/* ----- Google Fonts ----- */
+@font-face {
+  font-family: 'poppins';
+  font-weight: 400;
+  src: url("../fonts/poppins.eot"), url("../fonts/poppins.woff") format("woff"), url("../fonts/poppins.ttf") format("truetype"); }
+
+/*デフォルトCSSのリセット*/
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-decoration: none;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none; }
+
+/*ヘッダー部分*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+  background: #fff;
+  width: 100%;
+  -webkit-transition: -webkit-box-shadow .5s;
+  transition: -webkit-box-shadow .5s;
+  -o-transition: box-shadow .5s;
+  transition: box-shadow .5s;
+  transition: box-shadow .5s, -webkit-box-shadow .5s; }
+  header.rolled {
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5); }
+  header::before {
+    display: block;
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: -webkit-gradient(linear, right top, left top, from(#83e0f2), to(#4cbee0));
+    background-image: -webkit-linear-gradient(right, #83e0f2, #4cbee0);
+    background-image: -o-linear-gradient(right, #83e0f2, #4cbee0);
+    background-image: linear-gradient(to left, #83e0f2, #4cbee0);
+    width: 100%;
+    height: 5px; }
+  header .header_inner {
+    position: relative;
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    height: 70px; }
+    header .header_inner .header_logo {
+      height: 45px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto; }
+      header .header_inner .header_logo a {
+        display: block;
+        width: 200px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        background-image: url(../img/common/header_logo.png);
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s; }
+        header .header_inner .header_logo a:hover {
+          opacity: 0.7; }
+    header .header_inner #headerNav {
+      height: 50px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto; }
+      header .header_inner #headerNav a {
+        display: block;
+        width: 50px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        background-image: url(../img/common/search_icon.png); }
+  header #slideMenu #slideBg {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(60, 60, 60, 0.7);
+    z-index: 50;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s; }
+  header #slideMenu .contents {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -380px;
+    margin: auto;
+    width: 380px;
+    height: 100vh;
+    z-index: 101;
+    background-color: #f4f4f4;
+    overflow: scroll;
+    -webkit-transition: right .5s;
+    -o-transition: right .5s;
+    transition: right .5s; }
+    header #slideMenu .contents #closeButton {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/common/closeButton.png);
+      background-size: 25px; }
+    header #slideMenu .contents .inner {
+      padding: 80px 15px; }
+      header #slideMenu .contents .inner .form_wrap .serch_word {
+        position: relative; }
+        header #slideMenu .contents .inner .form_wrap .serch_word .submit_wrap {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+          background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+          background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+          background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+          border-radius: 0 5px 5px 0; }
+          header #slideMenu .contents .inner .form_wrap .serch_word .submit_wrap .search_icon {
+            display: block;
+            width: 50px;
+            height: 40px;
+            pointer-events: none;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../img/common/search.png);
+            background-size: 20px; }
+          header #slideMenu .contents .inner .form_wrap .serch_word .submit_wrap input[type="submit"] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            margin: auto; }
+      header #slideMenu .contents .inner .popular_word {
+        margin-top: 30px; }
+        header #slideMenu .contents .inner .popular_word .common_ttl {
+          font-size: 18px; }
+        header #slideMenu .contents .inner .popular_word .word_list a {
+          display: inline-block;
+          color: #fc9792;
+          margin-right: 5px;
+          margin-bottom: 10px;
+          padding: 5px 10px;
+          border-radius: 5px;
+          -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          background-color: #ffffff;
+          border-left: 5px solid #4cbee0;
+          -webkit-transition: opacity .5s;
+          -o-transition: opacity .5s;
+          transition: opacity .5s; }
+          header #slideMenu .contents .inner .popular_word .word_list a:hover {
+            opacity: 0.7; }
+          header #slideMenu .contents .inner .popular_word .word_list a .num {
+            display: inline-block;
+            margin-left: 10px;
+            background: #fc9792;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 50%; }
+  header #slideMenu.open #slideBg {
+    opacity: 1;
+    pointer-events: all; }
+  header #slideMenu.open .contents {
+    right: 0px; }
+
+/*フッター部分*/
+footer {
+  padding: 30px 0 0;
+  position: relative; }
+  footer::after {
+    display: block;
+    content: "";
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: -webkit-gradient(linear, right top, left top, from(#83e0f2), to(#4cbee0));
+    background-image: -webkit-linear-gradient(right, #83e0f2, #4cbee0);
+    background-image: -o-linear-gradient(right, #83e0f2, #4cbee0);
+    background-image: linear-gradient(to left, #83e0f2, #4cbee0);
+    width: 100%;
+    height: 5px; }
+  footer .footer_inner {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (max-width: 1150px) {
+      footer .footer_inner {
+        max-width: 750px; } }
+    @media screen and (max-width: 750px) {
+      footer .footer_inner {
+        width: 84%; } }
+    footer .footer_inner .footer_logo {
+      width: 240px;
+      margin: 0 auto 25px; }
+    footer .footer_inner .footer_nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      footer .footer_inner .footer_nav ul li {
+        position: relative;
+        padding-right: 20px;
+        margin-right: 20px; }
+        footer .footer_inner .footer_nav ul li::after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          width: 1px;
+          height: 20px;
+          background: #e6e6e6; }
+        footer .footer_inner .footer_nav ul li:last-child {
+          padding-right: 0;
+          margin-right: 0; }
+          footer .footer_inner .footer_nav ul li:last-child::after {
+            display: none; }
+        footer .footer_inner .footer_nav ul li a {
+          color: #4cbee0;
+          font-size: 12px; }
+          footer .footer_inner .footer_nav ul li a span {
+            display: inline-block;
+            padding-right: 0.5em;
+            font-family: 'poppins', 'Libre Baskerville', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 20px; }
+    footer .footer_inner .footer_copy {
+      font-family: 'poppins', 'Libre Baskerville', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin: 30px auto;
+      text-align: center; }
+
+/*共通部分*/
+body {
+  font-size: 14px;
+  line-height: 1;
+  font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  color: #666666; }
+
+.common_ttl {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #666666;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 15px; }
+  .common_ttl::before, .common_ttl:after {
+    dispaly: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px; }
+  .common_ttl::before {
+    right: 0;
+    margin: auto;
+    width: 100%;
+    background: #d8d8d8; }
+  .common_ttl::after {
+    width: 100px;
+    background: #4cbee0; }
+
+article {
+  padding-top: 70px; }
+  article section .inner {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (max-width: 1150px) {
+      article section .inner {
+        max-width: 750px; } }
+    @media screen and (max-width: 750px) {
+      article section .inner {
+        width: 84%; } }
+  article .ttl01 {
+    width: 50%;
+    padding: 15px 0px;
+    background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+    background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+    background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+    background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+    border-radius: 0 200px 200px 0;
+    position: relative;
+    position: relative; }
+    article .ttl01::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: calc(50vw - 540px);
+      height: 100%;
+      right: 100%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 1; }
+      @media screen and (max-width: 1100px) {
+        article .ttl01::before {
+          width: calc(50vw - 360px); } }
+      @media screen and (max-width: 750px) {
+        article .ttl01::before {
+          width: 4vw; } }
+    article .ttl01::before {
+      background: #4cbee0; }
+    article .ttl01 span {
+      display: inline-block;
+      padding-left: 5px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 10; }
+
+/*フォーム部分共通*/
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 16px; }
+
+form :placeholder-shown {
+  color: #e6e6e6;
+  font-size: 16px; }
+
+form ::-webkit-input-placeholder {
+  color: #e6e6e6; }
+
+form :-moz-placeholder {
+  color: #e6e6e6;
+  opacity: 1; }
+
+form ::-moz-placeholder {
+  color: #e6e6e6;
+  opacity: 1; }
+
+form :-ms-input-placeholder {
+  color: #e6e6e6; }
+
+form textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 1.5; }
+
+form input {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="submit"]:focus,
+form select:focus,
+form textarea:focus {
+  outline: 0;
+  border-color: #4cbee0 !important; }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+  border: solid 1px #999;
+  background: #ffffff; }
+
+form input[type="submit"],
+form input[type="button"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+/* custom */
+.form_radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .form_radio .radio_item label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 15px;
+    padding: 0px 0px 0px 30px;
+    line-height: 20px;
+    position: relative; }
+    .form_radio .radio_item label::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 22.5px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      border: solid 1px #999;
+      background: #fff; }
+    .form_radio .radio_item label:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 6px;
+      bottom: 6px;
+      left: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 22.5px;
+      background: #4cbee0;
+      opacity: 0;
+      -webkit-transition: opacity .5s;
+      -o-transition: opacity .5s;
+      transition: opacity .5s; }
+    .form_radio .radio_item label input[type="checkbox"] {
+      display: none; }
+    .form_radio .radio_item label.selected:after {
+      opacity: 1; }
+
+/*パンくず部分*/
+#bread {
+  width: 100%;
+  height: 45px;
+  background-color: #f4f4f4; }
+  #bread .inner {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (max-width: 1150px) {
+      #bread .inner {
+        max-width: 750px; } }
+    @media screen and (max-width: 750px) {
+      #bread .inner {
+        width: 84%; } }
+    #bread .inner .step ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #bread .inner .step ul li {
+        position: relative;
+        width: calc(100% / 3);
+        line-height: 50px;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 0.9px;
+        color: #666666; }
+        #bread .inner .step ul li span {
+          position: relative;
+          z-index: 10; }
+
+#doctorList #bread .step02::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 45px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+  background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+  background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+  background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+  -webkit-transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  transform: skewX(-30deg); }
+
+#doctorList #bread .step02 span {
+  color: #fff; }
+
+/*医師一覧ページ*/
+#doctorList #main {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-image: url(../img/doctor_list/main.jpg);
+  background-size: cover; }
+  #doctorList #main .fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(51, 51, 51, 0.3); }
+  #doctorList #main .main_content {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    text-align: center;
+    color: #fff; }
+    #doctorList #main .main_content .main_ttl {
+      font-size: 45px;
+      font-weight: bold;
+      letter-spacing: 0.9px;
+      margin-bottom: 50px;
+      position: relative; }
+      #doctorList #main .main_content .main_ttl::after {
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+        content: "";
+        width: 300px;
+        height: 2px;
+        background: #fff; }
+    #doctorList #main .main_content .sub_ttl {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 0.9px; }
+
+#doctorList #searchForm .result {
+  width: 100%;
+  height: 60px;
+  background: #fc9792;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #doctorList #searchForm .result span.txt {
+    display: block;
+    font-size: 22px; }
+  #doctorList #searchForm .result span.num {
+    display: block;
+    font-size: 35px;
+    height: 1.1em;
+    padding: 0 0.2em 0 0; }
+
+#doctorList #searchForm .search_form {
+  position: relative;
+  padding: 40px 0; }
+  #doctorList #searchForm .search_form::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url(../img/common/dott_bg.png);
+    background-size: 2px; }
+  #doctorList #searchForm .search_form div {
+    position: relative;
+    z-index: 10; }
+  #doctorList #searchForm .search_form .form_wrap {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center; }
+    #doctorList #searchForm .search_form .form_wrap .search_word {
+      width: 100%; }
+    #doctorList #searchForm .search_form .form_wrap .submit_wrap {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto; }
+      #doctorList #searchForm .search_form .form_wrap .submit_wrap::before {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 10;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        bottom: 0;
+        left: 10px;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(../img/common/search.png);
+        background-size: 20px; }
+      #doctorList #searchForm .search_form .form_wrap .submit_wrap .submit_word {
+        height: 40px;
+        background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+        background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+        border: 0;
+        -webkit-box-shadow: 0;
+        box-shadow: 0;
+        border-radius: 0 10px 10px 0;
+        padding: 0 20px 0 45px;
+        color: #fff;
+        font-weight: bold;
+        -webkit-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        transition: opacity 1s; }
+        #doctorList #searchForm .search_form .form_wrap .submit_wrap .submit_word:hover {
+          opacity: 0.7; }
+
+#doctorList #list {
+  margin: 60px 0 0; }
+  #doctorList #list .filter {
+    margin-top: 30px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    border: solid 1px #d8d8d8;
+    background-color: #f4f4f4; }
+  #doctorList #list #doctors ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 100px; }
+    #doctorList #list #doctors ul li {
+      position: relative;
+      width: 255px;
+      margin-bottom: 90px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-right: 20px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      border: solid 2px #4cbee0;
+      background-color: #ebf7fa;
+      padding: 90px 20px 20px 20px;
+      text-align: center;
+      -webkit-transition: background-color .5s, border .5s;
+      -o-transition: background-color .5s, border .5s;
+      transition: background-color .5s, border .5s; }
+      #doctorList #list #doctors ul li:nth-child(4n) {
+        margin-right: 0; }
+      #doctorList #list #doctors ul li .doctor_icon {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -60px; }
+        #doctorList #list #doctors ul li .doctor_icon div {
+          display: inline-block;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background-color: #f1f1f1;
+          -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          border: solid 2px #fff;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover; }
+      #doctorList #list #doctors ul li .info_wrap .hospital {
+        font-size: 16px;
+        margin-bottom: 10px; }
+      #doctorList #list #doctors ul li .info_wrap .name {
+        font-size: 16px;
+        font-weight: bold; }
+        #doctorList #list #doctors ul li .info_wrap .name::after {
+          display: inline-block;
+          padding-left: 0.2em;
+          content: "先生"; }
+        #doctorList #list #doctors ul li .info_wrap .name span {
+          display: inline-block;
+          font-size: 22px; }
+      #doctorList #list #doctors ul li .info_wrap .area {
+        display: inline-block;
+        margin: 15px 0;
+        padding: 5px 15px;
+        border-radius: 30px;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        -webkit-transition: background .5s;
+        -o-transition: background .5s;
+        transition: background .5s; }
+      #doctorList #list #doctors ul li .form_wrap .form_radio {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        #doctorList #list #doctors ul li .form_wrap .form_radio label {
+          font-size: 18px;
+          font-weight: bold;
+          color: #4cbee0;
+          margin: 0;
+          -webkit-transition: color .5s;
+          -o-transition: color .5s;
+          transition: color .5s; }
+      #doctorList #list #doctors ul li .form_wrap .detail_button {
+        margin-top: 20px; }
+        #doctorList #list #doctors ul li .form_wrap .detail_button a {
+          display: block;
+          padding: 10px 0;
+          background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+          background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+          background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+          background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+          font-size: 18px;
+          font-weight: bold;
+          color: #fff;
+          border-radius: 100px;
+          -webkit-transition: background .5s, background-image .5s, opacity .5s;
+          -o-transition: background .5s, background-image .5s, opacity .5s;
+          transition: background .5s, background-image .5s, opacity .5s; }
+          #doctorList #list #doctors ul li .form_wrap .detail_button a:hover {
+            opacity: 0.7; }
+      #doctorList #list #doctors ul li.removed {
+        opacity: 0.6;
+        border: solid 2px #e6e6e6;
+        background-color: #f8f8f8; }
+        #doctorList #list #doctors ul li.removed .info_wrap .area {
+          background-color: #666 !important; }
+        #doctorList #list #doctors ul li.removed .form_wrap .form_radio {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+          #doctorList #list #doctors ul li.removed .form_wrap .form_radio label {
+            color: #999; }
+        #doctorList #list #doctors ul li.removed .form_wrap .detail_button {
+          margin-top: 20px; }
+          #doctorList #list #doctors ul li.removed .form_wrap .detail_button a {
+            background: #666; }
+      #doctorList #list #doctors ul li.tokyo .info_wrap .area {
+        background-color: #4cbee0; }
+        #doctorList #list #doctors ul li.tokyo .info_wrap .area::after {
+          display: inline-block;
+          content: "東京"; }
+      #doctorList #list #doctors ul li.fukuoka .info_wrap .area {
+        background-color: #fc9792; }
+        #doctorList #list #doctors ul li.fukuoka .info_wrap .area::after {
+          display: inline-block;
+          content: "福岡"; }
+  #doctorList #list #submitWrap {
+    position: relative;
+    padding-bottom: 25px;
+    text-align: center; }
+    #doctorList #list #submitWrap::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background-image: url(../img/common/dott_bg.png);
+      background-size: 2px; }
+    #doctorList #list #submitWrap div {
+      position: relative;
+      z-index: 10; }
+    #doctorList #list #submitWrap .submit_ttl {
+      font-size: 22px;
+      padding: 10px 0;
+      color: #fff;
+      background: #fc9792; }
+    #doctorList #list #submitWrap .current_state {
+      margin: 25px 0;
+      font-size: 22px; }
+      #doctorList #list #submitWrap .current_state .all {
+        display: inline-block;
+        padding: 0 0.2em;
+        font-weight: bold; }
+      #doctorList #list #submitWrap .current_state .selected {
+        display: inline-block;
+        font-size: 30px;
+        padding: 0 0.2em;
+        font-weight: bold;
+        color: #fc9792; }
+    #doctorList #list #submitWrap .submit_wrap {
+      width: 800px;
+      margin: 0 auto;
+      position: relative; }
+      #doctorList #list #submitWrap .submit_wrap .submit_label {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 15px 0;
+        border-radius: 100px;
+        background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+        background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+        text-align: center;
+        display: inline-block;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #fff;
+        pointer-events: none; }
+        #doctorList #list #submitWrap .submit_wrap .submit_label span.arrow {
+          position: relative;
+          display: inline-block;
+          padding-right: 100px; }
+          #doctorList #list #submitWrap .submit_wrap .submit_label span.arrow::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../img/common/arrow.png);
+            background-size: 70px;
+            width: 70px;
+            height: 10px;
+            -webkit-transition: right .5s;
+            -o-transition: right .5s;
+            transition: right .5s; }
+      #doctorList #list #submitWrap .submit_wrap input[type="submit"] {
+        opacity: 0;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto; }
+      #doctorList #list #submitWrap .submit_wrap:hover .submit_label span.arrow::after {
+        right: -15px; }
