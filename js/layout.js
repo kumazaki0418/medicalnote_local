@@ -158,7 +158,6 @@ $(function() {
         var checkWrap = [];
 
         function onCheckChange(e) {
-          console.log(checkState[e]);
           if (checkState[e] == 0) {
             checkLabel[e].addClass('selected');
             checkState[e] = 1;
@@ -199,21 +198,17 @@ $(function() {
         var checkWrap = [];
 
         function onCheckChange(e) {
-          console.log(checkState[e]);
           if (checkState[e] == 0) {
             checkBox[e].removeClass('removed');
             checkState[e] = 1;
-            console.log('on');
           } else {
             checkBox[e].addClass('removed');
             checkState[e] = 0;
-            console.log('off');
           }
         }
 
         function init() {
           $("li").each(function(index) {
-            console.log(index);
             checkBox[index] = $(this);
             checkButton[index] = $(this).find('.checkbox');
             checkLabel[index] = checkButton[index].parent('label')
@@ -235,6 +230,19 @@ $(function() {
       if (document.getElementById('doctorList')) {
         changeDoctorBox($('doctors'));
       }
+
+      $('#searchDoctor').select2({
+        ajax: {
+          url: 'https://api.github.com/search/repositories',
+          dataType: 'json'
+        }
+      });
+      $('#serchForm').select2({
+        ajax: {
+          url: 'https://www.json-generator.com/api/json/get/caQuwKJtrC?indent=2',
+          dataType: 'json'
+        }
+      });
 
 
 });

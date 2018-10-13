@@ -101,8 +101,11 @@ header{
 			.inner{
 				padding: 80px 15px;
 				.form_wrap{
-					.serch_word{
+					.search_word{
 						position: relative;
+						#searchDoctor{
+							@include basicForm;
+						}
 						.submit_wrap{
 							position: absolute;
 							top:0;

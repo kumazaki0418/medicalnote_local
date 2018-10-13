@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript" src="js/select2.min.js"></script>
 </head>
 <body id="user">
 <header>
@@ -40,13 +41,11 @@
 			</div>
 			<div class="inner">
 				<div class="form_wrap">
-					<div class="serch_word">
-						<form action="aaaa" method="post">
-						<input type="text" value="大腸ガン" placeholder="疾患名で医師を検索">
+					<div class="search_word">
+						<select id="searchDoctor"></select>
 						<div class="submit_wrap">
 							<span class="search_icon"></span>
 							<input type="submit">
-							</form>
 						</div>
 					</div>
 				</div><!-- form_wrap -->
@@ -97,7 +96,7 @@
 		<div class="search_form">
 			<form action=“aaaa” method="post">
 				<div class="form_wrap">
-					<input type="text" name="keywords" value="大腸ガン" placeholder="疾患名で医師を検索" class="search_word">
+					<select id="serchForm"></select>
 					<div class="submit_wrap">
 						<input type="submit" value="別の疾患名で検索し直す" class="submit_word">
 					</div>

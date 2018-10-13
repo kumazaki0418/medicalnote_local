@@ -69,6 +69,17 @@ $basicGreen: #00381f;
     z-index: 10;
   }
 }
+@mixin basicForm{
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+  border: solid 1px #999;
+  background: #ffffff;
+}
 @mixin indentRight {
   position: relative;
   &::before {
@@ -162,6 +173,8 @@ $basicGreen: #00381f;
 @import 'header.scss';
 /*フッター部分*/
 @import 'footer.scss';
+/*インクリメンタルサーチ部分*/
+@import 'select2.scss';
 /*共通部分*/
 @import 'common.scss';
 /*フォーム部分共通*/
