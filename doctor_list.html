@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,7 +79,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="main">
+	<section id="main" style="background-image:url(img/doctor_list/main.jpg);">
 		<div class="fill"></div>
 		<div class="main_content">
 			<h1 class="main_ttl">医師一覧</h1>
@@ -91,7 +90,7 @@
 	</section>
 	<section id="searchForm">
 		<div class="result">
-			<span class="txt">検索結果：</span><span class="num">10</span><span class="txt">名の医師がヒットしました。</span>
+			<span class="txt">検索結果：</span><span id="totalNum">1</span><span class="txt">名の医師がヒットしました。</span>
 		</div>
 		<div class="search_form">
 			<form action=“aaaa” method="post">
@@ -113,12 +112,12 @@
 				<div class="form_wrap">
 					<span id="filter" class="form_radio">
 						<span class="radio_item first">
-							<label class="selected"><input type="checkbox" name="tokyo" value="東京" checked="checked" class="checkbox"><span class="radio_label">東京</span>
+							<label class="selected"><input type="checkbox" name="tokyo" id="tokyo" value="東京" checked="checked" class="checkbox"><span class="radio_label">東京</span>
 							</label>
 						</span>
 						<span class="radio_item">
 							<label class="selected">
-								<input type="checkbox" name="fukuoka" value="福岡" checked="checked" class="checkbox"><span class="radio_label">福岡</span>
+								<input type="checkbox" id="fukuoka" name="fukuoka" value="福岡" checked="checked" class="checkbox"><span class="radio_label">福岡</span>
 							</label>
 						</span>
 					</span>
@@ -342,7 +341,7 @@
 		<div id="submitWrap">
 			<div><h2 class="submit_ttl">受診のお申し込みはこちらから</h2></div>
 			<div class="current_state">
-				現在<span class="all">10</span>人中<span class="selected">10</span>人の医師を選択中
+				現在<span id="allNum">1</span>人中<span id="selectedNum">1</span>人の医師を選択中
 			</div>
 			<div class="submit_wrap">
 				<span class="submit_label"><span class="arrow">受診をお申し込み</span></span>

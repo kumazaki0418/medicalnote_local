@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="https://www.komons-japan.com">
+	<title>受診のお申し込み | Doctor Match</title>
+	<meta name="description" content="aaaa">
+	<link href="img/common/favicon.png" rel="apple-touch-icon" sizes="180x180">
+	<link rel="shortcut icon" href="img/common/favicon.png">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="aaaa">
+	<meta property="og:url" content="https://www.komons-japan.com">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="医師一覧 | Doctor Match">
+	<meta property="og:description" content="aaaa">
+	<meta property="og:url" content="aaaa">
+	<meta property="og:site_name" content="ドクターマッチ">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript" src="js/select2.min.js"></script>
+</head>
+<body id="user">
+<header>
+	<div class="header_inner">
+		<div class="header_logo">
+			<a href="/"></a>
+		</div>
+		<div id="headerNav">
+			<a href="javascript:void(0);"></a>
+		</div>
+	</div>
+	<div id="slideMenu">
+		<div id="slideBg"></div>
+		<div class="contents">
+			<div id="closeButton">
+				<a href="javascript:void(0);"></a>
+			</div>
+			<div class="inner">
+				<div class="form_wrap">
+					<div class="search_word">
+						<select id="searchDoctor"></select>
+						<div class="submit_wrap">
+							<span class="search_icon"></span>
+							<input type="submit">
+						</div>
+					</div>
+				</div><!-- form_wrap -->
+				<div class="popular_word">
+					<span class="common_ttl">よく検索されているワード</span>
+					<div class="word_list">
+						<a href="aaaa">麻疹<span class="num">7</span></a>
+						<a href="aaaa">手足口病<span class="num">12</span></a>
+						<a href="aaaa">帯状疱疹<span class="num">9</span></a>
+						<a href="aaaa">うつ病<span class="num">5</span></a>
+						<a href="aaaa">子宮筋腫<span class="num">4</span></a>
+						<a href="aaaa">逆流性食道炎<span class="num">10</span></a>
+						<a href="aaaa">梅毒<span class="num">6</span></a>
+						<a href="aaaa">ギラン・バレー症候群<span class="num">6</span></a>
+						<a href="aaaa">大腸がん<span class="num">6</span></a>
+						<a href="aaaa">認知症<span class="num">6</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<article id="apply">
+	<section id="bread">
+		<div class="inner">
+			<div class="step">
+				<ul>
+					<li class="step01"><span>1 疾患名を入力し、医師を検索</span></li>
+					<li class="step02"><span>2 検索結果より、受診希望の医師を選択</span></li>
+					<li class="step03"><span>3 情報を入力し、マッチング結果を待つ</span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="main" style="background-image: url(img/apply/main.jpg);">
+		<div class="fill"></div>
+		<div class="main_content">
+			<h1 class="main_ttl">受診のお申し込み</h1>
+			<div class="sub_ttl">
+				<h2>下記フォームよりご登録頂くと、<span class="newline">あなたのご希望に合う医師をご紹介いたします。</span>
+			</div>
+		</div><!-- main_content -->
+	</section>
+	<form action="aaaa" method="post">
+	<section id="step02" class="apply_section">
+		<div class="inner">
+		<div class="txt_upper">
+			<h3 class="apply_ttl"><span>STEP 02</span>疾患に関する基本情報の入力</h3>
+			<p class="apply_txt">診療を受ける方の情報についてご入力ください。</p>
+			<h3 class="ttl_help"><span>入力ヘルプ機能について</span></h3>
+			<p class="apply_txt">各入力項目の”?”ボタンをクリック頂くと、その項目に対する適切な内容の入力の方法や入力頂いた情報の取り扱いなどについての詳細説明が表示されます。入力内容に不明点があったり、内容を入力する際に不安な点がございましたら、ご参考くださいませ。</p>
+		</div><!-- txt_upper -->
+		<div class="form_block">
+			<div class="form_wrap">
+				<div class="form_ttl required">
+					<h3 class="common_ttl"><span>診断状況</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form01" popTitle="診断状況"></a>
+				</div><!-- form_ttl -->
+				<div class="form_radio">
+				<span class="radio_item first">
+							<label><input type="checkbox" value="過去に診察を受けている" checked="" class="checkbox"><span class="radio_label">過去に診察を受けている</span>
+							</label>
+				</span>
+			</div>
+			</div><!-- form_wrap -->
+			<div class="form_wrap">
+				<div class="form_ttl required">
+					<h3 class="common_ttl"><span>診断を受けた医療機関名</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form02" popTitle="診断を受けた医療機関名"></a>
+				</div><!-- form_ttl -->
+				<div class="form_text">
+					<input type="text" placeholder="Medical Note病院">
+			</div>
+			</div><!-- form_wrap -->
+			<div class="form_wrap">
+				<div class="form_ttl required">
+					<h3 class="common_ttl"><span>ご相談対象者の性別</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form03" popTitle="ご相談対象者の性別"></a>
+				</div><!-- form_ttl -->
+				<div class="form_radio">
+				<span class="radio_item first">
+							<label><input type="radio" name="sex" value="男性"  class="radiobutton"><span class="radio_label">男性</span>
+							</label>
+				</span>
+				<span class="radio_item first">
+							<label><input type="radio" name="sex" id="tokyo" value="女性"  class="radiobutton"><span class="radio_label">女性</span>
+							</label>
+				</span>
+			</div>
+			</div><!-- form_wrap -->
+			<div class="form_wrap">
+				<div class="form_ttl required">
+					<h3 class="common_ttl"><span>ご相談対象者の年齢</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form04" popTitle="ご相談対象者の年齢"></a>
+				</div><!-- form_ttl -->
+				<div class="form_text">
+					<input type="number" name="age">歳
+			</div>
+			</div><!-- form_wrap -->
+			<div class="form_wrap">
+				<div class="form_ttl required">
+					<h3 class="common_ttl"><span>ご相談対象者との関係</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form05" popTitle="ご相談対象者との関係"></a>
+				</div><!-- form_ttl -->
+				<div class="form_radio">
+				<span class="radio_item first">
+							<label><input type="radio" name="user" value="本人" class="radiobutton"><span class="radio_label">本人</span>
+							</label>
+				</span>
+				<span class="radio_item first">
+							<label><input type="radio" name="user" value="家族" class="radiobutton"><span class="radio_label">家族</span>
+							</label>
+				</span>
+				<span class="radio_item first">
+							<label><input type="radio" name="user" value="その他" class="radiobutton"><span class="radio_label">その他</span>
+							</label>
+				</span>
+			</div>
+			</div><!-- form_wrap -->
+			<div class="form_wrap">
+				<div class="form_ttl required">
+					<h3 class="common_ttl"><span>ご連絡が可能な電話番号</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form06" popTitle="ご連絡が可能な電話番号"></a>
+				</div><!-- form_ttl -->
+				<div class="form_text">
+					<input type="tel" name="phone" placeholder="例) 0312345678(ハイフン無し)">
+			</div>
+			</div><!-- form_wrap -->
+		</div>
+	</div><!-- inner -->
+	</section>
+	<section id="step03" class="apply_section gray_bg">
+		<div class="inner">
+		<div class="txt_upper">
+			<h3 class="apply_ttl"><span>STEP 03</span>疾患詳細情報の入力</h3>
+			<p class="apply_txt">下記の情報は必須項目ではございませんが、過去に受けた診断の内容や診療を受ける医療機関に関するご希望などを入力頂くと、よりあなたのケースに適切な医療機関のご紹介をすることが可能です。</p>
+		</div><!-- txt_upper -->
+		<div class="form_block">
+			<div class="form_wrap">
+				<div class="form_ttl">
+					<h3 class="common_ttl"><span>受診の検討経緯(当サービスの利用を検討された経緯)</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form07" popTitle="受診の検討経緯"></a>
+				</div><!-- form_ttl -->
+				<div class="form_textarea">
+					<textarea value="" placeholder="記入例) テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。"></textarea>
+			</div><!-- form_textarea -->
+			</div><!-- form_wrap -->
+			<div class="form_wrap">
+				<div class="form_ttl">
+					<h3 class="common_ttl"><span>過去の診断における医師の疾患に対する見解</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form08" popTitle="過去の診断における医師の疾患に対する見解"></a>
+				</div><!-- form_ttl -->
+				<div class="form_textarea">
+					<textarea value="" placeholder="記入例) テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。"></textarea>
+			</div><!-- form_textarea -->
+			</div><!-- form_wrap -->
+			<div class="form_wrap">
+				<div class="form_ttl">
+					<h3 class="common_ttl"><span>医療機関のご紹介に際してご希望されること</span></h3>
+					<a class="help" href="javascript:void(0);" popup="form09" popTitle="医療機関のご紹介に際してご希望されること"></a>
+				</div><!-- form_ttl -->
+				<div class="form_textarea">
+					<textarea placeholder="記入例) テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。"></textarea>
+			</div><!-- form_textarea -->
+			</div><!-- form_wrap -->
+		</div><!-- form_block -->
+	</div><!-- inner -->
+	</section>
+	<section id="notice" class="apply_section">
+		<div class="inner">
+		<div class="txt_upper">
+			<h3 class="apply_ttl">注意事項</h3>
+			<div class="notice_list">
+			<ul>
+				<li>・確定診断を受けられている方を対象とさせていただきます。</li>
+				<li>・ご入力いただいた後、対応まで3営業日〜5営業日程度頂く可能性がございます。</li>
+				<li>・お問合わせへの対応が出来ない場合もございます。 </li>
+				<li>・情報提供の際にメディカルノートが具体的医療機関を推薦するものではありません。</li>
+				<li>・ドメイン指定受信を設定されている方は「medicalnote-qa.jp」と「medicalnote.co.jp」を受信できるように指定ください。</li>
+			</ul>
+		</div>
+		</div><!-- txt_upper -->
+	</div><!-- inner -->
+	</section>
+	<section id="submitWrap">
+		<div class="form_wrap">
+			<div class="form_radio">
+			<span class="radio_item first">
+						<label>
+							<input type="checkbox" name="tokyo" id="tokyo" value="プライバシーポリシー及び利用規約に同意する" checked="" class="checkbox"><span class="radio_label">プライバシーポリシー及び利用規約に同意する  </span>
+						</label>
+			</span>
+		</div>
+		</div><!-- form_wrap -->
+		<div class="submit">
+		<div class="submit_wrap">
+			<span class="submit_label"><span class="arrow">受診をお申し込み</span></span>
+			<input type="submit" class="submit" value="受診をお申し込み">
+		</div>
+	</div>
+
+	</section>
+</form>
+</article>
+<footer>
+	<div class="footer_inner">
+		<div class="footer_logo">
+			<img src="img/common/footer_logo.png">
+		</div>
+		<div class="footer_nav">
+			<nav>
+				<ul>
+					<li>
+						<a href="/"><span>Service</span>サービスについて</a>
+					</li>
+					<li>
+						<a href="aaaa"><span>Terms</span>ご利用規約</a>
+					</li>
+					<li>
+						<a href="/"><span>Policy</span>プライバシーポリシー</a>
+					</li>
+					<li>
+						<a href="/"><span>Contact</span>お問い合わせ</a>
+					</li>
+					<li>
+						<a href="/"><span>Company</span>運営会社</a>
+					</li>
+				</ul>
+			</nav>
+	</div>
+	<div class="footer_copy">
+		<p>©Medical Note, Inc. All Rights Reserved.</p>
+	</div>
+</div>
+</footer>
+<div id="popUp">
+	<div id="popBg"></div>
+	<div class="popContents">
+		<div class="pop_ttl_wrap">
+		<h3 class="pop_ttl">"<span id="itemName">過去の診断における医師の疾患に対する見解”</span>"の入力について</h3>
+		<a id="popClose" href="javascript:void(0);"></a>
+		</div>
+		<div class="pop_text">
+			<div class="form01 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム01</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム01</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form01 -->
+			<div class="form02 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム02</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム02</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form02 -->
+			<div class="form03 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム03</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム03</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form03 -->
+			<div class="form04 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム04</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム04</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form04 -->
+			<div class="form05 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム05</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム05</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form05 -->
+			<div class="form06 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム06</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム06</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form06 -->
+			<div class="form07 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム07</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム07</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form07 -->
+			<div class="form08 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム08</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム08</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form08 -->
+			<div class="form09 pop_item">
+				<div class="pop_wrap">
+					<h4>フォーム09</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+				<div class="pop_wrap">
+					<h4>フォーム09</h4>
+					<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+				</div>
+			</div><!-- form09 -->
+		</div><!-- pop_text -->
+	</div>
+</div>
+</body>
+</html>

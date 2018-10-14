@@ -5,6 +5,7 @@
 
 	.inner {
 		@include waku;
+		position: relative;
 
 		.step {
 			ul {
@@ -13,7 +14,7 @@
 				li {
 					position: relative;
 					width: calc(100% / 3);
-					line-height: 50px;
+					line-height: 45px;
 					text-align: center;
 					font-size: 14px;
 					letter-spacing: 0.9px;
@@ -28,10 +29,69 @@
 		}
 	}
 }
-
+#index{
+	#bread{
+		.inner{
+			@include indentRight;
+			&::before{
+				background: $basicBlue01;
+			}
+		}
+		.step01 {
+			background:linear-gradient(90deg, $basicBlue01 0%, $basicBlue01 50%, #f1f1f1 50%, #f1f1f1 100%);
+			&::before{
+				display: block;
+				content: "";
+				position: absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				margin: auto;
+				width: 100%;
+				height: 45px;
+				@include blueGrad;
+				transform: skewX(-30deg);
+			}
+			span{
+				color: #fff;
+			}
+		}
+	}
+}
 #doctorList {
 	#bread{
 		.step02 {
+			&::before{
+				display: block;
+				content: "";
+				position: absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				margin: auto;
+				width: 100%;
+				height: 45px;
+				@include blueGrad;
+				transform: skewX(-30deg);
+			}
+			span{
+				color: #fff;
+			}
+		}
+	}
+}
+#apply{
+	#bread{
+		.inner{
+			@include indentLeft;
+			&::before{
+				background: $basicBlue02;
+			}
+		}
+		.step03 {
+			background:linear-gradient(90deg, #f1f1f1 0%, #f1f1f1 50%, $basicBlue02 50%, $basicBlue02 100%);
 			&::before{
 				display: block;
 				content: "";

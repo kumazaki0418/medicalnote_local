@@ -1,0 +1,144 @@
+.apply_section{
+	padding: 60px 0 30px;
+	&#step01{
+		padding: 60px 0;
+	}
+	&.gray_bg{
+		background: $basicGray03;
+	}
+	.txt_upper{
+		.apply_ttl{
+			font-size: 24px;
+			font-weight: normal;
+  		letter-spacing: 0.9px;
+			color: $basicRed;
+			margin-bottom: 25px;
+			span{
+				display: inline-block;
+				@include poppins;
+				font-size: 30px;
+  			letter-spacing: 2px;
+				margin-right: 0.5em;
+			}
+		}
+		.apply_txt{
+			font-size: 16px;
+  		line-height: 1.6;
+  		letter-spacing: 1px;
+			span{
+				display: block;
+			}
+		}
+		.ttl_help{
+			margin: 20px 0 10px;
+			span{
+				font-size: 18px;
+				line-height: 40px;
+				color: $basicBlue01;
+				position: relative;
+				padding-left:50px;
+				&::before{
+					display: block;
+					content: "";
+					position: absolute;
+					top:0;
+					bottom:0;
+					left:0;
+					margin: auto;
+					width: 40px;
+					height: 40px;
+					@include bgSet;
+					background-image: url(../img/apply/help.png);
+					background-size: 40px;
+				}
+			}
+		}
+		.notice_list{
+			ul{
+				li{
+					font-size: 16px;
+		  		line-height: 1.6;
+		  		letter-spacing: 1px;
+				}
+			}
+		}
+	}
+	.login_button{
+		margin-top: 40px;
+		a{
+			display: block;
+			box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+			@include submitButton;
+			@include hover;
+		}
+	}
+	.form_block{
+		margin-top: 60px;
+		.form_wrap{
+			margin-bottom: 40px;
+			.form_ttl{
+				position: relative;
+				.help{
+					display: block;
+					position: absolute;
+					top:0;
+					bottom:5px;
+					right:0;
+					margin: auto;
+					width: 30px;
+					height: 30px;
+					@include bgSet;
+					background-image: url(../img/apply/help.png);
+					background-size: 30px;
+				}
+				&.required{
+					.common_ttl{
+						span{
+							position: relative;
+							&::after{
+								display: inline-block;
+								content: "必須";
+								border-radius: 100px;
+								background-color: $basicRed;
+								padding: 7px 15px;
+								color: #fff;
+								margin-left: 15px;
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+			.form_text{
+				input[name="age"]{
+					display: inline-block;
+    			width: 100px;
+    			margin-right: 1em;
+				}
+				input[name="phone"]{
+					width: 380px;
+				}
+			}
+		}
+	}
+}
+#apply{
+	#submitWrap{
+		padding: 60px 0;
+		@include dotBg;
+		.form_wrap{
+			text-align: center;
+			margin-bottom: 30px;
+			.form_radio{
+				@include flexSet;
+				justify-content: center;
+			}
+		}
+		.submit{
+			position: relative;
+			.submit_wrap{
+				@include submitNext;
+			}
+		}
+	}
+}

@@ -50,6 +50,80 @@ $basicGreen: #00381f;
     opacity: 0.7;
   }
 }
+@mixin submitButton{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 0;
+  border-radius: 100px;
+  background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+  text-align: center;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+}
+@mixin submitNext{
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+    .submit_label{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px 0;
+      border-radius: 100px;
+      @include blueGrad;
+      text-align: center;
+      display: inline-block;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #fff;
+      pointer-events: none;
+      span.arrow{
+        position: relative;
+        display: inline-block;
+        padding-right: 100px;
+        &::after{
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-image: url(../img/common/arrow.png);
+          background-size: 70px;
+          width: 70px;
+          height: 10px;
+          transition: right .5s;
+        }
+      }
+    }
+    input[type="submit"]{
+      opacity: 0;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      margin: auto;
+    }
+    &:hover{
+      .submit_label{
+        span.arrow{
+          &::after{
+              right: -15px;
+          }
+        }
+      }
+    }
+}
 @mixin dotBg{
   position: relative;
   &::before{
@@ -177,10 +251,15 @@ $basicGreen: #00381f;
 @import 'select2.scss';
 /*共通部分*/
 @import 'common.scss';
+/*ユーザー側メインビジュアル部分*/
+@import 'main.scss';
 /*フォーム部分共通*/
 @import 'form.scss';
 /*パンくず部分*/
 @import 'bread.scss';
-
+/*ポップアップ部分*/
+@import 'popup.scss';
 /*医師一覧ページ*/
 @import 'doctor_list.scss';
+/*受診申し込みページ*/
+@import 'apply_section.scss';

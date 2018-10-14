@@ -1,59 +1,4 @@
 #doctorList{
-	#bread{}
-	#main{
-		width: 100%;
-		height: 300px;
-		position: relative;
-		@include flexSet;
-		background-image: url(../img/doctor_list/main.jpg);
-		background-size: cover;
-		.fill{
-			position: absolute;
-			top: 0;
-			bottom:0;
-			left:0;
-			right:0;
-			margin: auto;
-			background-color: rgba(51, 51, 51, 0.3);
-		}
-		.main_content{
-			position: absolute;
-			width: 100%;
-			height: 120px;
-			top:0;
-			bottom:0;
-			left:0;
-			right:0;
-			margin: auto;
-			z-index: 10;
-			text-align: center;
-			color: #fff;
-			.main_ttl{
-				font-size: 45px;
- 				font-weight: bold;
- 				letter-spacing: 0.9px;
-				margin-bottom: 50px;
-				position: relative;
-				&::after{
-					position: absolute;
-					bottom: -25px;
-					left:0;
-					right:0;
-					margin: auto;
-					display: block;
-					content: "";
-					width: 300px;
-					height: 2px;
-					background: #fff;
-				}
-			}
-			.sub_ttl{
-				font-size: 25px;
-  			font-weight: bold;
-  			letter-spacing: 0.9px;
-			}
-		}
-	}
 	#searchForm{
 		.result{
 			width: 100%;
@@ -70,7 +15,7 @@
 				display: block;
 				font-size: 22px;
 			}
-			span.num{
+			span#totalNum{
 				display: block;
 				font-size: 35px;
 				height: 1.1em;
@@ -292,6 +237,16 @@
 			@include dotBg;
 			padding-bottom: 25px;
 			text-align: center;
+			background: #fff;
+				&.fixed{
+					position: fixed;
+					left:0;
+					right:0;
+					bottom:0;
+					margin: auto;
+					z-index: 100;
+					box-shadow: 0 -4px 4px 0 rgba(170, 170, 170, 0.5);
+				}
 			.submit_ttl{
 				font-size: 22px;
 				padding: 10px 0;
@@ -301,12 +256,12 @@
 			.current_state{
 				margin: 25px 0;
 				font-size: 22px;
-				.all{
+				#allNum{
 					display: inline-block;
 					padding: 0 0.2em;
 					font-weight: bold;
 				}
-				.selected{
+				#selectedNum{
 					display: inline-block;
 					font-size: 30px;
 					padding: 0 0.2em;
@@ -315,65 +270,7 @@
 				}
 			}
 			.submit_wrap{
-				width: 800px;
-				margin: 0 auto;
-				position: relative;
-				.submit_label{
-					width: 100%;
-					box-sizing: border-box;
-					padding: 15px 0;
- 					border-radius: 100px;
-					@include blueGrad;
-					text-align: center;
-					display: inline-block;
-					font-size: 22px;
-  				font-weight: bold;
-  				letter-spacing: 1px;
-					color: #fff;
-					pointer-events: none;
-					span.arrow{
-						position: relative;
-						display: inline-block;
-						padding-right: 100px;
-						&::after{
-							display: block;
-							content: "";
-							position: absolute;
-							top: 0;
-							bottom: 0;
-							right: 0;
-							margin: auto;
-							background-repeat: no-repeat;
-							background-position: center center;
-							background-image: url(../img/common/arrow.png);
-							background-size: 70px;
-							width: 70px;
-							height: 10px;
-							transition: right .5s;
-						}
-					}
-				}
-				input[type="submit"]{
-					opacity: 0;
-					display: block;
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					top:0;
-					bottom:0;
-					left:0;
-					right:0;
-					margin: auto;
-				}
-				&:hover{
-					.submit_label{
-						span.arrow{
-							&::after{
-									right: -15px;
-							}
-						}
-					}
-				}
+				@include submitNext;
 			}
 		}
 	}

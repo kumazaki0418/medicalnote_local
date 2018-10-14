@@ -150,6 +150,66 @@ $(function() {
 
       humMenuToggle($('#headerNav'));
 
+
+      //ポップアップメニューの開閉
+
+      function popMenuToggle(target) {
+        var closeBtn = $('#popClose');
+        var menuBg = $('#popBg');
+        var popState = 0;
+        var popContent = [];
+        var popTitle = [];
+
+        function popMenuEdit(e){
+          $('.pop_item').css({'display': 'none'});
+          $('.' + popContent[e]).css({'display': 'block'});
+          $('#itemName').text(popTitle[e]);
+          popMenuShift();
+        }
+
+        function popMenuShift() {
+          if (popState == 0) {
+            target.addClass('popOpen');
+            popState = 1;
+          } else {
+            target.removeClass('popOpen');
+            popState = 0;
+          }
+        }
+
+        function init() {
+
+          if (document.getElementById('apply')) {
+            $(".help").each(function(index) {
+              popContent[index] = $(this).attr('popup');
+              popTitle[index] = $(this).attr('popTitle');
+              $(this).on({
+                'click': function() {
+                  popMenuEdit(index);
+                }
+              });
+            });
+          }
+          closeBtn.on({
+            'click': function() {
+              popMenuShift();
+            }
+          });
+          menuBg.on({
+            'click': function() {
+              popMenuShift();
+            }
+          });
+        }
+
+        init()
+
+      };
+
+      if (document.getElementById('popUp')) {
+        popMenuToggle($('#popUp'));
+      };
+
       //チェックボックスの変更を取得
       function checkBoxChange(target) {
         var checkBox = [];
@@ -187,6 +247,28 @@ $(function() {
       }
 
       checkBoxChange($('body'));
+
+      // ラジオボタンの変更を取得
+      function radioChange(target) {
+
+        function onCatChange() {
+          var val = $('.radiobutton:checked').val();
+          console.log(val);
+          $('.selected').removeClass('selected');
+          $('.radiobutton:checked').parent('label').addClass('selected')
+        }
+
+        function init() {
+          $('.radiobutton').change(function() {
+            onCatChange();
+          });
+        }
+
+        init();
+
+      }
+
+        radioChange();
 
       //医師一覧のチェックボックスの変更を取得
 
@@ -230,6 +312,48 @@ $(function() {
       if (document.getElementById('doctorList')) {
         changeDoctorBox($('doctors'));
       }
+
+      //医師一覧のチェックボックスの値を制御
+
+      function checkNumControl(target){
+        var itemNum = target.find('li').length;
+        var tokyo = $('#tokyo');
+        var tokyoState = 1;
+        var fukuoka = $('#fukuoka');
+        var fukuokaState = 1;
+        var checkBox = [];
+
+        function onCheckChange(){
+          var num = target.find('.selected').length;
+          $('#selectedNum').text(num);
+        }
+
+        function init(){
+          $('#totalNum').text(itemNum);
+          $('#allNum').text(itemNum);
+          $('#selectedNum').text(itemNum);
+          $("li").each(function(index) {
+            checkBox[index] = $(this).find('.checkbox')
+            checkBox[index].change(function() {
+              onCheckChange();
+            });
+          });
+          tokyo.change(function() {
+            $('.tokyo').each(function(index) {
+              console.log(index);
+              $(this).prop('checked', false);
+            });
+          });
+        }
+
+        init();
+
+      }
+
+        if (document.getElementById('doctorList')) {
+            checkNumControl($('#doctors'));
+        }
+
 
       $('#searchDoctor').select2({
         ajax: {

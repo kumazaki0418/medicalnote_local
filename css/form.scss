@@ -49,6 +49,7 @@ form {
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="tel"]:focus,
+  input[type="number"]:focus,
   input[type="submit"]:focus,
   select:focus,
   textarea:focus {
@@ -61,7 +62,8 @@ form {
 
   input[type="text"],
   input[type="email"],
-  input[type="tel"] {
+  input[type="tel"],
+  input[type="number"] {
     width: 100%;
     box-sizing: border-box;
     appearance: none;
@@ -71,6 +73,21 @@ form {
     box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
     border: solid 1px #999;
     background: #ffffff;
+    color: #666;
+  }
+
+  textarea{
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    padding: 10px;
+    font-size: 16px;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    border: solid 1px #999;
+    background: #ffffff;
+    color: #666;
   }
 
   input[type="submit"],
@@ -119,7 +136,7 @@ form {
         opacity:0;
         transition: opacity .5s;
       }
-      input[type="checkbox"]{
+      input[type="checkbox"], input[type="radio"]{
         display: none;
       }
       &.selected{
