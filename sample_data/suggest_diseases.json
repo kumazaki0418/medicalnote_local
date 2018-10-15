@@ -1,0 +1,22 @@
+[
+  {
+    "id":1,
+    "name":"潰瘍性大腸炎",
+    "doctors_count": 10
+  },
+  {
+    "id":2,
+    "name":"大腸ガン",
+    "doctors_count": 15
+  },
+  {
+    "id":3,
+    "name":"大腸ポリープ",
+    "doctors_count": 8
+  },
+  {
+    "id":4,
+    "name":"腸管出血性大腸菌感染症（O-157）",
+    "doctors_count": 8
+  }
+]
