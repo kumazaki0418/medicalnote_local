@@ -2039,3 +2039,92 @@ form input[type="button"] {
         margin: auto; }
       #apply #submitWrap .submit .submit_wrap:hover .submit_label span.arrow::after {
         right: -15px; }
+
+/*受診申し込み確認ページ*/
+.apply_confirm input[type="text"],
+.apply_confirm input[type="email"],
+.apply_confirm input[type="tel"],
+.apply_confirm input[type="number"],
+.apply_confirm textarea {
+  background: #f1f1f1; }
+
+.apply_confirm .form_radio .radio_item label::before {
+  background: #f1f1f1; }
+
+.apply_confirm #mainTitle {
+  padding: 60px 0; }
+  .apply_confirm #mainTitle .mainttl_inner {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    background-color: #ffffff; }
+    @media screen and (max-width: 1150px) {
+      .apply_confirm #mainTitle .mainttl_inner {
+        max-width: 750px; } }
+    @media screen and (max-width: 750px) {
+      .apply_confirm #mainTitle .mainttl_inner {
+        width: 84%; } }
+    .apply_confirm #mainTitle .mainttl_inner .main_ttl {
+      padding: 10px 20px;
+      font-size: 22px;
+      letter-spacing: 1px;
+      color: #ffffff;
+      background: #fc9792;
+      border-radius: 5px 5px 0 0; }
+    .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt {
+      padding: 10px 20px;
+      font-size: 16px;
+      line-height: 1.5; }
+      .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt span {
+        display: block; }
+
+.apply_confirm #submitWrap .form_wrap {
+  margin-bottom: 0 !important; }
+  .apply_confirm #submitWrap .form_wrap .submit_confirm {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    @media screen and (max-width: 1150px) {
+      .apply_confirm #submitWrap .form_wrap .submit_confirm {
+        max-width: 750px; } }
+    @media screen and (max-width: 750px) {
+      .apply_confirm #submitWrap .form_wrap .submit_confirm {
+        width: 84%; } }
+    .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton, .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 520px;
+      border-radius: 100px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      text-align: center;
+      padding: 10px 0;
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border: none;
+      -webkit-transition: opacity .5s;
+      -o-transition: opacity .5s;
+      transition: opacity .5s; }
+      .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton:hover, .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton:hover {
+        opacity: 0.7; }
+    .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton {
+      background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+      background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: linear-gradient(to left, #79e0f2, #4cbee0); }
+    .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton {
+      background: #aaa; }

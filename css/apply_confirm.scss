@@ -1,0 +1,67 @@
+.apply_confirm{
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea {
+    background: #f1f1f1;
+  }
+  .form_radio .radio_item label::before{
+    background: #f1f1f1;
+  }
+  #mainTitle{
+    padding: 60px 0;
+    .mainttl_inner{
+      @include waku;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      background-color: #ffffff;
+      .main_ttl{
+        padding: 10px 20px;
+        font-size: 22px;;
+        letter-spacing: 1px;
+        color: #ffffff;
+        background: $basicRed;
+        border-radius: 5px 5px 0 0;
+      }
+      .main_ttl_txt{
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        span{
+          display: block;
+        }
+      }
+    }
+  }
+  #submitWrap{
+    .form_wrap{
+      margin-bottom: 0 !important;
+      .submit_confirm{
+        @include waku;
+        @include flexSet;
+        justify-content: space-between;
+        #submitButton, #backButton{
+          appearance:none;
+          width: 520px;
+          border-radius: 100px;
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          text-align: center;
+          padding: 10px 0;
+          color: #fff;
+          font-size: 22px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          border: none;
+          @include hover;
+        }
+        #submitButton{
+          @include blueGrad;
+        }
+        #backButton{
+          background: #aaa;
+        }
+      }
+    }
+  }
+}
