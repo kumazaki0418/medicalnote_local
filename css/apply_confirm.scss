@@ -1,4 +1,4 @@
-.apply_confirm{
+.apply_confirm, .apply_complete{
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -61,6 +61,75 @@
         #backButton{
           background: #aaa;
         }
+      }
+    }
+  }
+  #links{
+    padding: 60px 0;
+    background: $basicGray03;
+    .link_wrap{
+      margin-top: 35px;
+      @include flexSet;
+      align-items: center;
+      .img_wrap{
+        width: 230px;
+        margin-right: 20px;
+      }
+      .txt_wrap{
+        width: calc(100% - 250px);
+        .link_ttl{
+          @include blueGrad;
+          font-size: 16px;
+          font-weight: normal;
+          letter-spacing: 2px;
+          color: #ffffff;
+          padding: 7px 10px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+        .link_txt{
+          font-size: 16px;
+          letter-spacing: 1.6px;
+          line-height: 1.5;
+          margin-bottom: 10px;
+        }
+        .link_button{
+          display: block;
+          span{
+            position: relative;
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: #666;
+            padding-right: 70px;
+            &::after{
+              display: block;
+              content:"";
+              position: absolute;
+              top:0;
+              bottom:0;
+              right:0;
+              margin: auto;
+              width: 60px;
+              height: 10px;
+              @include bgSet;
+              background-image: url(../img/apply/arrow.png);
+              background-size: 60px;
+              transition: right .5s;
+            }
+          }
+          &:hover{
+            span{
+              &::after{
+                right: -10px;
+              }
+            }
+          }
+        }
+      }
+      &:nth-of-type(1){
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px dotted #aaa;
       }
     }
   }

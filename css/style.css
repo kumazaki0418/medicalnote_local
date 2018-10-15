@@ -2045,15 +2045,19 @@ form input[type="button"] {
 .apply_confirm input[type="email"],
 .apply_confirm input[type="tel"],
 .apply_confirm input[type="number"],
-.apply_confirm textarea {
+.apply_confirm textarea, .apply_complete input[type="text"],
+.apply_complete input[type="email"],
+.apply_complete input[type="tel"],
+.apply_complete input[type="number"],
+.apply_complete textarea {
   background: #f1f1f1; }
 
-.apply_confirm .form_radio .radio_item label::before {
+.apply_confirm .form_radio .radio_item label::before, .apply_complete .form_radio .radio_item label::before {
   background: #f1f1f1; }
 
-.apply_confirm #mainTitle {
+.apply_confirm #mainTitle, .apply_complete #mainTitle {
   padding: 60px 0; }
-  .apply_confirm #mainTitle .mainttl_inner {
+  .apply_confirm #mainTitle .mainttl_inner, .apply_complete #mainTitle .mainttl_inner {
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
@@ -2062,28 +2066,28 @@ form input[type="button"] {
     box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
     background-color: #ffffff; }
     @media screen and (max-width: 1150px) {
-      .apply_confirm #mainTitle .mainttl_inner {
+      .apply_confirm #mainTitle .mainttl_inner, .apply_complete #mainTitle .mainttl_inner {
         max-width: 750px; } }
     @media screen and (max-width: 750px) {
-      .apply_confirm #mainTitle .mainttl_inner {
+      .apply_confirm #mainTitle .mainttl_inner, .apply_complete #mainTitle .mainttl_inner {
         width: 84%; } }
-    .apply_confirm #mainTitle .mainttl_inner .main_ttl {
+    .apply_confirm #mainTitle .mainttl_inner .main_ttl, .apply_complete #mainTitle .mainttl_inner .main_ttl {
       padding: 10px 20px;
       font-size: 22px;
       letter-spacing: 1px;
       color: #ffffff;
       background: #fc9792;
       border-radius: 5px 5px 0 0; }
-    .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt {
+    .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt, .apply_complete #mainTitle .mainttl_inner .main_ttl_txt {
       padding: 10px 20px;
       font-size: 16px;
       line-height: 1.5; }
-      .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt span {
+      .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt span, .apply_complete #mainTitle .mainttl_inner .main_ttl_txt span {
         display: block; }
 
-.apply_confirm #submitWrap .form_wrap {
+.apply_confirm #submitWrap .form_wrap, .apply_complete #submitWrap .form_wrap {
   margin-bottom: 0 !important; }
-  .apply_confirm #submitWrap .form_wrap .submit_confirm {
+  .apply_confirm #submitWrap .form_wrap .submit_confirm, .apply_complete #submitWrap .form_wrap .submit_confirm {
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
@@ -2096,12 +2100,12 @@ form input[type="button"] {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     @media screen and (max-width: 1150px) {
-      .apply_confirm #submitWrap .form_wrap .submit_confirm {
+      .apply_confirm #submitWrap .form_wrap .submit_confirm, .apply_complete #submitWrap .form_wrap .submit_confirm {
         max-width: 750px; } }
     @media screen and (max-width: 750px) {
-      .apply_confirm #submitWrap .form_wrap .submit_confirm {
+      .apply_confirm #submitWrap .form_wrap .submit_confirm, .apply_complete #submitWrap .form_wrap .submit_confirm {
         width: 84%; } }
-    .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton, .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton {
+    .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton, .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton, .apply_complete #submitWrap .form_wrap .submit_confirm #submitButton, .apply_complete #submitWrap .form_wrap .submit_confirm #backButton {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -2119,12 +2123,79 @@ form input[type="button"] {
       -webkit-transition: opacity .5s;
       -o-transition: opacity .5s;
       transition: opacity .5s; }
-      .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton:hover, .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton:hover {
+      .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton:hover, .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton:hover, .apply_complete #submitWrap .form_wrap .submit_confirm #submitButton:hover, .apply_complete #submitWrap .form_wrap .submit_confirm #backButton:hover {
         opacity: 0.7; }
-    .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton {
+    .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton, .apply_complete #submitWrap .form_wrap .submit_confirm #submitButton {
       background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
       background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
       background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
       background-image: linear-gradient(to left, #79e0f2, #4cbee0); }
-    .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton {
+    .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton, .apply_complete #submitWrap .form_wrap .submit_confirm #backButton {
       background: #aaa; }
+
+.apply_confirm #links, .apply_complete #links {
+  padding: 60px 0;
+  background: #f8f8f8; }
+  .apply_confirm #links .link_wrap, .apply_complete #links .link_wrap {
+    margin-top: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .apply_confirm #links .link_wrap .img_wrap, .apply_complete #links .link_wrap .img_wrap {
+      width: 230px;
+      margin-right: 20px; }
+    .apply_confirm #links .link_wrap .txt_wrap, .apply_complete #links .link_wrap .txt_wrap {
+      width: calc(100% - 250px); }
+      .apply_confirm #links .link_wrap .txt_wrap .link_ttl, .apply_complete #links .link_wrap .txt_wrap .link_ttl {
+        background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+        background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        color: #ffffff;
+        padding: 7px 10px;
+        border-radius: 5px;
+        margin-bottom: 10px; }
+      .apply_confirm #links .link_wrap .txt_wrap .link_txt, .apply_complete #links .link_wrap .txt_wrap .link_txt {
+        font-size: 16px;
+        letter-spacing: 1.6px;
+        line-height: 1.5;
+        margin-bottom: 10px; }
+      .apply_confirm #links .link_wrap .txt_wrap .link_button, .apply_complete #links .link_wrap .txt_wrap .link_button {
+        display: block; }
+        .apply_confirm #links .link_wrap .txt_wrap .link_button span, .apply_complete #links .link_wrap .txt_wrap .link_button span {
+          position: relative;
+          font-size: 16px;
+          letter-spacing: 2px;
+          color: #666;
+          padding-right: 70px; }
+          .apply_confirm #links .link_wrap .txt_wrap .link_button span::after, .apply_complete #links .link_wrap .txt_wrap .link_button span::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 60px;
+            height: 10px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../img/apply/arrow.png);
+            background-size: 60px;
+            -webkit-transition: right .5s;
+            -o-transition: right .5s;
+            transition: right .5s; }
+        .apply_confirm #links .link_wrap .txt_wrap .link_button:hover span::after, .apply_complete #links .link_wrap .txt_wrap .link_button:hover span::after {
+          right: -10px; }
+    .apply_confirm #links .link_wrap:nth-of-type(1), .apply_complete #links .link_wrap:nth-of-type(1) {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px dotted #aaa; }
