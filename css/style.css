@@ -1043,7 +1043,6 @@ article {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-image: url("../img/doctor_list/main.jpg");
   background-size: cover; }
   #main .fill {
     position: absolute;
@@ -1086,6 +1085,119 @@ article {
       font-size: 25px;
       font-weight: bold;
       letter-spacing: 0.9px; }
+
+/*ワード検索部分*/
+#searchSection .result, #seachSection2 .result {
+  width: 100%;
+  height: 60px;
+  background: #fc9792;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #searchSection .result span.txt, #seachSection2 .result span.txt {
+    display: block;
+    font-size: 22px; }
+  #searchSection .result span#totalNum, #seachSection2 .result span#totalNum {
+    display: block;
+    font-size: 35px;
+    height: 1.1em;
+    padding: 0 0.2em 0 0; }
+
+#searchSection .search_form, #seachSection2 .search_form {
+  position: relative;
+  padding: 40px 0; }
+  #searchSection .search_form::before, #seachSection2 .search_form::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url(../img/common/dott_bg.png);
+    background-size: 2px; }
+  #searchSection .search_form div, #seachSection2 .search_form div {
+    position: relative;
+    z-index: 10; }
+  #searchSection .search_form #serchForm, #searchSection .search_form #serchForm2, #seachSection2 .search_form #serchForm, #seachSection2 .search_form #serchForm2 {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    border: solid 1px #999;
+    background: #ffffff; }
+  #searchSection .search_form .search_ttl, #seachSection2 .search_form .search_ttl {
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #fc9792;
+    margin-bottom: 30px; }
+  #searchSection .search_form .form_wrap, #seachSection2 .search_form .form_wrap {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center; }
+    #searchSection .search_form .form_wrap .search_word, #seachSection2 .search_form .form_wrap .search_word {
+      width: 100%; }
+    #searchSection .search_form .form_wrap .submit_wrap, #seachSection2 .search_form .form_wrap .submit_wrap {
+      position: absolute !important;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto; }
+      #searchSection .search_form .form_wrap .submit_wrap::before, #seachSection2 .search_form .form_wrap .submit_wrap::before {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 10;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        bottom: 0;
+        left: 10px;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(../img/common/search.png);
+        background-size: 20px; }
+      #searchSection .search_form .form_wrap .submit_wrap .submit_word, #seachSection2 .search_form .form_wrap .submit_wrap .submit_word {
+        height: 40px;
+        background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+        background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+        border: 0;
+        -webkit-box-shadow: 0;
+        box-shadow: 0;
+        border-radius: 0 5px 5px 0;
+        padding: 0 20px 0 45px;
+        color: #fff;
+        font-weight: bold;
+        -webkit-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        transition: opacity 1s; }
+        #searchSection .search_form .form_wrap .submit_wrap .submit_word:hover, #seachSection2 .search_form .form_wrap .submit_wrap .submit_word:hover {
+          opacity: 0.7; }
 
 /*フォーム部分共通*/
 form select {
@@ -1483,39 +1595,111 @@ form input[type="button"] {
     opacity: 1;
     pointer-events: all; }
 
-/*医師一覧ページ*/
-#doctorList #searchForm .result {
+/*トップページ*/
+#index #indexMain {
   width: 100%;
-  height: 60px;
-  background: #fc9792;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 0.5px;
+  height: calc(100vh - 280px);
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  #doctorList #searchForm .result span.txt {
-    display: block;
-    font-size: 22px; }
-  #doctorList #searchForm .result span#totalNum {
-    display: block;
-    font-size: 35px;
-    height: 1.1em;
-    padding: 0 0.2em 0 0; }
+  background-color: #f1f1f1;
+  background-size: cover; }
+  #index #indexMain .fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(51, 51, 51, 0.3); }
+  #index #indexMain .main_content {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    text-align: center;
+    color: #fff; }
+    #index #indexMain .main_content .main_ttl {
+      font-size: 25px;
+      letter-spacing: 0.9px;
+      color: #ffffff;
+      margin-bottom: 30px; }
+    #index #indexMain .main_content .service_logo {
+      width: 450px;
+      margin: 0 auto; }
 
-#doctorList #searchForm .search_form {
+#index .index_section#about {
+  padding: 100px 0;
+  position: relative; }
+  #index .index_section#about .index_ttl {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 10; }
+    #index .index_section#about .index_ttl .ttl_en {
+      font-family: 'poppins', 'Libre Baskerville', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 45px;
+      letter-spacing: 5px;
+      color: #ffffff;
+      padding: 20px calc(50vw - 540px) 10px 45px;
+      background: #45aacb;
+      margin-bottom: 10px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5); }
+    #index .index_section#about .index_ttl .ttl_ja {
+      display: block;
+      text-align: right;
+      font-size: 26px;
+      font-weight: normal;
+      letter-spacing: 2px; }
+      #index .index_section#about .index_ttl .ttl_ja span {
+        display: inline-block;
+        padding: 10px calc(50vw - 540px) 10px 35px;
+        color: #ffffff;
+        background: #45aacb;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5); }
+  #index .index_section#about .img_wrap {
+    width: 980px;
+    padding-left: calc(50vw - 540px);
+    height: 480px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/index/index_img01.jpg"); }
+  #index .index_section#about .txt_wrap {
+    width: calc(50vw + 200px);
+    position: absolute;
+    padding: 20px 0 20px 25px;
+    right: 0;
+    bottom: 30px;
+    border-radius: 5px 0 0 5px;
+    background-color: #f4f4f4;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5); }
+    #index .index_section#about .txt_wrap .plain_txt {
+      font-size: 14px;
+      line-height: 2;
+      letter-spacing: 1px;
+      text-align: left;
+      padding-right: calc(50vw - 550px); }
+
+#index .index_section#support {
+  margin-top: 100px;
+  padding: 150px 0 100px;
   position: relative;
-  padding: 40px 0; }
-  #doctorList #searchForm .search_form::before {
+  position: relative; }
+  #index .index_section#support::before {
     display: block;
     content: "";
     position: absolute;
@@ -1526,70 +1710,374 @@ form input[type="button"] {
     opacity: 0.1;
     background-image: url(../img/common/dott_bg.png);
     background-size: 2px; }
-  #doctorList #searchForm .search_form div {
+  #index .index_section#support div {
     position: relative;
     z-index: 10; }
-  #doctorList #searchForm .search_form #serchForm {
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  #index .index_section#support .index_ttl {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    z-index: 10; }
+    #index .index_section#support .index_ttl .ttl_en {
+      font-family: 'poppins', 'Libre Baskerville', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 45px;
+      letter-spacing: 5px;
+      color: #ffffff;
+      padding: 20px 45px 10px calc(50vw - 540px);
+      background: #45aacb;
+      margin-bottom: 10px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5); }
+    #index .index_section#support .index_ttl .ttl_ja {
+      display: block;
+      font-size: 26px;
+      font-weight: normal;
+      letter-spacing: 2px; }
+      #index .index_section#support .index_ttl .ttl_ja span {
+        display: inline-block;
+        padding: 10px 35px 10px calc(50vw - 540px);
+        color: #ffffff;
+        background: #45aacb;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5); }
+  #index .index_section#support .inner .plain_txt {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 40px; }
+  #index .index_section#support #slickSlider .slick-next,
+  #index .index_section#support #slickSlider .slick-prev {
+    width: 100px;
+    height: 100px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-    border: solid 1px #999;
-    background: #ffffff; }
-  #doctorList #searchForm .search_form .form_wrap {
-    width: 900px;
-    margin: 0 auto;
-    position: relative;
-    text-align: center; }
-    #doctorList #searchForm .search_form .form_wrap .search_word {
-      width: 100%; }
-    #doctorList #searchForm .search_form .form_wrap .submit_wrap {
+    border: none;
+    background: rgba(50, 50, 50, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    top: 0;
+    bottom: 50px;
+    margin: auto;
+    padding: 0;
+    border: none;
+    outline: 0; }
+    #index .index_section#support #slickSlider .slick-next::before,
+    #index .index_section#support #slickSlider .slick-prev::before {
+      display: block;
+      content: "";
+      bottom: 0;
+      margin: auto;
+      border-top: 2px solid #fff;
       position: absolute;
       top: 0;
       bottom: 0;
+      line-height: 1;
+      color: #fff; }
+  #index .index_section#support #slickSlider .slick-next {
+    right: -50px; }
+    #index .index_section#support #slickSlider .slick-next::before {
+      right: 45px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border-right: 2px solid #fff;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+  #index .index_section#support #slickSlider .slick-prev {
+    left: -50px; }
+    #index .index_section#support #slickSlider .slick-prev::before {
       right: 0;
-      margin: auto; }
-      #doctorList #searchForm .search_form .form_wrap .submit_wrap::before {
+      left: 45px;
+      width: 15px;
+      height: 15px;
+      border-left: 2px solid #fff;
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+  #index .index_section#support #slickSlider .slick-dots {
+    position: absolute;
+    bottom: -60px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%; }
+    #index .index_section#support #slickSlider .slick-dots li {
+      position: relative;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin: 0 5px;
+      padding: 0;
+      cursor: pointer; }
+      #index .index_section#support #slickSlider .slick-dots li button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 0;
+        background: #aaa;
         display: block;
-        content: "";
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        outline: 0;
+        line-height: 0;
+        font-size: 0;
+        color: transparent;
+        padding: 5px;
+        cursor: pointer; }
+      #index .index_section#support #slickSlider .slick-dots li.slick-active button {
+        background: #45aacb; }
+  #index .index_section#support #slickSlider .slick-slide {
+    padding: 0 5px; }
+    #index .index_section#support #slickSlider .slick-slide .img_wrap {
+      margin-bottom: 10px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5); }
+      #index .index_section#support #slickSlider .slick-slide .img_wrap img {
+        width: 100%; }
+    #index .index_section#support #slickSlider .slick-slide .txt_wrap {
+      text-align: center;
+      border-radius: 5px;
+      background-color: #45aacb;
+      padding: 10px 0;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(68, 68, 68, 0.5); }
+
+#index .index_section#flow {
+  padding: 80px 0 50px; }
+  #index .index_section#flow .index_ttl {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 25px 0;
+    border-radius: 5px;
+    background-image: -webkit-gradient(linear, right top, left top, from(#81dff1), to(#45aacb));
+    background-image: -webkit-linear-gradient(right, #81dff1, #45aacb);
+    background-image: -o-linear-gradient(right, #81dff1, #45aacb);
+    background-image: linear-gradient(to left, #81dff1, #45aacb);
+    color: #ffffff; }
+    @media screen and (max-width: 1150px) {
+      #index .index_section#flow .index_ttl {
+        max-width: 750px; } }
+    @media screen and (max-width: 750px) {
+      #index .index_section#flow .index_ttl {
+        width: 84%; } }
+    #index .index_section#flow .index_ttl .ttl_en {
+      font-family: 'poppins', 'Libre Baskerville', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 45px;
+      letter-spacing: 5px;
+      margin-bottom: 10px; }
+    #index .index_section#flow .index_ttl .ttl_ja {
+      font-size: 26px;
+      font-weight: normal;
+      letter-spacing: 2px; }
+  #index .index_section#flow .inner .flow_list ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 40px auto; }
+    #index .index_section#flow .inner .flow_list ul li {
+      width: 350px;
+      margin-right: 15px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+      border: solid 1px #d8d8d8;
+      background-color: #ffffff;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 10px 10px 15px; }
+      #index .index_section#flow .inner .flow_list ul li:last-child {
+        margin-right: 0; }
+      #index .index_section#flow .inner .flow_list ul li .img_wrap {
+        margin-bottom: 15px; }
+      #index .index_section#flow .inner .flow_list ul li .txt_wrap {
+        padding: 0 5px; }
+        #index .index_section#flow .inner .flow_list ul li .txt_wrap .common_ttl {
+          font-size: 19px;
+          font-weight: normal;
+          letter-spacing: 0.9px;
+          color: #4cbee0; }
+          #index .index_section#flow .inner .flow_list ul li .txt_wrap .common_ttl span {
+            display: block;
+            font-family: 'poppins', 'Libre Baskerville', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 24px;
+            letter-spacing: 1.9px; }
+        #index .index_section#flow .inner .flow_list ul li .txt_wrap .flow_txt {
+          font-size: 14px;
+          line-height: 1.6; }
+          #index .index_section#flow .inner .flow_list ul li .txt_wrap .flow_txt span {
+            display: block; }
+
+#index .index_section#customer {
+  padding-bottom: 60px; }
+  #index .index_section#customer .main_wrap {
+    position: relative; }
+    #index .index_section#customer .main_wrap .index_ttl {
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 20;
+      text-align: center;
+      color: #fff; }
+      #index .index_section#customer .main_wrap .index_ttl .ttl_en {
+        font-family: 'poppins', 'Libre Baskerville', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 45px;
+        letter-spacing: 5px;
+        margin-bottom: 10px; }
+      #index .index_section#customer .main_wrap .index_ttl .ttl_ja {
+        font-size: 26px;
+        font-weight: normal;
+        letter-spacing: 2px; }
+    #index .index_section#customer .main_wrap .img_wrap {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-position: top center;
+      background-image: url("../img/index/support_bg.jpg");
+      background-size: cover; }
+      #index .index_section#customer .main_wrap .img_wrap .fill {
         position: absolute;
         z-index: 10;
-        width: 30px;
-        height: 30px;
+        background: rgba(50, 50, 50, 0.6);
         top: 0;
         bottom: 0;
-        left: 10px;
-        margin: auto;
+        left: 0;
+        right: 0;
+        margin: auto; }
+  #index .index_section#customer .inner {
+    margin-top: 50px; }
+    #index .index_section#customer .inner .common_ttl {
+      text-align: center; }
+      #index .index_section#customer .inner .common_ttl span {
+        display: inline-block;
+        padding: 15px 0 15px 290px;
         background-repeat: no-repeat;
         background-position: center center;
-        background-image: url(../img/common/search.png);
+        background-image: url("../img/index/logo.png");
+        background-position: left center;
+        background-size: 270px; }
+    #index .index_section#customer .inner .txt_wrap .support_txt {
+      border-radius: 5px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      background: #f1f1f1;
+      text-align: center;
+      margin-bottom: 15px; }
+      #index .index_section#customer .inner .txt_wrap .support_txt span {
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding: 10px 0 10px 30px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("../img/index/check_icon.png");
+        background-position: left center;
         background-size: 20px; }
-      #doctorList #searchForm .search_form .form_wrap .submit_wrap .submit_word {
-        height: 40px;
-        background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
-        background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
-        background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
-        background-image: linear-gradient(to left, #79e0f2, #4cbee0);
-        border: 0;
-        -webkit-box-shadow: 0;
-        box-shadow: 0;
-        border-radius: 0 5px 5px 0;
-        padding: 0 20px 0 45px;
-        color: #fff;
+    #index .index_section#customer .inner .txt_wrap .support_summary {
+      border-radius: 5px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      background-color: #fab8b6; }
+      #index .index_section#customer .inner .txt_wrap .support_summary .txt {
+        font-size: 16px;
         font-weight: bold;
-        -webkit-transition: opacity 1s;
-        -o-transition: opacity 1s;
-        transition: opacity 1s; }
-        #doctorList #searchForm .search_form .form_wrap .submit_wrap .submit_word:hover {
-          opacity: 0.7; }
+        line-height: 1.6;
+        letter-spacing: 1px;
+        color: #ffffff;
+        padding: 15px 50px; }
 
+#index #seachSection2 {
+  position: relative;
+  padding-bottom: 30px; }
+  #index #seachSection2::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url(../img/common/dott_bg.png);
+    background-size: 2px; }
+  #index #seachSection2 div {
+    position: relative;
+    z-index: 10; }
+  #index #seachSection2 .txt_upper {
+    padding: 35px 0;
+    background-image: -webkit-gradient(linear, right top, left top, from(#81dff1), to(#45aacb));
+    background-image: -webkit-linear-gradient(right, #81dff1, #45aacb);
+    background-image: -o-linear-gradient(right, #81dff1, #45aacb);
+    background-image: linear-gradient(to left, #81dff1, #45aacb); }
+    #index #seachSection2 .txt_upper .ttl {
+      font-size: 24px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      text-align: center;
+      color: #ffffff; }
+      #index #seachSection2 .txt_upper .ttl span {
+        display: block; }
+  #index #seachSection2 .search_form::before {
+    display: none; }
+  #index #seachSection2 .tag_wrap #tagList a {
+    display: inline-block;
+    color: #fc9792;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    background-color: #ffffff;
+    border-left: 5px solid #4cbee0;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s; }
+    #index #seachSection2 .tag_wrap #tagList a:hover {
+      opacity: 0.7; }
+    #index #seachSection2 .tag_wrap #tagList a .num {
+      display: inline-block;
+      margin-left: 10px;
+      background: #fc9792;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 50%; }
+
+/*医師一覧ページ*/
 #doctorList #list {
   margin: 60px 0 0; }
   #doctorList #list .filter {
@@ -2149,6 +2637,13 @@ form input[type="button"] {
     .apply_confirm #links .link_wrap .img_wrap, .apply_complete #links .link_wrap .img_wrap {
       width: 230px;
       margin-right: 20px; }
+      .apply_confirm #links .link_wrap .img_wrap a, .apply_complete #links .link_wrap .img_wrap a {
+        display: block;
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s; }
+        .apply_confirm #links .link_wrap .img_wrap a:hover, .apply_complete #links .link_wrap .img_wrap a:hover {
+          opacity: 0.7; }
     .apply_confirm #links .link_wrap .txt_wrap, .apply_complete #links .link_wrap .txt_wrap {
       width: calc(100% - 250px); }
       .apply_confirm #links .link_wrap .txt_wrap .link_ttl, .apply_complete #links .link_wrap .txt_wrap .link_ttl {

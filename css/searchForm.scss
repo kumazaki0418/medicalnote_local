@@ -1,0 +1,84 @@
+#searchSection, #seachSection2{
+  .result{
+    width: 100%;
+    height: 60px;
+    background: #fc9792;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    @include flexSet;
+    align-items: center;
+    justify-content: center;
+    span.txt{
+      display: block;
+      font-size: 22px;
+    }
+    span#totalNum{
+      display: block;
+      font-size: 35px;
+      height: 1.1em;
+      padding: 0 0.2em 0 0;
+    }
+  }
+  .search_form{
+    @include dotBg;
+    padding: 40px 0;
+    #serchForm, #serchForm2{
+      @include basicForm;
+    }
+    .search_ttl{
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 1px;
+      color: $basicRed;
+      margin-bottom: 30px;
+    }
+
+    .form_wrap{
+      width: 900px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+      .search_word{
+        width: 100%;
+      }
+      .submit_wrap{
+        position: absolute !important;
+        top:0;
+        bottom:0;
+        right:0;
+        margin: auto;
+        &::before{
+          display: block;
+          content: "";
+          position: absolute;
+          z-index: 10;
+          width: 30px;
+          height: 30px;
+          top:0;
+          bottom:0;
+          left:10px;
+          margin: auto;
+          @include bgSet;
+          background-image: url(../img/common/search.png);
+          background-size: 20px;
+        }
+        .submit_word{
+          height:40px;
+          @include blueGrad;
+          border: 0;
+          box-shadow: 0;
+          border-radius: 0 5px 5px 0;
+          padding: 0 20px 0 45px;
+          color: #fff;
+          font-weight: bold;
+          transition: opacity 1s;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

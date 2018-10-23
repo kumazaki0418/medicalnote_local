@@ -74,6 +74,10 @@
       .img_wrap{
         width: 230px;
         margin-right: 20px;
+        a{
+          display: block;
+          @include hover;
+        }
       }
       .txt_wrap{
         width: calc(100% - 250px);

@@ -253,12 +253,16 @@ $basicGreen: #00381f;
 @import 'common.scss';
 /*ユーザー側メインビジュアル部分*/
 @import 'main.scss';
+/*ワード検索部分*/
+@import 'searchForm.scss';
 /*フォーム部分共通*/
 @import 'form.scss';
 /*パンくず部分*/
 @import 'bread.scss';
 /*ポップアップ部分*/
 @import 'popup.scss';
+/*トップページ*/
+@import 'index.scss';
 /*医師一覧ページ*/
 @import 'doctor_list.scss';
 /*受診申し込みページ*/

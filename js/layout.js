@@ -357,16 +357,81 @@ $(function() {
 
       $('#searchDoctor').select2({
         ajax: {
-          url: 'https://api.github.com/search/repositories',
+          url: 'https://raw.githubusercontent.com/kumazaki0418/medicalnote_local/master/sample_data/suggest_diseases.json',
           dataType: 'json'
         }
       });
       $('#serchForm').select2({
         ajax: {
-          url: 'https://www.json-generator.com/api/json/get/caQuwKJtrC?indent=2',
+          url: 'https://raw.githubusercontent.com/kumazaki0418/medicalnote_local/master/sample_data/suggest_diseases.json',
           dataType: 'json'
         }
       });
+      $('#serchForm2').select2({
+        ajax: {
+          url: 'https://raw.githubusercontent.com/kumazaki0418/medicalnote_local/master/sample_data/suggest_diseases.json',
+          dataType: 'json'
+        }
+      });
+
+
+      // LPのスライダー
+
+      if (document.getElementById('index')) {
+        $('#slickSlider').slick({
+          infinite: true,
+          dots: true,
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: 'calc(50% - 300px)',
+          autoplay: true,
+          responsive: [{
+            breakpoint: 700,
+            settings: {
+              centerPadding: '5%',
+            }
+          }]
+        });
+        (function(b) {
+          b.fn.tile = function(t) {
+            var c, q, o, p, s, n = this.length - 1,
+              a, u;
+            if (!t) {
+              t = this.length
+            }
+            this.each(function() {
+              a = this.style;
+              if (a.removeProperty) {
+                a.removeProperty("height")
+              } else {
+                if (a.removeAttribute) {
+                  a.removeAttribute("height")
+                }
+              }
+            });
+            return this.each(function(d) {
+              p = d % t;
+              if (p == 0) {
+                c = []
+              }
+              q = c[p] = b(this);
+              u = (q.css("box-sizing") == "border-box") ? b.fn.outerHeight : b.fn.innerHeight;
+              s = u.apply(q);
+              if (p == 0 || s > o) {
+                o = s
+              }
+              if (d == n || p == t - 1) {
+                b.each(c, function() {
+                  u.apply(this, [o])
+                })
+              }
+            })
+          }
+        })(jQuery);
+        $(window).on("load resize", function() {
+          $("#slickSlider .item_box").tile();
+        })
+      }
 
 
 });

@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="https://www.komons-japan.com">
+	<title>Doctor Match | 診てもらいたい医師を探せる、受診を希望できる、新しいマッチングサービス</title>
+	<meta name="description" content="aaaa">
+	<link href="img/common/favicon.png" rel="apple-touch-icon" sizes="180x180">
+	<link rel="shortcut icon" href="img/common/favicon.png">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="aaaa">
+	<meta property="og:url" content="https://www.komons-japan.com">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="医師一覧 | Doctor Match">
+	<meta property="og:description" content="aaaa">
+	<meta property="og:url" content="aaaa">
+	<meta property="og:site_name" content="ドクターマッチ">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript" src="js/select2.min.js"></script>
+</head>
+
+<body id="user">
+	<header>
+		<div class="header_inner">
+			<div class="header_logo">
+				<a href="/"></a>
+			</div>
+			<div id="headerNav">
+				<a href="javascript:void(0);"></a>
+			</div>
+		</div>
+		<div id="slideMenu">
+			<div id="slideBg"></div>
+			<div class="contents">
+				<div id="closeButton">
+					<a href="javascript:void(0);"></a>
+				</div>
+				<div class="inner">
+					<div class="form_wrap">
+						<div class="search_word">
+							<select id="searchDoctor"></select>
+							<div class="submit_wrap">
+								<span class="search_icon"></span>
+								<input type="submit">
+							</div>
+						</div>
+					</div>
+					<!-- form_wrap -->
+					<div class="popular_word">
+						<span class="common_ttl">よく検索されているワード</span>
+						<div class="word_list">
+							<a href="aaaa">麻疹<span class="num">7</span></a>
+							<a href="aaaa">手足口病<span class="num">12</span></a>
+							<a href="aaaa">帯状疱疹<span class="num">9</span></a>
+							<a href="aaaa">うつ病<span class="num">5</span></a>
+							<a href="aaaa">子宮筋腫<span class="num">4</span></a>
+							<a href="aaaa">逆流性食道炎<span class="num">10</span></a>
+							<a href="aaaa">梅毒<span class="num">6</span></a>
+							<a href="aaaa">ギラン・バレー症候群<span class="num">6</span></a>
+							<a href="aaaa">大腸がん<span class="num">6</span></a>
+							<a href="aaaa">認知症<span class="num">6</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<article id="index">
+		<section id="bread">
+			<div class="inner">
+				<div class="step">
+					<ul>
+						<li class="step01"><span>1 疾患名を入力し、医師を検索</span></li>
+						<li class="step02"><span>2 検索結果より、受診希望の医師を選択</span></li>
+						<li class="step03"><span>3 情報を入力し、マッチング結果を待つ</span></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- bread -->
+		<section id="indexMain" style="background-image:url(img/index/main.jpg);">
+			<div class="fill"></div>
+			<div class="main_content">
+				<h1 class="main_ttl">診てもらいたい医師を探せる、受診を希望できる、新しいマッチングサービス</h1>
+				<div class="service_logo">
+					<img src="img/index/main_logo.png">
+				</div>
+			</div>
+			<!-- main_content -->
+		</section>
+		<section id="searchSection">
+			<div class="search_form">
+				<h2 class="search_ttl">疾患名を入れるだけで、すぐにあなたに合った医師が見つかります。</h2>
+				<form action=“aaaa” method="post">
+					<div class="form_wrap">
+						<select id="serchForm"></select>
+						<div class="submit_wrap">
+							<input type="submit" value="医師を探してみる" class="submit_word">
+						</div>
+					</div>
+				</form>
+			</div><!-- search_form -->
+		</section>
+		<!-- searchForm -->
+		<section id="about" class="index_section">
+			<div class="index_ttl align_right">
+				<h3 class="ttl_en"><span>ABOUT DOCTOR MATCH</span></h3>
+				<h2 class="ttl_ja"><span>Doctor Matchとは？</span></h2>
+			</div>
+			<div class="content_wrap">
+				<div class="img_wrap"></div>
+				<div class="txt_wrap">
+					<h3 class="common_ttl">疾患の情報を入力するだけで、医師選びを代行致します。</h3>
+					<p class="plain_txt"><span>「紹介状は書きますので、ご希望の治療先を探してみてください」と言われてお困りではありませんか？</span><span>治療法について詳しく調べるにも時間がかかり、更には病院の情報も読んだだけではわかりにくいですよね。</span><span>Doctor Match（仮）は、診断を受けた病名を入力いただくだけで、その疾患を専門とする医師をピックアップし、直接受診希望をお出しいただくことが可能です。</span><span>医師があなたの記載事項を確認し、不足の情報あれば追加の質問を出したり、受診の際の手続きをご案内します。</span></p>
+				</div>
+			</div>
+		</section>
+		<!-- about -->
+		<section id="support" class="index_section">
+			<div class="index_ttl align_right">
+				<h3 class="ttl_en"><span>SUPPORT TEAM</span></h3>
+				<h2 class="ttl_ja"><span>医師のサポート体制</span></h2>
+			</div>
+			<div class="inner">
+				<h3 class="common_ttl">高邦会グループ協力の下、オンライン経由の質の高い医療へのアクセスが実現</h3>
+				<p class="plain_txt"><span>医療・教育・福祉の三事業を主軸に全国展開を行う「国際医療福祉大学・高邦会グループ」に所属する臨床経験豊富な医師のバックアップにより、オンライン上からの質の高い医療へのアクセスが可能となりました。</span><span>東京エリア・三田病院、山王病院の2病院及び、九州エリアの福岡山王病院より、あなたのケースに合った医師とのマッチングを実現いたします。</span></p>
+			</div>
+			<div id="slickSlider" class="slick-slider">
+				<div class="item_box slick-slide">
+					<div class="img_wrap">
+						<img src="img/index/hos01.jpg">
+					</div>
+					<div class="txt_wrap">国際医療福祉大学山王病院</div>
+				</div>
+				<!-- item_box-->
+				<div class="item_box slick-slide">
+					<div class="img_wrap">
+						<img src="img/index/hos02.jpg">
+					</div>
+					<div class="txt_wrap">福岡山王病院</div>
+				</div>
+				<!-- item_box-->
+				<div class="item_box slick-slide">
+					<div class="img_wrap">
+						<img src="img/index/hos03.jpg">
+					</div>
+					<div class="txt_wrap">国際医療福祉大学三田病院</div>
+				</div>
+				<!-- item_box-->
+			</div>
+			<!-- slickSlider -->
+		</section>
+		<!-- support -->
+		<section id="flow" class="index_section">
+			<div class="index_ttl align_right">
+				<h3 class="ttl_en"><span>FLOW OF SERVICE</span></h3>
+				<h2 class="ttl_ja"><span>ご利用は簡単な3ステップ</span></h2>
+			</div>
+			<!-- index_ttl -->
+			<div class="inner">
+				<div class="flow_list">
+					<ul>
+						<li>
+							<div class="img_wrap">
+								<img src="img/index/step01.jpg">
+							</div>
+							<div class="txt_wrap">
+								<h3 class="common_ttl"><span>STEP01</span>疾患名を入力し、医師を検索</h3>
+								<p class="flow_txt"><span>検索をフォームより、確定している疾患名をご入力頂くと、当該の疾患の診察が可能な医師が一覧で表示されます。</span><span>一覧の中から、受診を希望荒れる医師をお選び頂きます。</span></p>
+							</div>
+						</li>
+						<li>
+							<div class="img_wrap">
+								<img src="img/index/step02.jpg">
+							</div>
+							<div class="txt_wrap">
+								<h3 class="common_ttl"><span>STEP02</span>ご自身の情報・疾患の詳細を入力</h3>
+								<p class="flow_txt"><span>医師に対してご自身の情報、病状、診断を受けるまでの経緯などをご記入いただきます。</span><span>こちらの記載が充実しているほど、医師の方は判断が容易になりますので、医師とのマッチング可能性が高まります。</span></p>
+							</div>
+						</li>
+						<li>
+							<div class="img_wrap">
+								<img src="img/index/step03.jpg">
+							</div>
+							<div class="txt_wrap">
+								<h3 class="common_ttl"><span>STEP03</span>疾患名を入力し、医師を検索</h3>
+								<p class="flow_txt"><span>STEP2で入力頂いた情報を元に、Mediacal Noteに登録済みの医師の中からあなたのケースに適した医師を選出し、受診を依頼します。</span><span>医師から受診希望の了承があればMedicalNoteが受診までのお手続きをご案内させていただきます。</span></p>
+							</div>
+						</li>
+				</div>
+			</div>
+		</section>
+		<!-- flow -->
+		<section id="customer" class="index_section">
+			<div class="main_wrap">
+				<div class="index_ttl align_right">
+					<h3 class="ttl_en"><span>CUSTOMER SUPPORT</span></h3>
+					<h2 class="ttl_ja"><span>カスタマーサポート</span></h2>
+				</div>
+				<!-- index_ttl -->
+				<div class="img_wrap">
+					<div class="fill"></div>
+				</div>
+			</div>
+			<!-- main_wrap -->
+			<div class="inner">
+				<h3 class="common_ttl"><span>が、豊富なデータベースとノウハウで受診をサポートします</span></h3>
+				<div class="txt_wrap">
+					<div class="support_txt">
+						<span>医療系メディア運営の実績で構築された、医療業界に関する豊富なデータベースとノウハウによるサポート。</span>
+					</div>
+					<div class="support_txt">
+						<span>本サービスにて医師とマッチングした方に、MedicalNoteの「医療相談サービス(月額432円)」を無料でご提供。</span>
+					</div>
+					<div class="support_summary">
+						<p class="txt">診断をしてくれている医師にへの紹介状の書き方や受診までの準備、そして診断を受ける病気に関する調査など、受診に関する不安や疑問点についてのご相談にも対応いたします。</p>
+					</div>
+				</div>
+				<!-- txt_wrap -->
+			</div>
+			<!-- inner -->
+		</section>
+		<!-- customer -->
+		<section id="seachSection2">
+			<div class="txt_upper">
+				<h2 class="ttl"><span>まずは、下記フォームよりサービスを体験してみて下さい。</span><span>疾患名を入れるだけで、すぐにあなたに合った医師が見つかります。</span></h2>
+			</div>
+			<div class="search_form">
+				<form action="“aaaa”" method="post">
+					<div class="form_wrap">
+						<select id="serchForm2"></select>
+						<div class="submit_wrap">
+							<input type="submit" value="医師を探してみる" class="submit_word">
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- search_form -->
+			<div class="tag_wrap inner">
+				<h3 class="common_ttl"><span>下記のような疾患名がよく検索されています</span></h3>
+				<div id="tagList" class="tag_list">
+					<a href="aaaa">麻疹<span class="num">7</span></a>
+					<a href="aaaa">手足口病<span class="num">12</span></a>
+					<a href="aaaa">帯状疱疹<span class="num">9</span></a>
+					<a href="aaaa">うつ病<span class="num">5</span></a>
+					<a href="aaaa">子宮筋腫<span class="num">4</span></a>
+					<a href="aaaa">逆流性食道炎<span class="num">10</span></a>
+					<a href="aaaa">梅毒<span class="num">6</span></a>
+					<a href="aaaa">ギラン・バレー症候群<span class="num">6</span></a>
+					<a href="aaaa">大腸がん<span class="num">6</span></a>
+					<a href="aaaa">認知症<span class="num">6</span></a>
+				</div>
+			</div>
+		</section>
+		<link rel="stylesheet" href="slick/slick.css">
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+	</article>
+	<footer>
+		<div class="footer_inner">
+			<div class="footer_logo">
+				<img src="img/common/footer_logo.png">
+			</div>
+			<div class="footer_nav">
+				<nav>
+					<ul>
+						<li>
+							<a href="/"><span>Service</span>サービスについて</a>
+						</li>
+						<li>
+							<a href="aaaa"><span>Terms</span>ご利用規約</a>
+						</li>
+						<li>
+							<a href="/"><span>Policy</span>プライバシーポリシー</a>
+						</li>
+						<li>
+							<a href="/"><span>Contact</span>お問い合わせ</a>
+						</li>
+						<li>
+							<a href="/"><span>Company</span>運営会社</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer_copy">
+				<p>©Medical Note, Inc. All Rights Reserved.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
