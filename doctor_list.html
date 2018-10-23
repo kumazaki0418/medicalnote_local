@@ -88,7 +88,7 @@
 			</div>
 		</div><!-- main_content -->
 	</section>
-	<section id="searchForm">
+	<section id="searchSection">
 		<div class="result">
 			<span class="txt">検索結果：</span><span id="totalNum">1</span><span class="txt">名の医師がヒットしました。</span>
 		</div>
@@ -137,7 +137,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" checked="checked" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" checked="checked" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -158,7 +158,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" checked="checked" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" checked="checked" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -179,7 +179,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -200,7 +200,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -221,7 +221,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -242,7 +242,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -263,7 +263,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -284,7 +284,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -305,7 +305,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -326,7 +326,7 @@
 						<div class="form_wrap">
 							<span class="form_radio">
 								<span class="radio_item first">
-									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label">受診申込み済</span>
+									<label class="selected"><input type="checkbox" name="doctor" value="" class="checkbox"><span class="radio_label"></span>
 									</label>
 								</span>
 							</span>
@@ -350,6 +350,78 @@
 		</div>
 	</form>
 	</section>
+	<div id="popUp">
+		<div id="popBg"></div>
+		<div class="popContents">
+			<div class="doctor_profile">
+				<div class="profile_wrap">
+					<div class="doctor_icon" style="background-image: url(img/common/doctor.png)">
+					</div>
+					<div class="profile_txt">
+						<div class="hospital">国際医療福祉大学三田病院</div>
+						<div class="name"><span>宮崎 勝</span></div>
+						<div class="area tokyo"></div>
+					</div><!-- profile_txt -->
+				</div><!-- profile_wrap -->
+			<a id="popClose" href="javascript:void(0);"></a>
+			<a class="relation" href="aaaa">詳細記事あり<span class="arrow"></span></a>
+		</div><!-- doctor_profile -->
+			<div class="pop_text">
+				<div class="pop_inner">
+					<div class="pop_left">
+						<div class="pop_content_wrap">
+						<h3 class="common_ttl">受診可能な疾患</h3>
+						<div class="tag_list">
+						<span>麻疹</span>
+						<span>手足口病</span>
+						<span>帯状疱疹</span>
+						<span>うつ病</span>
+						<span>子宮筋腫</span>
+						<span>逆流性食道炎</span>
+						<span>梅毒</span>
+						<span>ギラン・バレー症候群</span>
+						<span>大腸がん</span>
+						<span>認知症</span>
+						</div>
+					</div><!-- pop_content_wrap -->
+					<div class="pop_content_wrap">
+						<h3 class="common_ttl">専門分野</h3>
+						<div class="content_txt">
+							<p>発達精神医学<br>児童青年精神医学</p>
+						</div>
+					</div><!-- pop_content_wrap -->
+					<div class="pop_content_wrap">
+						<h3 class="common_ttl">紹介</h3>
+						<div class="content_txt">
+							<p>発達障害の早期発見、早期介入から成人期の支援まで、あらゆるライフステージにわたる臨床経験をもつ発達障害の専門家。知的障害を伴わない自閉症が稀ならず存在することを世界で初めて実証した疫学調査は国際的にも評価を受けている。現在は、大学を拠点として児童青年精神科医の育成と臨床研究体制の整備に取り組んでいる。</p>
+						</div>
+					</div><!-- pop_content_wrap -->
+					<div class="pop_content_wrap">
+						<h3 class="common_ttl">略歴</h3>
+						<div class="content_txt">
+							<p>1988年　東京大学医学部卒業<br>1988年　東京大学医学部附属病院精神神経科<br>1990年　国立精神・神経センター武蔵病院精神科<br>1991年　横浜市総合リハビリテーションセンター発達精神科<br>2009年　横浜市総合リハビリテーションセンター発達支援部担当部長<br>　　　　　兼 横浜市西部地域療育センター長<br>2011年　山梨県立こころの発達総合支援センター所長<br>2014年　信州大学医学部附属病院子どものこころ診療部 診療教授<br>2018年4月　信州大学医学部子どものこころの発達医学教室 教授</p>
+						</div>
+					</div><!-- pop_content_wrap -->
+				</div><!-- pop_left -->
+				<div class="pop_right">
+					<div class="pop_content_wrap">
+						<h3 class="common_ttl">所属学会・資格・役職など</h3>
+						<div class="content_txt">
+							<p class="fs14 mgb15">医学博士<br>精神保健指定医<br>日本児童青年精神医学会代議員<br>日本発達障害学会評議員<br>日本自閉症スペクトラム学会評議員<br>日本自閉症協会理事<br>全国情緒障害教育研究会顧問<br>JDDネットワークながの理事<br>特定非営利活動法人ネスト・ジャパン代表理事</p>
+						</div>
+					</div><!-- pop_content_wrap -->
+					<div class="pop_content_wrap">
+						<h3 class="common_ttl">受賞・著書・論文など</h3>
+						<div class="content_txt">
+							<p>【著書】<br>自閉症スペクトラム－10人に1人が抱える「生きづらさ」の正体－、ソフトバンク新書、2013<br>子どもから大人への発達精神医学－自閉症スペクトラム・ADHD・知的障害の基礎と実践－、金剛出版、2013</p>
+							<p>【論文】<br>Honda H, Shimizu Y, Misumi K, Niimi M, and Ohashi Y: Cumulative incidence and prevalence of childhood autism in children in Japan. British Journal of Psychiatry 169(2): 228-235, 1996.<br>Honda H, Shimizu Y, Imai M, and Nitto Y: Cumulative incidence of childhood autism: a total population study of better accuracy and precision. Developmental Medicine and Child Neurology 47(1): 10-18, 2005.<br>Honda H, Shimizu Y, and Rutter M: No effect of MMR withdrawal on the incidence of autism: a total population study. Journal of Child Psychology and Psychiatry 46(6): 572-579, 2005.<br>Honda H, Shimizu Y, Nitto Y, Imai M, Ozawa T, Iwasa M, Shiga K, and Hira T: Extraction and Refinement Strategy for detection of autism in 18-month-olds: a guarantee of higher sensitivity and specificity in the process of mass screening. Journal of Child Psychology and Psychiatry, 50(8): 972-981, 2009.<br>本田秀夫：発達障害の乳幼児期における親支援－気づきから診断の告知まで－　家族療法研究 29(2): 109-114, 2012<br>本田秀夫：職場におけるおとなのADHDの人との付き合い方－周囲の理解と本人の能力活用のために－　精神科治療学 28(3): 345-349, 2013<br>本田秀夫：発達障害の早期支援。精神療法 40(2): 299-307, 2014<br>本田秀夫：成人の発達障害－類型概念，鑑別診断および対応－　精神神経学雑誌 116(6): 513-518, 2014</p>
+						</div>
+					</div><!-- pop_content_wrap -->
+				</div><!-- pop_right -->
+			</div><!-- pop_inner -->
+			</div><!-- pop_text -->
+		</div>
+	</div>
 </article>
 <footer>
 	<div class="footer_inner">

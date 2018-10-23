@@ -87,6 +87,12 @@
 								color: $basicBlue01;
 								margin: 0;
 								transition: color .5s;
+								.radio_label{
+									&::after{
+										display: inline-block;
+										content: "選択済み";
+									}
+								}
 							}
 						}
 						.detail_button{
@@ -121,6 +127,12 @@
 								justify-content: center;
 								label{
 									color: $basicBlack03;
+									.radio_label{
+										&::after{
+											display: inline-block;
+											content: "未選択";
+										}
+									}
 								}
 							}
 							.detail_button{

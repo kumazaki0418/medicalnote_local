@@ -158,12 +158,17 @@ $(function() {
         var menuBg = $('#popBg');
         var popState = 0;
         var popContent = [];
+        var popButton = [];
         var popTitle = [];
 
         function popMenuEdit(e){
-          $('.pop_item').css({'display': 'none'});
-          $('.' + popContent[e]).css({'display': 'block'});
-          $('#itemName').text(popTitle[e]);
+          if (document.getElementById('apply')) {
+            $('.pop_item').css({'display': 'none'});
+            $('.' + popContent[e]).css({'display': 'block'});
+            $('#itemName').text(popTitle[e]);
+          }else if (document.getElementById('doctorList')) {
+            
+          }
           popMenuShift();
         }
 
@@ -190,6 +195,19 @@ $(function() {
               });
             });
           }
+
+          if (document.getElementById('doctorList')) {
+            $("#doctors").each(function(index) {
+              console.log(index);
+              popButton[index] = $(this).find('li a');
+              popButton[index].on({
+                'click': function() {
+                  popMenuEdit(index);
+                }
+              });
+            });
+          }
+
           closeBtn.on({
             'click': function() {
               popMenuShift();
@@ -340,8 +358,12 @@ $(function() {
           });
           tokyo.change(function() {
             $('.tokyo').each(function(index) {
-              console.log(index);
-              $(this).prop('checked', false);
+              $(this).find('input').click();
+            });
+          });
+          fukuoka.change(function() {
+            $('.fukuoka').each(function(index) {
+              $(this).find('input').click();
             });
           });
         }
