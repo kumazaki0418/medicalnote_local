@@ -2466,7 +2466,7 @@ form input[type="button"] {
             background-image: url(../img/common/arrow.png);
             background-size: 70px;
             width: 70px;
-            height: 10px;
+            height: 12px;
             -webkit-transition: right .5s;
             -o-transition: right .5s;
             transition: right .5s; }
@@ -2669,7 +2669,7 @@ form input[type="button"] {
             background-image: url(../img/common/arrow.png);
             background-size: 70px;
             width: 70px;
-            height: 10px;
+            height: 12px;
             -webkit-transition: right .5s;
             -o-transition: right .5s;
             transition: right .5s; }
@@ -2853,3 +2853,121 @@ form input[type="button"] {
       padding-bottom: 30px;
       margin-bottom: 30px;
       border-bottom: 1px dotted #aaa; }
+
+/*医師側画面共通*/
+#doctor #bread .inner .bread_txt {
+  line-height: 45px;
+  font-size: 18px;
+  letter-spacing: 1px; }
+
+#doctor section .bg_wrap {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+  border: solid 1px #d8d8d8;
+  background-color: #f4f4f4; }
+  @media screen and (max-width: 1150px) {
+    #doctor section .bg_wrap {
+      max-width: 750px; } }
+  @media screen and (max-width: 750px) {
+    #doctor section .bg_wrap {
+      width: 84%; } }
+
+/*医師側ログイン画面*/
+#doctorLogin #loginForm {
+  padding: 40px 0; }
+  #doctorLogin #loginForm .bg_wrap .form_wrap {
+    margin-bottom: 30px; }
+  #doctorLogin #loginForm .bg_wrap #submitWrap .form_wrap {
+    text-align: center;
+    margin-bottom: 30px; }
+    #doctorLogin #loginForm .bg_wrap #submitWrap .form_wrap .form_radio {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      #doctorLogin #loginForm .bg_wrap #submitWrap .form_wrap .form_radio .radio_item a {
+        display: inline-block;
+        padding-right: 0.4em;
+        color: #068acc;
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s; }
+        #doctorLogin #loginForm .bg_wrap #submitWrap .form_wrap .form_radio .radio_item a:hover {
+          opacity: 0.7; }
+  #doctorLogin #loginForm .bg_wrap #submitWrap .submit {
+    position: relative; }
+    #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap {
+      width: 800px;
+      margin: 0 auto;
+      position: relative; }
+      #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap .submit_label {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 15px 0;
+        border-radius: 100px;
+        background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+        background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+        background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+        text-align: center;
+        display: inline-block;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #fff;
+        pointer-events: none; }
+        #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap .submit_label span.arrow {
+          position: relative;
+          display: inline-block;
+          padding-right: 100px; }
+          #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap .submit_label span.arrow::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../img/common/arrow.png);
+            background-size: 70px;
+            width: 70px;
+            height: 12px;
+            -webkit-transition: right .5s;
+            -o-transition: right .5s;
+            transition: right .5s; }
+      #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap input[type="submit"] {
+        opacity: 0;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto; }
+      #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap:hover .submit_label span.arrow::after {
+        right: -15px; }
+      #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap .submit_label {
+        -webkit-transition: background 0.5s, opacity 0.5s;
+        -o-transition: background 0.5s, opacity 0.5s;
+        transition: background 0.5s, opacity 0.5s; }
+      #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap.disable {
+        pointer-events: none; }
+        #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap.disable .submit_label {
+          opacity: 0.7;
+          background: #aaa; }

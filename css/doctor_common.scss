@@ -1,0 +1,22 @@
+#doctor{
+  #bread {
+  	.inner {
+      .bread_txt{
+        line-height: 45px;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+  	}
+  }
+  section{
+    .bg_wrap{
+      @include waku;
+      box-sizing: border-box;
+      padding: 25px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      border: solid 1px #d8d8d8;
+      background-color: #f4f4f4;
+    }
+  }
+}

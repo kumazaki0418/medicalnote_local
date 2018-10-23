@@ -1,0 +1,52 @@
+#doctorLogin {
+  #loginForm {
+    padding: 40px 0;
+
+    .bg_wrap {
+      .form_wrap {
+        margin-bottom: 30px;
+      }
+
+      #submitWrap {
+        .form_wrap {
+          text-align: center;
+          margin-bottom: 30px;
+
+          .form_radio {
+            @include flexSet;
+            justify-content: center;
+
+            .radio_item {
+              a {
+                display: inline-block;
+                padding-right: 0.4em;
+                color: #068acc;
+                @include hover;
+              }
+            }
+          }
+        }
+
+        .submit {
+          position: relative;
+
+          .submit_wrap {
+            @include submitNext;
+
+            .submit_label {
+              transition: background 0.5s, opacity 0.5s;
+            }
+
+            &.disable {
+              pointer-events: none;
+              .submit_label {
+                opacity: 0.7;
+                background: #aaa;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

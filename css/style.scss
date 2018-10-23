@@ -97,7 +97,7 @@ $basicGreen: #00381f;
           background-image: url(../img/common/arrow.png);
           background-size: 70px;
           width: 70px;
-          height: 10px;
+          height: 12px;
           transition: right .5s;
         }
       }
@@ -269,3 +269,7 @@ $basicGreen: #00381f;
 @import 'apply_section.scss';
 /*受診申し込み確認ページ*/
 @import 'apply_confirm.scss';
+/*医師側画面共通*/
+@import 'doctor_common.scss';
+/*医師側ログイン画面*/
+@import 'doctor_login.scss';

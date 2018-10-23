@@ -167,7 +167,7 @@ $(function() {
             $('.' + popContent[e]).css({'display': 'block'});
             $('#itemName').text(popTitle[e]);
           }else if (document.getElementById('doctorList')) {
-            
+
           }
           popMenuShift();
         }
@@ -454,6 +454,45 @@ $(function() {
           $("#slickSlider .item_box").tile();
         })
       }
+
+
+      //医師側ログイン画面の利用規約同意制御
+
+      function agreePolicy(){
+        var submitButton = $('#submitButton');
+        var submitWrap = $('.submit_wrap');
+        var agreeButton = $('#agree');
+        var agreeState = 0;
+
+        function submitPermit(){
+          if(agreeState == 0){
+            submitButton.attr('disabled', false);
+            submitWrap.removeClass('disable');
+            agreeState = 1;
+          }else{
+            submitButton.attr('disabled', true);
+            submitWrap.addClass('disable');
+            agreeState = 0;
+          }
+        }
+
+        function init(){
+          submitButton.attr('disabled', true);
+          submitWrap.addClass('disable');
+          agreeButton.change(function() {
+            submitPermit();
+          });
+        }
+
+        init();
+
+      }
+
+      if (document.getElementById('loginFirst')) {
+        agreePolicy();
+      }
+
+
 
 
 });
