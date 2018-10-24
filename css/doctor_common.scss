@@ -6,6 +6,40 @@
         font-size: 18px;
         letter-spacing: 1px;
       }
+      .login_info{
+        line-height: 45px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        .houjin{
+          position: relative;
+          padding-right: 15px;
+          margin-right: 10px;
+          &::before{
+            display: inline-block;
+            content: "医療法人:";
+            padding-right: 0.3em;
+          }
+          &::after{
+            display: block;
+            content: "";
+            position: absolute;
+            right: 0;
+            top:0;
+            bottom: 0;
+            margin: auto;
+            width: 1px;
+            height: 20px;
+            background-color: #aaaaaa;
+          }
+        }
+        .hospotal{
+          &::before{
+            display: inline-block;
+            content: "医療機関名:";
+            padding-right: 0.3em;
+          }
+        }
+      }
   	}
   }
   section{
@@ -18,5 +52,8 @@
       border: solid 1px #d8d8d8;
       background-color: #f4f4f4;
     }
+  }
+  footer{
+    background: #f4f4f4;
   }
 }

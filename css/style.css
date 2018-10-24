@@ -2860,6 +2860,34 @@ form input[type="button"] {
   font-size: 18px;
   letter-spacing: 1px; }
 
+#doctor #bread .inner .login_info {
+  line-height: 45px;
+  font-size: 14px;
+  letter-spacing: 1px; }
+  #doctor #bread .inner .login_info .houjin {
+    position: relative;
+    padding-right: 15px;
+    margin-right: 10px; }
+    #doctor #bread .inner .login_info .houjin::before {
+      display: inline-block;
+      content: "医療法人:";
+      padding-right: 0.3em; }
+    #doctor #bread .inner .login_info .houjin::after {
+      display: block;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 1px;
+      height: 20px;
+      background-color: #aaaaaa; }
+  #doctor #bread .inner .login_info .hospotal::before {
+    display: inline-block;
+    content: "医療機関名:";
+    padding-right: 0.3em; }
+
 #doctor section .bg_wrap {
   max-width: 1080px;
   margin-left: auto;
@@ -2878,6 +2906,9 @@ form input[type="button"] {
   @media screen and (max-width: 750px) {
     #doctor section .bg_wrap {
       width: 84%; } }
+
+#doctor footer {
+  background: #f4f4f4; }
 
 /*医師側ログイン画面*/
 #doctorLogin #loginForm {
@@ -2971,3 +3002,312 @@ form input[type="button"] {
         #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap.disable .submit_label {
           opacity: 0.7;
           background: #aaa; }
+
+/*医師側マッチング一覧画面*/
+#matchingList #filter {
+  padding: 50px 0; }
+  #matchingList #filter label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1;
+    margin-bottom: 10px; }
+  #matchingList #filter .filter_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 15px auto 30px; }
+    #matchingList #filter .filter_wrap .filter_item {
+      width: 320px;
+      margin-right: 30px; }
+      #matchingList #filter .filter_wrap .filter_item.last {
+        margin-right: 0; }
+      #matchingList #filter .filter_wrap .filter_item select {
+        width: 100%;
+        font-size: 14px;
+        color: #666;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 7px 15px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        border: solid 1px #d8d8d8;
+        background-color: #ffffff;
+        background-image: url(../img/common/select_caret.png);
+        background-size: 45px;
+        background-position: center right;
+        background-repeat: no-repeat; }
+        #matchingList #filter .filter_wrap .filter_item select:focus {
+          outline: none;
+          border: 1px solid #79e0f2; }
+  #matchingList #filter .filter_date input[type="date"] {
+    display: inline-block;
+    width: 200px;
+    position: relative;
+    font-size: 14px;
+    color: #666;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    border: solid 1px #d8d8d8;
+    background-color: #ffffff;
+    background-image: url(../img/common/select_caret.png);
+    background-size: 45px;
+    background-position: center right;
+    background-repeat: no-repeat; }
+    #matchingList #filter .filter_date input[type="date"]#start {
+      margin-right: 0.5em; }
+    #matchingList #filter .filter_date input[type="date"]#end {
+      margin-left: 0.5em; }
+    #matchingList #filter .filter_date input[type="date"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      appearance: none; }
+    #matchingList #filter .filter_date input[type="date"]::-webkit-clear-button {
+      -webkit-appearance: none;
+      appearance: none; }
+    #matchingList #filter .filter_date input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      opacity: 0;
+      right: 0px;
+      top: 0px;
+      padding: 0;
+      width: 36px;
+      height: 36px;
+      color: transparent;
+      cursor: pointer; }
+
+#matchingList #list {
+  padding-bottom: 50px; }
+  #matchingList #list .list_num {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px; }
+  #matchingList #list .list_table {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 15px auto;
+    background: #fff;
+    padding: 0px;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5); }
+    #matchingList #list .list_table .table_contents {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #matchingList #list .list_table .table_contents.mitaiou {
+        background: rgba(244, 218, 218, 0.5); }
+      #matchingList #list .list_table .table_contents.monshin {
+        background: rgba(210, 244, 149, 0.2); }
+      #matchingList #list .list_table .table_contents.tyousei {
+        background: #fff; }
+      #matchingList #list .list_table .table_contents.ng {
+        background: rgba(241, 241, 241, 0.6); }
+      #matchingList #list .list_table .table_contents.completed {
+        background-color: #d2eff7; }
+      #matchingList #list .list_table .table_contents .checkbox {
+        width: 40px; }
+      #matchingList #list .list_table .table_contents .date {
+        width: 125px; }
+      #matchingList #list .list_table .table_contents .disease {
+        width: 200px; }
+      #matchingList #list .list_table .table_contents .assign {
+        width: 320px; }
+      #matchingList #list .list_table .table_contents .status {
+        width: 170px; }
+      #matchingList #list .list_table .table_contents .edit {
+        width: 170px;
+        border-right: 0 !important; }
+      #matchingList #list .list_table .table_contents.table_header div {
+        text-align: center;
+        font-size: 14px;
+        padding: 15px 0;
+        border-right: 1px solid #ccc;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+      #matchingList #list .list_table .table_contents.table_row {
+        border-top: 1px solid #ccc; }
+        #matchingList #list .list_table .table_contents.table_row .checkbox, #matchingList #list .list_table .table_contents.table_row .date, #matchingList #list .list_table .table_contents.table_row .disease, #matchingList #list .list_table .table_contents.table_row .assign, #matchingList #list .list_table .table_contents.table_row .status, #matchingList #list .list_table .table_contents.table_row .edit {
+          font-size: 14px;
+          line-height: 1.6;
+          padding: 15px 10px;
+          border-right: 1px dotted #d8d8d8;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+        #matchingList #list .list_table .table_contents.table_row .assign {
+          padding: 0; }
+          #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 15px 10px;
+            border-bottom: 1px dotted #d8d8d8; }
+            #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li:last-child {
+              border-bottom: 0; }
+            #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li .name {
+              width: 150px;
+              margin-right: 20px; }
+            #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li .form_radio {
+              width: calc(100% - 170px); }
+              #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li .form_radio .radio_item {
+                width: 100%;
+                display: block;
+                margin-bottom: 10px; }
+        #matchingList #list .list_table .table_contents.table_row .status select {
+          width: 100%;
+          font-size: 12px;
+          color: #666;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          padding: 5px 10px;
+          border-radius: 5px;
+          -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          border: solid 1px #d8d8d8;
+          background-color: #ffffff;
+          background-image: url(../img/common/select_caret2.png);
+          background-size: 38px;
+          background-position: center right;
+          background-repeat: no-repeat; }
+          #matchingList #list .list_table .table_contents.table_row .status select:focus {
+            outline: none;
+            border: 1px solid #4cbee0; }
+        #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li {
+            width: 70px;
+            margin-right: 10px; }
+            #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li:last-child {
+              margin-right: 0; }
+            #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"] {
+              width: 100%;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              display: block;
+              font-size: 12px;
+              padding: 7px 15px;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              color: #fff;
+              border-radius: 50px;
+              -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+              box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+              border: solid 1px #ffffff;
+              background-color: #4cbee0;
+              -webkit-transition: opacity .5s;
+              -o-transition: opacity .5s;
+              transition: opacity .5s; }
+              #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"]:hover {
+                opacity: 0.7; }
+              #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"]:focus {
+                outline: none; }
+            #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li .detail {
+              width: 100%;
+              text-align: center;
+              display: block;
+              font-size: 12px;
+              line-height: 1;
+              padding: 10px 15px;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              color: #fff;
+              border-radius: 50px;
+              -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+              box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+              border: solid 1px #ffffff;
+              background-color: #222;
+              -webkit-transition: opacity .5s;
+              -o-transition: opacity .5s;
+              transition: opacity .5s; }
+              #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li .detail:hover {
+                opacity: 0.7; }
+  #matchingList #list .list_lower {
+    text-align: center; }
+    #matchingList #list .list_lower #readMore {
+      display: block;
+      max-width: 800px;
+      margin: 40px auto;
+      color: #fff;
+      font-size: 18px;
+      padding: 15px 0;
+      border-radius: 100px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      background-color: #4cbee0;
+      -webkit-transition: opacity .5s;
+      -o-transition: opacity .5s;
+      transition: opacity .5s; }
+      #matchingList #list .list_lower #readMore:hover {
+        opacity: 0.7; }
+    #matchingList #list .list_lower .submit_wrap {
+      border-radius: 5px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      background: #ffffff;
+      padding: 15px 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      #matchingList #list .list_lower .submit_wrap span {
+        display: block;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-right: 0.5em; }
+      #matchingList #list .list_lower .submit_wrap input[type="submit"] {
+        width: 80px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        font-size: 12px;
+        padding: 7px 15px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #fff;
+        border-radius: 50px;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        border: solid 1px #ffffff;
+        background-color: #4cbee0;
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s; }
+        #matchingList #list .list_lower .submit_wrap input[type="submit"]:hover {
+          opacity: 0.7; }
+        #matchingList #list .list_lower .submit_wrap input[type="submit"]:focus {
+          outline: none; }

@@ -1,0 +1,759 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="https://www.komons-japan.com">
+	<title>受診のお申し込み | Doctor Match</title>
+	<meta name="description" content="aaaa">
+	<link href="img/common/favicon.png" rel="apple-touch-icon" sizes="180x180">
+	<link rel="shortcut icon" href="img/common/favicon.png">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="aaaa">
+	<meta property="og:url" content="https://www.komons-japan.com">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="医師一覧 | Doctor Match">
+	<meta property="og:description" content="aaaa">
+	<meta property="og:url" content="aaaa">
+	<meta property="og:site_name" content="ドクターマッチ">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript" src="js/select2.min.js"></script>
+</head>
+
+<body id="doctor">
+	<header>
+		<div class="header_inner">
+			<div class="header_logo">
+				<a href="/"></a>
+			</div>
+	</header>
+	<article id="matchingList">
+		<section id="bread">
+			<div class="inner">
+				<div class="login_info">
+					<span class="houjin">国際医療福祉大学・高邦会グループ</span>
+					<span class="hospotal">三田病院 </span>
+				</div>
+			</div>
+		</section>
+		<section id="filter">
+			<div class="bg_wrap">
+				<h3 class="common_ttl">受診マッチングリストの絞り込み</h3>
+				<div class="filter_wrap">
+					<div class="filter_item">
+						<label>▼医療機関名で絞り込む</label>
+						<select name="relation" id="relation" class="postform errorInput">
+         		<option class="default" value="" disabled="" selected="">指定なし</option>
+				 		<option value="三田病院">三田病院</option>
+         		<option value="山王病院">山王病院</option>
+         		<option value="福岡山王病院">福岡山王病院</option>
+						</select>
+				</div><!-- filter_item -->
+				<div class="filter_item">
+					<label>▼医師名で絞り込む</label>
+					<select name="relation" id="relation" class="postform errorInput">
+					<option class="default" value="" disabled="" selected="">指定なし</option>
+					<option value="医師A">医師A</option>
+					<option value="医師B">医師B</option>
+					<option value="医師C">医師C</option>
+					<option value="医師D">医師D</option>
+					<option value="医師E">医師E</option>
+					</select>
+			</div><!-- filter_item -->
+			<div class="filter_item last">
+				<label>▼対応ステータスで絞り込む</label>
+				<select name="relation" id="relation" class="postform errorInput">
+				<option class="default" value="" disabled="" selected="">指定なし</option>
+				<option value="未対応">未対応</option>
+				<option value="問診中">問診中</option>
+				<option value="受診調整中">受診調整中</option>
+				<option value="対応完了">対応完了</option>
+				<option value="対応不可">対応不可</option>
+				</select>
+		</div><!-- filter_item -->
+		</div><!-- filter_wrap -->
+		<div class="filter_date">
+			<div class="filter_item date">
+				<label>▼申し込み日時で絞り込み</label>
+				<input type="date" id="start" name="trip" value="" min="2018-01-01" max="2018-12-31"/>
+							<span>-</span>
+				<input type="date" id="end" name="trip" value="" min="2018-01-01" max="2018-12-31"/>
+		</div><!-- filter_item -->
+		</div>
+		</div><!-- bg_wrap -->
+	</section>
+	<section id="list">
+		<div class="bg_wrap">
+			<h3 class="common_ttl">受診マッチングリスト</h3>
+			<div class="list_num">
+				▼ 対象のリスト 35件中 15件を表示中
+			</div>
+			<div class="list_table">
+				<div class="table_header table_contents">
+					<div class="checkbox"></div>
+					<div class="date">申し込み日時</div>
+					<div class="disease">疾患名</div>
+					<div class="assign">医療機関名 / 担当医師名</div>
+					<div class="status">ステータス</div>
+					<div class="edit">編集・詳細</div>
+				</div>
+				<form action="aaaa" method="post">
+				<div class="table_row table_contents mitaiou">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月19日</div>
+					<div class="disease">潰瘍性大腸炎</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">三田病院</div>
+									<div class="form_radio">
+										<span class="radio_item first">
+												<label><input type="checkbox"  name="a" value="医師A" class="checkbox"><span class="radio_label">医師A</span>
+												</label>
+											</span>
+											<span class="radio_item first">
+												<label><input type="checkbox" name="b" value="医師B" class="checkbox"><span class="radio_label">医師B</span>
+												</label>
+											</span>
+							</div><!-- form_radio -->
+								</li>
+								<li>
+									<div class="name">山王病院</div>
+									<div class="form_radio">
+										<span class="radio_item first">
+											<label><input type="checkbox"  name="c" value="医師C" class="checkbox"><span class="radio_label">医師C</span>
+									</label>
+								</span>
+								<span class="radio_item first">
+									<label><input type="checkbox" name="d" value="医師D" class="checkbox"><span class="radio_label">医師D</span>
+									</label>
+								</span>
+							</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応" selected>未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents mitaiou">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月19日</div>
+					<div class="disease">大腸ガン</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">三田病院</div>
+									<div class="form_radio">
+										<span class="radio_item first">
+												<label><input type="checkbox"  name="a02" value="医師A" class="checkbox"><span class="radio_label">医師A</span>
+												</label>
+											</span>
+											<span class="radio_item first">
+												<label><input type="checkbox" name="b02" value="医師B" class="checkbox"><span class="radio_label">医師B</span>
+												</label>
+											</span>
+							</div><!-- form_radio -->
+								</li>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応" selected>未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents monshin">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月18日</div>
+					<div class="disease">腸管出血性大腸菌感染症(O-157)</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">山王病院</div>
+									<div class="form_radio">医師B</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中" selected>問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents monshin">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月17日</div>
+					<div class="disease">大腸ポリープ</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">山王病院</div>
+									<div class="form_radio">医師B<br>医師C</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中" selected>問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents tyousei">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月16日</div>
+					<div class="disease">潰瘍性大腸炎</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">三田病院</div>
+									<div class="form_radio">医師D</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中" selected>受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents tyousei">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月15日</div>
+					<div class="disease">大腸ガン</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">福岡山王病院</div>
+									<div class="form_radio">医師E</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中" selected>受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents ng">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月14日</div>
+					<div class="disease">大腸ポリープ</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">福岡山王病院</div>
+									<div class="form_radio">医師G</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可" selected>対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents tyousei">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月15日</div>
+					<div class="disease">大腸ガン</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">福岡山王病院</div>
+									<div class="form_radio">医師E</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中" selected>受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents completed">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月14日</div>
+					<div class="disease">大腸ポリープ</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">-</div>
+									<div class="form_radio">-</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了" selected>対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents tyousei">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月11日</div>
+					<div class="disease">大腸がん</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+									<li>
+										<div class="name">福岡山王病院</div>
+										<div class="form_radio">医師E</div><!-- form_radio -->
+									</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中" selected>受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents completed">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月8日</div>
+					<div class="disease">大腸がん</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+									<li>
+										<div class="name">福岡山王病院</div>
+										<div class="form_radio">医師E</div><!-- form_radio -->
+									</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可" selected>対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents ng">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月6日</div>
+					<div class="disease">大腸がん</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+								<li>
+									<div class="name">-</div>
+									<div class="form_radio">-</div><!-- form_radio -->
+								</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可" selected>対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents ng">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月6日</div>
+					<div class="disease">大腸がん</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+									<li>
+										<div class="name">-</div>
+										<div class="form_radio">-</div><!-- form_radio -->
+									</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可" selected>対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents ng">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月6日</div>
+					<div class="disease">大腸がん</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+									<li>
+										<div class="name">-</div>
+										<div class="form_radio">-</div><!-- form_radio -->
+									</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了">対応完了</option>
+							<option value="対応不可" selected>対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents completed">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月6日</div>
+					<div class="disease">大腸がん</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+									<li>
+										<div class="name">福岡山王病院</div>
+										<div class="form_radio">医師E</div><!-- form_radio -->
+									</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了" selected>対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			<form action="aaaa" method="post">
+				<div class="table_row table_contents completed">
+					<div class="checkbox form_radio">
+							<label><input type="checkbox" value=""><span class="radio_label"></span>
+							</label>
+					</div>
+					<div class="date">2018年9月6日</div>
+					<div class="disease">大腸がん</div>
+					<div class="assign">
+						<div class="hospital_wrap">
+							<ul>
+									<li>
+										<div class="name">福岡山王病院</div>
+										<div class="form_radio">医師E</div><!-- form_radio -->
+									</li>
+							</ul>
+				</div><!-- hospital_wrap -->
+					</div><!-- assign -->
+					<div class="status">
+						<select name="status" class="status_select">
+							<option value="未対応">未対応</option>
+							<option value="問診中">問診中</option>
+							<option value="受診調整中">受診調整中</option>
+							<option value="対応完了" selected>対応完了</option>
+							<option value="対応不可">対応不可</option>
+						</select>
+					</div>
+					<div class="edit">
+						<div class="button_wrap">
+							<ul>
+								<li><input type="submit" id="submitButton" class="submit" value="更新"></li>
+								<li><a class="detail" href="aaaa">詳細</a>
+						</div>
+					</div>
+				</div><!-- table_row -->
+			</form>
+			</div><!-- list_table -->
+			<div class="list_lower">
+				<a id="readMore">次の15件を表示する ▼</a>
+				<form action="aaaa" method="post">
+				<div class="submit_wrap">
+					<span>選択中の項目のステータスをまとめて</span>
+					<input id="submitAll" type="submit" value="変更">
+				</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+			</div>
+		</section>
+	</article>
+	<footer>
+		<div class="footer_inner">
+			<div class="footer_logo">
+				<img src="img/common/footer_logo.png">
+			</div>
+			<div class="footer_nav">
+				<nav>
+					<ul>
+						<li>
+							<a href="/"><span>Service</span>サービスについて</a>
+						</li>
+						<li>
+							<a href="aaaa"><span>Terms</span>ご利用規約</a>
+						</li>
+						<li>
+							<a href="/"><span>Policy</span>プライバシーポリシー</a>
+						</li>
+						<li>
+							<a href="/"><span>Contact</span>お問い合わせ</a>
+						</li>
+						<li>
+							<a href="/"><span>Company</span>運営会社</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer_copy">
+				<p>©Medical Note, Inc. All Rights Reserved.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
