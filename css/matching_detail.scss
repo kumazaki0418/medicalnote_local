@@ -1,0 +1,242 @@
+#matchingDetail{
+  #detail{
+    padding: 40px 0;
+    .detail_inner{
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      position: relative;
+      min-height: 200px;
+      &::before{
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5px;
+        @include blueGrad;
+        top:0;
+        left:0;
+        right:0;
+        margin: auto;
+      }
+      .detail_ttl{
+        margin-bottom: 20px;
+      }
+      .detail_upper{
+        margin-top: 5px;
+        background: #f1f1f1;
+        padding: 15px 20px;
+        @include flexSet;
+        align-items: center;
+        justify-content: space-between;
+        .profile{
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+        .status{
+          @include flexSet;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          .resister{
+            margin-right: 20px;
+          }
+        }
+      }
+      .detail_middle{
+        padding: 15px 20px;
+        .list_table{
+          border-top: 1px solid #d8d8d8;
+          .table_header{
+            div{
+              border-right: 1px solid #d8d8d8;
+            }
+          }
+        }
+        .submit_wrap{
+          ul{
+            @include flexSet;
+            justify-content: center;
+            margin: 25px auto 0;
+            li{
+              width: 480px;
+              margin-right: 20px;
+              &:last-child{
+                margin-right: 0;
+              }
+              a{
+                display: block;
+                font-size: 18px;
+                letter-spacing: 1px;
+                color: #ffffff;
+                padding: 15px 0;
+                border-radius: 100px;
+                text-align: center;
+                @include hover;
+                &.permit_button{
+                  background: $basicBlue01;
+                }
+                &.denied_button{
+                  background: #aaa;
+                }
+              }
+            }
+          }
+        }
+      }
+      .detail_lower{
+        padding: 15px 20px;
+        .disease_wrap{
+          border-radius: 5px;
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          background-color: #ffffff;
+          overflow: hidden;
+          margin-bottom: 20px;
+          .disease_ttl{
+            font-size: 16px;
+            color: #fff;
+            padding: 10px;
+            background: $basicBlue01;
+          }
+          .disease_txt{
+            padding: 10px;
+            line-height: 1.6;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  #comment{
+    padding-bottom: 40px;
+    .comment_wrap{
+      .comment_item{
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        padding: 25px 20px 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        background-color: #ffffff;
+        &::before{
+          display: block;
+          position: absolute;
+          content: "";
+          top:0;
+          left:0;
+          right:0;
+          margin: auto;
+          width: 100%;
+          height: 5px;
+        }
+        &.medical_note{
+          &::before{
+            background: $basicBlue01;
+          }
+        }
+        &.doctor{
+          &::before{
+            background: $basicRed;
+          }
+        }
+        .delete_button{
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          a{
+            display: inline-block;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+            background-color: #aaaaaa;
+            padding: 7px 15px;
+            border-radius: 30px;
+            @include hover;
+          }
+        }
+        .comment_info{
+          @include flexSet;
+          align-items: center;
+          margin-bottom: 20px;
+          .user_name{
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-right: 20px;
+          }
+          .date{
+            font-size: 12px;
+          }
+        }
+        .comment_txt{
+          border-radius: 5px;
+          padding: 10px;
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          background-color: #f1f1f1;
+          p{
+            font-size: 14px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+    .add_comment{
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      background-color: #ffffff;
+      .ttl{
+        font-size: 16px;
+        color: #fff;
+        padding: 10px 20px;
+        background: #4cbee0;
+      }
+      .form_wrap{
+        padding: 20px 20px 10px;
+        label{
+          display: block;
+          font-weight: bold;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+      }
+      .submit_wrap{
+        padding: 10px 20px 20px;
+        input[type="button"]{
+          width: 400px;
+          padding: 10px 0;
+          text-align: center;
+          color: #fff;
+          font-size: 16px;
+          appearance:none;
+          border-radius: 100px;
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          background-color: #4cbee0;
+          @include hover;
+        }
+      }
+    }
+    .pager{
+      @include waku;
+      margin-top: 40px;
+      @include flexSet;
+      justify-content: space-between;
+      a{
+        display: inline-block;
+        padding: 10px 0;
+        @include hover;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $basicBlue01;
+      }
+    }
+  }
+}

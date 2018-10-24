@@ -2855,6 +2855,29 @@ form input[type="button"] {
       border-bottom: 1px dotted #aaa; }
 
 /*医師側画面共通*/
+#doctor header .header_inner .header_alert {
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto; }
+  #doctor header .header_inner .header_alert span {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #d45b54;
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: left center;
+    background-size: 25px;
+    background-image: url(../img/common/alert_icon.png); }
+
 #doctor #bread .inner .bread_txt {
   line-height: 45px;
   font-size: 18px;
@@ -2909,6 +2932,160 @@ form input[type="button"] {
 
 #doctor footer {
   background: #f4f4f4; }
+
+#doctor .list_table {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 15px auto;
+  background: #fff;
+  padding: 0px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5); }
+  #doctor .list_table .table_contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    #doctor .list_table .table_contents.mitaiou {
+      background: rgba(244, 218, 218, 0.5); }
+    #doctor .list_table .table_contents.monshin {
+      background: rgba(210, 244, 149, 0.2); }
+    #doctor .list_table .table_contents.tyousei {
+      background: #fff; }
+    #doctor .list_table .table_contents.ng {
+      background: rgba(241, 241, 241, 0.6); }
+    #doctor .list_table .table_contents.completed {
+      background-color: #d2eff7; }
+    #doctor .list_table .table_contents .checkbox {
+      width: 40px; }
+    #doctor .list_table .table_contents .date {
+      width: 125px; }
+    #doctor .list_table .table_contents .disease {
+      width: 200px; }
+    #doctor .list_table .table_contents .assign {
+      width: 320px; }
+    #doctor .list_table .table_contents .status {
+      width: 170px; }
+    #doctor .list_table .table_contents .edit {
+      width: 170px;
+      border-right: 0 !important; }
+    #doctor .list_table .table_contents.table_header div {
+      text-align: center;
+      font-size: 14px;
+      padding: 15px 0;
+      border-right: 1px solid #ccc;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    #doctor .list_table .table_contents.table_row {
+      border-top: 1px solid #ccc; }
+      #doctor .list_table .table_contents.table_row .checkbox, #doctor .list_table .table_contents.table_row .date, #doctor .list_table .table_contents.table_row .disease, #doctor .list_table .table_contents.table_row .assign, #doctor .list_table .table_contents.table_row .status, #doctor .list_table .table_contents.table_row .edit {
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 15px 10px;
+        border-right: 1px dotted #d8d8d8;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+      #doctor .list_table .table_contents.table_row .assign {
+        padding: 0; }
+        #doctor .list_table .table_contents.table_row .assign .hospital_wrap ul li {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          padding: 15px 10px;
+          border-bottom: 1px dotted #d8d8d8; }
+          #doctor .list_table .table_contents.table_row .assign .hospital_wrap ul li:last-child {
+            border-bottom: 0; }
+          #doctor .list_table .table_contents.table_row .assign .hospital_wrap ul li .name {
+            width: 150px;
+            margin-right: 20px; }
+          #doctor .list_table .table_contents.table_row .assign .hospital_wrap ul li .form_radio {
+            width: calc(100% - 170px); }
+            #doctor .list_table .table_contents.table_row .assign .hospital_wrap ul li .form_radio .radio_item {
+              width: 100%;
+              display: block;
+              margin-bottom: 10px; }
+      #doctor .list_table .table_contents.table_row .status select {
+        width: 100%;
+        font-size: 12px;
+        color: #666;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        border: solid 1px #d8d8d8;
+        background-color: #ffffff;
+        background-image: url(../img/common/select_caret2.png);
+        background-size: 38px;
+        background-position: center right;
+        background-repeat: no-repeat; }
+        #doctor .list_table .table_contents.table_row .status select:focus {
+          outline: none;
+          border: 1px solid #4cbee0; }
+      #doctor .list_table .table_contents.table_row .edit .button_wrap ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        #doctor .list_table .table_contents.table_row .edit .button_wrap ul li {
+          width: 70px;
+          margin-right: 10px; }
+          #doctor .list_table .table_contents.table_row .edit .button_wrap ul li:last-child {
+            margin-right: 0; }
+          #doctor .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"] {
+            width: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: block;
+            font-size: 12px;
+            padding: 7px 15px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #fff;
+            border-radius: 50px;
+            -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+            box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+            border: solid 1px #ffffff;
+            background-color: #4cbee0;
+            -webkit-transition: opacity .5s;
+            -o-transition: opacity .5s;
+            transition: opacity .5s; }
+            #doctor .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"]:hover {
+              opacity: 0.7; }
+            #doctor .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"]:focus {
+              outline: none; }
+          #doctor .list_table .table_contents.table_row .edit .button_wrap ul li .detail {
+            width: 100%;
+            text-align: center;
+            display: block;
+            font-size: 12px;
+            line-height: 1;
+            padding: 10px 15px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #fff;
+            border-radius: 50px;
+            -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+            box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+            border: solid 1px #ffffff;
+            background-color: #222;
+            -webkit-transition: opacity .5s;
+            -o-transition: opacity .5s;
+            transition: opacity .5s; }
+            #doctor .list_table .table_contents.table_row .edit .button_wrap ul li .detail:hover {
+              opacity: 0.7; }
 
 /*医師側ログイン画面*/
 #doctorLogin #loginForm {
@@ -3094,159 +3271,6 @@ form input[type="button"] {
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px; }
-  #matchingList #list .list_table {
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 15px auto;
-    background: #fff;
-    padding: 0px;
-    border-radius: 5px;
-    overflow: hidden;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5); }
-    #matchingList #list .list_table .table_contents {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-      #matchingList #list .list_table .table_contents.mitaiou {
-        background: rgba(244, 218, 218, 0.5); }
-      #matchingList #list .list_table .table_contents.monshin {
-        background: rgba(210, 244, 149, 0.2); }
-      #matchingList #list .list_table .table_contents.tyousei {
-        background: #fff; }
-      #matchingList #list .list_table .table_contents.ng {
-        background: rgba(241, 241, 241, 0.6); }
-      #matchingList #list .list_table .table_contents.completed {
-        background-color: #d2eff7; }
-      #matchingList #list .list_table .table_contents .checkbox {
-        width: 40px; }
-      #matchingList #list .list_table .table_contents .date {
-        width: 125px; }
-      #matchingList #list .list_table .table_contents .disease {
-        width: 200px; }
-      #matchingList #list .list_table .table_contents .assign {
-        width: 320px; }
-      #matchingList #list .list_table .table_contents .status {
-        width: 170px; }
-      #matchingList #list .list_table .table_contents .edit {
-        width: 170px;
-        border-right: 0 !important; }
-      #matchingList #list .list_table .table_contents.table_header div {
-        text-align: center;
-        font-size: 14px;
-        padding: 15px 0;
-        border-right: 1px solid #ccc;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box; }
-      #matchingList #list .list_table .table_contents.table_row {
-        border-top: 1px solid #ccc; }
-        #matchingList #list .list_table .table_contents.table_row .checkbox, #matchingList #list .list_table .table_contents.table_row .date, #matchingList #list .list_table .table_contents.table_row .disease, #matchingList #list .list_table .table_contents.table_row .assign, #matchingList #list .list_table .table_contents.table_row .status, #matchingList #list .list_table .table_contents.table_row .edit {
-          font-size: 14px;
-          line-height: 1.6;
-          padding: 15px 10px;
-          border-right: 1px dotted #d8d8d8;
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-        #matchingList #list .list_table .table_contents.table_row .assign {
-          padding: 0; }
-          #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            padding: 15px 10px;
-            border-bottom: 1px dotted #d8d8d8; }
-            #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li:last-child {
-              border-bottom: 0; }
-            #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li .name {
-              width: 150px;
-              margin-right: 20px; }
-            #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li .form_radio {
-              width: calc(100% - 170px); }
-              #matchingList #list .list_table .table_contents.table_row .assign .hospital_wrap ul li .form_radio .radio_item {
-                width: 100%;
-                display: block;
-                margin-bottom: 10px; }
-        #matchingList #list .list_table .table_contents.table_row .status select {
-          width: 100%;
-          font-size: 12px;
-          color: #666;
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          padding: 5px 10px;
-          border-radius: 5px;
-          -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-          border: solid 1px #d8d8d8;
-          background-color: #ffffff;
-          background-image: url(../img/common/select_caret2.png);
-          background-size: 38px;
-          background-position: center right;
-          background-repeat: no-repeat; }
-          #matchingList #list .list_table .table_contents.table_row .status select:focus {
-            outline: none;
-            border: 1px solid #4cbee0; }
-        #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-          #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li {
-            width: 70px;
-            margin-right: 10px; }
-            #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li:last-child {
-              margin-right: 0; }
-            #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"] {
-              width: 100%;
-              -webkit-appearance: none;
-              -moz-appearance: none;
-              appearance: none;
-              display: block;
-              font-size: 12px;
-              padding: 7px 15px;
-              -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-              color: #fff;
-              border-radius: 50px;
-              -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-              box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-              border: solid 1px #ffffff;
-              background-color: #4cbee0;
-              -webkit-transition: opacity .5s;
-              -o-transition: opacity .5s;
-              transition: opacity .5s; }
-              #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"]:hover {
-                opacity: 0.7; }
-              #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li input[type="submit"]:focus {
-                outline: none; }
-            #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li .detail {
-              width: 100%;
-              text-align: center;
-              display: block;
-              font-size: 12px;
-              line-height: 1;
-              padding: 10px 15px;
-              -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-              color: #fff;
-              border-radius: 50px;
-              -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-              box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-              border: solid 1px #ffffff;
-              background-color: #222;
-              -webkit-transition: opacity .5s;
-              -o-transition: opacity .5s;
-              transition: opacity .5s; }
-              #matchingList #list .list_table .table_contents.table_row .edit .button_wrap ul li .detail:hover {
-                opacity: 0.7; }
   #matchingList #list .list_lower {
     text-align: center; }
     #matchingList #list .list_lower #readMore {
@@ -3311,3 +3335,261 @@ form input[type="button"] {
           opacity: 0.7; }
         #matchingList #list .list_lower .submit_wrap input[type="submit"]:focus {
           outline: none; }
+
+/*医師側マッチング詳細画面*/
+#matchingDetail #detail {
+  padding: 40px 0; }
+  #matchingDetail #detail .detail_inner {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    position: relative;
+    min-height: 200px; }
+    #matchingDetail #detail .detail_inner::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 5px;
+      background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+      background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+    #matchingDetail #detail .detail_inner .detail_ttl {
+      margin-bottom: 20px; }
+    #matchingDetail #detail .detail_inner .detail_upper {
+      margin-top: 5px;
+      background: #f1f1f1;
+      padding: 15px 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      #matchingDetail #detail .detail_inner .detail_upper .profile {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px; }
+      #matchingDetail #detail .detail_inner .detail_upper .status {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px; }
+        #matchingDetail #detail .detail_inner .detail_upper .status .resister {
+          margin-right: 20px; }
+    #matchingDetail #detail .detail_inner .detail_middle {
+      padding: 15px 20px; }
+      #matchingDetail #detail .detail_inner .detail_middle .list_table {
+        border-top: 1px solid #d8d8d8; }
+        #matchingDetail #detail .detail_inner .detail_middle .list_table .table_header div {
+          border-right: 1px solid #d8d8d8; }
+      #matchingDetail #detail .detail_inner .detail_middle .submit_wrap ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 25px auto 0; }
+        #matchingDetail #detail .detail_inner .detail_middle .submit_wrap ul li {
+          width: 480px;
+          margin-right: 20px; }
+          #matchingDetail #detail .detail_inner .detail_middle .submit_wrap ul li:last-child {
+            margin-right: 0; }
+          #matchingDetail #detail .detail_inner .detail_middle .submit_wrap ul li a {
+            display: block;
+            font-size: 18px;
+            letter-spacing: 1px;
+            color: #ffffff;
+            padding: 15px 0;
+            border-radius: 100px;
+            text-align: center;
+            -webkit-transition: opacity .5s;
+            -o-transition: opacity .5s;
+            transition: opacity .5s; }
+            #matchingDetail #detail .detail_inner .detail_middle .submit_wrap ul li a:hover {
+              opacity: 0.7; }
+            #matchingDetail #detail .detail_inner .detail_middle .submit_wrap ul li a.permit_button {
+              background: #4cbee0; }
+            #matchingDetail #detail .detail_inner .detail_middle .submit_wrap ul li a.denied_button {
+              background: #aaa; }
+    #matchingDetail #detail .detail_inner .detail_lower {
+      padding: 15px 20px; }
+      #matchingDetail #detail .detail_inner .detail_lower .disease_wrap {
+        border-radius: 5px;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        background-color: #ffffff;
+        overflow: hidden;
+        margin-bottom: 20px; }
+        #matchingDetail #detail .detail_inner .detail_lower .disease_wrap .disease_ttl {
+          font-size: 16px;
+          color: #fff;
+          padding: 10px;
+          background: #4cbee0; }
+        #matchingDetail #detail .detail_inner .detail_lower .disease_wrap .disease_txt {
+          padding: 10px;
+          line-height: 1.6;
+          font-size: 14px; }
+
+#matchingDetail #comment {
+  padding-bottom: 40px; }
+  #matchingDetail #comment .comment_wrap .comment_item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 25px 20px 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    background-color: #ffffff; }
+    #matchingDetail #comment .comment_wrap .comment_item::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 5px; }
+    #matchingDetail #comment .comment_wrap .comment_item.medical_note::before {
+      background: #4cbee0; }
+    #matchingDetail #comment .comment_wrap .comment_item.doctor::before {
+      background: #fc9792; }
+    #matchingDetail #comment .comment_wrap .comment_item .delete_button {
+      position: absolute;
+      top: 20px;
+      right: 20px; }
+      #matchingDetail #comment .comment_wrap .comment_item .delete_button a {
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        background-color: #aaaaaa;
+        padding: 7px 15px;
+        border-radius: 30px;
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s; }
+        #matchingDetail #comment .comment_wrap .comment_item .delete_button a:hover {
+          opacity: 0.7; }
+    #matchingDetail #comment .comment_wrap .comment_item .comment_info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 20px; }
+      #matchingDetail #comment .comment_wrap .comment_item .comment_info .user_name {
+        display: block;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-right: 20px; }
+      #matchingDetail #comment .comment_wrap .comment_item .comment_info .date {
+        font-size: 12px; }
+    #matchingDetail #comment .comment_wrap .comment_item .comment_txt {
+      border-radius: 5px;
+      padding: 10px;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      background-color: #f1f1f1; }
+      #matchingDetail #comment .comment_wrap .comment_item .comment_txt p {
+        font-size: 14px;
+        line-height: 1.6; }
+  #matchingDetail #comment .add_comment {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+    background-color: #ffffff; }
+    #matchingDetail #comment .add_comment .ttl {
+      font-size: 16px;
+      color: #fff;
+      padding: 10px 20px;
+      background: #4cbee0; }
+    #matchingDetail #comment .add_comment .form_wrap {
+      padding: 20px 20px 10px; }
+      #matchingDetail #comment .add_comment .form_wrap label {
+        display: block;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px; }
+    #matchingDetail #comment .add_comment .submit_wrap {
+      padding: 10px 20px 20px; }
+      #matchingDetail #comment .add_comment .submit_wrap input[type="button"] {
+        width: 400px;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 100px;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        background-color: #4cbee0;
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s; }
+        #matchingDetail #comment .add_comment .submit_wrap input[type="button"]:hover {
+          opacity: 0.7; }
+  #matchingDetail #comment .pager {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    @media screen and (max-width: 1150px) {
+      #matchingDetail #comment .pager {
+        max-width: 750px; } }
+    @media screen and (max-width: 750px) {
+      #matchingDetail #comment .pager {
+        width: 84%; } }
+    #matchingDetail #comment .pager a {
+      display: inline-block;
+      padding: 10px 0;
+      -webkit-transition: opacity .5s;
+      -o-transition: opacity .5s;
+      transition: opacity .5s;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #4cbee0; }
+      #matchingDetail #comment .pager a:hover {
+        opacity: 0.7; }
