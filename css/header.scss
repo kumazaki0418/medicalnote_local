@@ -265,18 +265,9 @@ header{
 			}
 			#headerNav{
 				height: 50px;
-				position: absolute;
-				top:0;
-				bottom:0;
-				right:0;
-				margin: auto;
 				a{
 					display: block;
-					width: 50px;
-					height: 100%;
-					@include bgSet;
-					background-size: 100%;
-					background-image: url(../img/common/search_icon.png);
+					width: 40px;
 				}
 			}
 		}

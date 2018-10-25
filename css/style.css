@@ -380,20 +380,10 @@ header {
         width: 170px;
         height: 100%; }
     header .header_inner #headerNav {
-      height: 50px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto; }
+      height: 50px; }
       header .header_inner #headerNav a {
         display: block;
-        width: 50px;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100%;
-        background-image: url(../img/common/search_icon.png); }
+        width: 40px; }
   header #slideMenu #slideBg {
     opacity: 0;
     pointer-events: none;
@@ -1390,7 +1380,7 @@ article {
       z-index: 10; }
   @media screen and (max-width: 720px) {
     article {
-      padding-top: 50px; }
+      padding-top: 53px; }
       article .ttl01 {
         width: 50%;
         padding: 15px 0px;
@@ -1483,6 +1473,42 @@ article {
       font-size: 25px;
       font-weight: bold;
       letter-spacing: 0.9px; }
+
+@media screen and (max-width: 1100px) {
+  #main {
+    height: 400px; }
+    #main .main_content {
+      height: 170px; }
+      #main .main_content .main_ttl {
+        font-size: 45px; }
+      #main .main_content .sub_ttl {
+        font-size: 25px;
+        line-height: 1.6; }
+        #main .main_content .sub_ttl span {
+          display: block; } }
+
+@media screen and (max-width: 730px) {
+  #main {
+    width: 100%;
+    height: 250px; }
+    #main .main_content {
+      width: 100%;
+      height: 135px; }
+      #main .main_content .main_ttl {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 30px; }
+        #main .main_content .main_ttl::after {
+          bottom: -15px;
+          width: 200px;
+          height: 1px;
+          background-color: #ffffff; }
+      #main .main_content .sub_ttl {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.9px; }
+        #main .main_content .sub_ttl font {
+          display: block; } }
 
 /*ワード検索部分*/
 #searchSection .result, #seachSection2 .result {
@@ -1898,6 +1924,108 @@ form input[type="button"] {
   #apply #bread .step03 span {
     color: #fff; }
 
+@media screen and (max-width: 1100px) {
+  #bread {
+    width: 100%;
+    height: 45px;
+    background-color: #f4f4f4; }
+    #bread .inner {
+      max-width: 1080px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative; } }
+    @media screen and (max-width: 1100px) and (max-width: 1100px) {
+      #bread .inner {
+        max-width: 720px; } }
+    @media screen and (max-width: 1100px) and (max-width: 750px) {
+      #bread .inner {
+        width: 90%; } }
+
+@media screen and (max-width: 1100px) {
+      #bread .inner .step ul {
+        display: block; }
+        #bread .inner .step ul li {
+          width: 100%; }
+  #index #bread .inner {
+    position: relative; }
+    #index #bread .inner::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: calc(50vw - 540px);
+      height: 100%;
+      right: 100%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 1; } }
+    @media screen and (max-width: 1100px) and (max-width: 1100px) {
+      #index #bread .inner::before {
+        width: calc(50vw - 360px); } }
+    @media screen and (max-width: 1100px) and (max-width: 750px) {
+      #index #bread .inner::before {
+        width: 4vw; } }
+
+@media screen and (max-width: 1100px) {
+    #index #bread .inner::before {
+      background: #4cbee0; }
+  #index #bread .step01 {
+    background: -webkit-gradient(linear, left top, right top, from(#4cbee0), color-stop(50%, #4cbee0), color-stop(50%, #f1f1f1), to(#f1f1f1));
+    background: -webkit-linear-gradient(left, #4cbee0 0%, #4cbee0 50%, #f1f1f1 50%, #f1f1f1 100%);
+    background: -o-linear-gradient(left, #4cbee0 0%, #4cbee0 50%, #f1f1f1 50%, #f1f1f1 100%);
+    background: linear-gradient(90deg, #4cbee0 0%, #4cbee0 50%, #f1f1f1 50%, #f1f1f1 100%); }
+    #index #bread .step01::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 45px;
+      background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+      background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+      -webkit-transform: skewX(-30deg);
+      -ms-transform: skewX(-30deg);
+      transform: skewX(-30deg); }
+    #index #bread .step01 span {
+      color: #fff; }
+  #doctorList #bread .step02::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 45px;
+    background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+    background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+    background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+    background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+    -webkit-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg); }
+  #doctorList #bread .step02 span {
+    color: #fff; }
+  #apply #bread {
+    background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+    background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+    background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+    background-image: linear-gradient(to left, #79e0f2, #4cbee0); }
+    #apply #bread .step01, #apply #bread .step02 {
+      display: none; }
+    #apply #bread .step03 {
+      background: none; }
+      #apply #bread .step03::before {
+        display: none; } }
+
 @media screen and (max-width: 720px) {
   #bread {
     width: 100%;
@@ -1917,14 +2045,8 @@ form input[type="button"] {
 
 @media screen and (max-width: 720px) {
       #bread .inner .step ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        display: block; }
         #bread .inner .step ul li {
-          position: relative;
-          width: calc(100% / 3);
           line-height: 45px;
           text-align: center;
           font-size: 14px;
@@ -2001,54 +2123,16 @@ form input[type="button"] {
     transform: skewX(-30deg); }
   #doctorList #bread .step02 span {
     color: #fff; }
-  #apply #bread .inner {
-    position: relative; }
-    #apply #bread .inner::before {
-      position: absolute;
-      display: block;
-      content: "";
-      width: calc(50vw - 540px);
-      height: 100%;
-      left: 100%;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      z-index: 1; } }
-    @media screen and (max-width: 720px) and (max-width: 1100px) {
-      #apply #bread .inner::before {
-        width: calc(50vw - 360px); } }
-    @media screen and (max-width: 720px) and (max-width: 750px) {
-      #apply #bread .inner::before {
-        width: 4vw; } }
-
-@media screen and (max-width: 720px) {
-    #apply #bread .inner::before {
-      background: #79e0f2; }
-  #apply #bread .step03 {
-    background: -webkit-gradient(linear, left top, right top, from(#f1f1f1), color-stop(50%, #f1f1f1), color-stop(50%, #79e0f2), to(#79e0f2));
-    background: -webkit-linear-gradient(left, #f1f1f1 0%, #f1f1f1 50%, #79e0f2 50%, #79e0f2 100%);
-    background: -o-linear-gradient(left, #f1f1f1 0%, #f1f1f1 50%, #79e0f2 50%, #79e0f2 100%);
-    background: linear-gradient(90deg, #f1f1f1 0%, #f1f1f1 50%, #79e0f2 50%, #79e0f2 100%); }
-    #apply #bread .step03::before {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 100%;
-      height: 45px;
-      background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
-      background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
-      background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
-      background-image: linear-gradient(to left, #79e0f2, #4cbee0);
-      -webkit-transform: skewX(-30deg);
-      -ms-transform: skewX(-30deg);
-      transform: skewX(-30deg); }
-    #apply #bread .step03 span {
-      color: #fff; } }
+  #apply #bread {
+    height: 35px; }
+    #apply #bread .step01, #apply #bread .step02 {
+      display: none; }
+    #apply #bread .step03 {
+      line-height: 35px; }
+      #apply #bread .step03::before {
+        display: none; }
+      #apply #bread .step03 span {
+        color: #fff; } }
 
 /*ポップアップ部分*/
 #popUp {
@@ -3195,6 +3279,16 @@ form input[type="button"] {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
+      #apply #submitWrap .form_wrap .form_radio a {
+        color: #068acc;
+        text-decoration: underline;
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+        display: inline-block;
+        padding: 0 0.2em; }
+        #apply #submitWrap .form_wrap .form_radio a:hover {
+          opacity: 0.7; }
   #apply #submitWrap .submit {
     position: relative; }
     #apply #submitWrap .submit .submit_wrap {
@@ -3267,6 +3361,104 @@ form input[type="button"] {
               #apply #submitWrap .submit .submit_wrap .submit_label span.arrow::after {
                 display: none; } }
 
+@media screen and (max-width: 720px) {
+  .apply_section {
+    padding: 25px 0 50px; }
+    .apply_section#step01 {
+      padding: 25px 0 50px; }
+    .apply_section#step03 {
+      padding: 25px 0 10px; }
+    .apply_section#notice {
+      padding: 40px 0; }
+    .apply_section.gray_bg {
+      background: #f8f8f8; }
+    .apply_section .txt_upper .apply_ttl {
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: 20px; }
+      .apply_section .txt_upper .apply_ttl span {
+        display: block;
+        font-size: 26px;
+        letter-spacing: 1px;
+        margin-right: 0; }
+    .apply_section .txt_upper .apply_txt {
+      font-size: 14px;
+      line-height: 1.6;
+      letter-spacing: 1px; }
+      .apply_section .txt_upper .apply_txt span {
+        display: block; }
+    .apply_section .txt_upper .ttl_help {
+      margin: 10px 0; }
+      .apply_section .txt_upper .ttl_help span {
+        font-size: 16px;
+        line-height: 30px;
+        padding-left: 40px; }
+        .apply_section .txt_upper .ttl_help span::before {
+          width: 30px;
+          height: 30px;
+          background-size: 30px; }
+    .apply_section .txt_upper .notice_list ul li {
+      font-size: 16px;
+      line-height: 1.6;
+      letter-spacing: 1px; }
+    .apply_section .login_button {
+      margin-top: 20px; }
+      .apply_section .login_button a {
+        font-size: 16px; }
+    .apply_section .form_block {
+      margin-top: 40px; }
+      .apply_section .form_block .form_wrap {
+        margin-bottom: 40px; }
+        .apply_section .form_block .form_wrap .form_ttl {
+          position: relative; }
+          .apply_section .form_block .form_wrap .form_ttl .common_ttl {
+            padding-right: 35px;
+            line-height: 1.6;
+            padding-bottom: 7px; } }
+          @media screen and (max-width: 720px) and (max-width: 350px) {
+            .apply_section .form_block .form_wrap .form_ttl .common_ttl {
+              font-size: 14px; } }
+
+@media screen and (max-width: 720px) {
+          .apply_section .form_block .form_wrap .form_ttl .help {
+            width: 30px;
+            height: 30px;
+            background-size: 30px; }
+          .apply_section .form_block .form_wrap .form_ttl.required .common_ttl span {
+            position: relative; }
+            .apply_section .form_block .form_wrap .form_ttl.required .common_ttl span::after {
+              content: "必須";
+              padding: 5px 15px;
+              margin-left: 15px;
+              font-size: 12px; }
+        .apply_section .form_block .form_wrap .form_text input[name="phone"] {
+          width: 100%; }
+  #apply #submitWrap {
+    padding: 30px 0; }
+    #apply #submitWrap .form_wrap {
+      margin-bottom: 20px; }
+      #apply #submitWrap .form_wrap .form_radio {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        #apply #submitWrap .form_wrap .form_radio .radio_item::before {
+          top: 10px; }
+        #apply #submitWrap .form_wrap .form_radio .radio_item .radio_label {
+          text-align: left;
+          line-height: 1.6; }
+          #apply #submitWrap .form_wrap .form_radio .radio_item .radio_label span {
+            display: block; }
+    #apply #submitWrap .submit {
+      position: relative; }
+      #apply #submitWrap .submit .submit_wrap {
+        width: 90%;
+        margin: 0 auto; } }
+
 /*受診申し込み確認ページ*/
 .apply_confirm input[type="text"],
 .apply_confirm input[type="email"],
@@ -3308,7 +3500,8 @@ form input[type="button"] {
     .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt, .apply_complete #mainTitle .mainttl_inner .main_ttl_txt {
       padding: 10px 20px;
       font-size: 16px;
-      line-height: 1.5; }
+      line-height: 1.5;
+      letter-spacing: 1px; }
       .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt span, .apply_complete #mainTitle .mainttl_inner .main_ttl_txt span {
         display: block; }
 
@@ -3433,6 +3626,89 @@ form input[type="button"] {
       padding-bottom: 30px;
       margin-bottom: 30px;
       border-bottom: 1px dotted #aaa; }
+
+@media screen and (max-width: 1100px) {
+  .apply_confirm #mainTitle, .apply_complete #mainTitle {
+    padding: 40px 0; }
+  .apply_confirm #submitWrap, .apply_complete #submitWrap {
+    padding: 30px 0 !important; }
+    .apply_confirm #submitWrap .form_wrap, .apply_complete #submitWrap .form_wrap {
+      margin-bottom: 0 !important; }
+      .apply_confirm #submitWrap .form_wrap .submit_confirm, .apply_complete #submitWrap .form_wrap .submit_confirm {
+        display: block; }
+        .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton, .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton, .apply_complete #submitWrap .form_wrap .submit_confirm #submitButton, .apply_complete #submitWrap .form_wrap .submit_confirm #backButton {
+          width: 100%;
+          font-size: 18px;
+          padding: 10px 0; }
+        .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton, .apply_complete #submitWrap .form_wrap .submit_confirm #submitButton {
+          margin-bottom: 15px; }
+  .apply_confirm #links, .apply_complete #links {
+    padding: 40px 0;
+    background: #f8f8f8; }
+    .apply_confirm #links .common_ttl, .apply_complete #links .common_ttl {
+      line-height: 1.4;
+      padding-bottom: 7px; }
+    .apply_confirm #links .link_wrap .txt_wrap .link_txt, .apply_complete #links .link_wrap .txt_wrap .link_txt {
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 1.6;
+      margin-bottom: 10px; } }
+
+@media screen and (max-width: 720px) {
+  .apply_confirm #mainTitle, .apply_complete #mainTitle {
+    padding: 30px 0; }
+    .apply_confirm #mainTitle .mainttl_inner .main_ttl, .apply_complete #mainTitle .mainttl_inner .main_ttl {
+      padding: 10px;
+      font-size: 18px; }
+    .apply_confirm #mainTitle .mainttl_inner .main_ttl_txt, .apply_complete #mainTitle .mainttl_inner .main_ttl_txt {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.6; }
+  .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton, .apply_confirm #submitWrap .form_wrap .submit_confirm #backButton, .apply_complete #submitWrap .form_wrap .submit_confirm #submitButton, .apply_complete #submitWrap .form_wrap .submit_confirm #backButton {
+    font-size: 16px; }
+  .apply_confirm #submitWrap .form_wrap .submit_confirm #submitButton, .apply_complete #submitWrap .form_wrap .submit_confirm #submitButton {
+    background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+    background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+    background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+    background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+    margin-bottom: 10px; }
+  .apply_confirm #links, .apply_complete #links {
+    padding: 30px 0; }
+    .apply_confirm #links .link_wrap, .apply_complete #links .link_wrap {
+      margin-top: 35px;
+      display: block; }
+      .apply_confirm #links .link_wrap .img_wrap, .apply_complete #links .link_wrap .img_wrap {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 15px; }
+      .apply_confirm #links .link_wrap .txt_wrap, .apply_complete #links .link_wrap .txt_wrap {
+        width: 100%; }
+        .apply_confirm #links .link_wrap .txt_wrap .link_ttl, .apply_complete #links .link_wrap .txt_wrap .link_ttl {
+          background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+          background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+          background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+          background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+          font-size: 14px;
+          letter-spacing: 1px; }
+        .apply_confirm #links .link_wrap .txt_wrap .link_txt, .apply_complete #links .link_wrap .txt_wrap .link_txt {
+          font-size: 14px;
+          letter-spacing: 1px;
+          line-height: 1.6;
+          margin-bottom: 20px; }
+        .apply_confirm #links .link_wrap .txt_wrap .link_button, .apply_complete #links .link_wrap .txt_wrap .link_button {
+          display: block; }
+          .apply_confirm #links .link_wrap .txt_wrap .link_button span, .apply_complete #links .link_wrap .txt_wrap .link_button span {
+            position: relative;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding-right: 50px; }
+            .apply_confirm #links .link_wrap .txt_wrap .link_button span::after, .apply_complete #links .link_wrap .txt_wrap .link_button span::after {
+              width: 40px;
+              height: 10px;
+              background-size: 40px; }
+      .apply_confirm #links .link_wrap:nth-of-type(1), .apply_complete #links .link_wrap:nth-of-type(1) {
+        padding-bottom: 20px;
+        margin-bottom: 20px; } }
 
 /*医師側画面共通*/
 #doctor header .header_inner .header_alert {

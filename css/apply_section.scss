@@ -132,12 +132,157 @@
 			.form_radio{
 				@include flexSet;
 				justify-content: center;
+				a{
+					color: #068acc;
+					text-decoration: underline;
+					@include hover;
+					display: inline-block;
+					padding: 0 0.2em;
+				}
 			}
 		}
 		.submit{
 			position: relative;
 			.submit_wrap{
 				@include submitNext;
+			}
+		}
+	}
+}
+@media screen and (max-width: 720px){
+	.apply_section{
+		padding: 25px 0 50px;
+		&#step01{
+			padding: 25px 0 50px;
+		}
+		&#step03{
+			padding: 25px 0 10px;
+		}
+		&#notice{
+			padding: 40px 0;
+		}
+		&.gray_bg{
+			background: $basicGray03;
+		}
+		.txt_upper{
+			.apply_ttl{
+				font-size: 18px;
+				line-height: 1.4;
+				margin-bottom: 20px;
+				span{
+					display: block;
+					font-size: 26px;
+	  			letter-spacing: 1px;
+					margin-right: 0;
+				}
+			}
+			.apply_txt{
+				font-size: 14px;
+	  		line-height: 1.6;
+	  		letter-spacing: 1px;
+				span{
+					display: block;
+				}
+			}
+			.ttl_help{
+				margin: 10px 0;
+				span{
+					font-size: 16px;
+					line-height: 30px;
+					padding-left:40px;
+					&::before{
+						width: 30px;
+						height: 30px;
+						background-size: 30px;
+					}
+				}
+			}
+			.notice_list{
+				ul{
+					li{
+						font-size: 16px;
+			  		line-height: 1.6;
+			  		letter-spacing: 1px;
+					}
+				}
+			}
+		}
+		.login_button{
+			margin-top: 20px;
+			a{
+				font-size: 16px;
+			}
+		}
+		.form_block{
+			margin-top: 40px;
+			.form_wrap{
+				margin-bottom: 40px;
+				.form_ttl{
+					position: relative;
+					.common_ttl{
+						padding-right: 35px;
+						line-height: 1.6;
+						padding-bottom: 7px;
+						@media screen and(max-width: 350px){
+							font-size: 14px;
+						}
+					}
+					.help{
+						width: 30px;
+						height: 30px;
+						background-size: 30px;
+					}
+					&.required{
+						.common_ttl{
+							span{
+								position: relative;
+								&::after{
+									content: "必須";
+									padding: 5px 15px;
+									margin-left: 15px;
+									font-size: 12px;
+								}
+							}
+						}
+					}
+				}
+				.form_text{
+					input[name="phone"]{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	#apply{
+		#submitWrap{
+			padding: 30px 0;
+			.form_wrap{
+				margin-bottom: 20px;
+				.form_radio{
+					@include flexSet;
+					justify-content: center;
+					.radio_item{
+						&::before{
+							top: 10px;
+						}
+						.radio_label{
+							text-align: left;
+							line-height: 1.6;
+							span{
+								display: block;
+							}
+						}
+					}
+
+				}
+			}
+			.submit{
+				position: relative;
+				.submit_wrap{
+					width: 90%;
+					margin: 0 auto;
+				}
 			}
 		}
 	}

@@ -28,6 +28,7 @@
         padding: 10px 20px;
         font-size: 16px;
         line-height: 1.5;
+        letter-spacing: 1px;
         span{
           display: block;
         }
@@ -137,4 +138,124 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1100px){
+  .apply_confirm, .apply_complete{
+    #mainTitle{
+      padding: 40px 0;
+    }
+    #submitWrap{
+      padding: 30px 0 !important;
+      .form_wrap{
+        margin-bottom: 0 !important;
+        .submit_confirm{
+          display: block;
+          #submitButton, #backButton{
+            width: 100%;
+            font-size: 18px;
+            padding: 10px 0;
+          }
+          #submitButton{
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+    #links{
+      padding: 40px 0;
+      background: $basicGray03;
+      .common_ttl{
+        line-height: 1.4;
+        padding-bottom: 7px;
+      }
+      .link_wrap{
+        .txt_wrap{
+          .link_txt{
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .apply_confirm, .apply_complete{
+    #mainTitle{
+      padding: 30px 0;
+      .mainttl_inner{
+        .main_ttl{
+          padding: 10px;
+          font-size: 18px;
+        }
+        .main_ttl_txt{
+          padding: 10px;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+      }
+    }
+    #submitWrap{
+      .form_wrap{
+        .submit_confirm{
+          #submitButton, #backButton{
+            font-size: 16px;
+          }
+          #submitButton{
+            @include blueGrad;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    #links{
+      padding: 30px 0;
+      .link_wrap{
+        margin-top: 35px;
+        display: block;
+        .img_wrap{
+          width: 100%;
+          margin-right: 0px;
+          margin-bottom: 15px;
+        }
+        .txt_wrap{
+          width: 100%;
+          .link_ttl{
+            @include blueGrad;
+            font-size: 14px;
+            letter-spacing: 1px;;
+          }
+          .link_txt{
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+          }
+          .link_button{
+            display: block;
+            span{
+              position: relative;
+              font-size: 14px;
+              letter-spacing: 1px;
+              padding-right: 50px;
+              &::after{
+                width: 40px;
+                height: 10px;
+                background-size: 40px;
+              }
+            }
+          }
+        }
+        &:nth-of-type(1){
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
 }

@@ -112,6 +112,95 @@
 		}
 	}
 }
+@media screen and (max-width: 1100px){
+	#bread {
+		width: 100%;
+		height: 45px;
+		background-color: #f4f4f4;
+
+		.inner {
+			@include waku;
+			position: relative;
+
+			.step {
+				ul {
+					display: block;
+
+					li {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	#index{
+		#bread{
+			.inner{
+				@include indentRight;
+				&::before{
+					background: $basicBlue01;
+				}
+			}
+			.step01 {
+				background:linear-gradient(90deg, $basicBlue01 0%, $basicBlue01 50%, #f1f1f1 50%, #f1f1f1 100%);
+				&::before{
+					display: block;
+					content: "";
+					position: absolute;
+					top:0;
+					bottom:0;
+					left:0;
+					right:0;
+					margin: auto;
+					width: 100%;
+					height: 45px;
+					@include blueGrad;
+					transform: skewX(-30deg);
+				}
+				span{
+					color: #fff;
+				}
+			}
+		}
+	}
+	#doctorList {
+		#bread{
+			.step02 {
+				&::before{
+					display: block;
+					content: "";
+					position: absolute;
+					top:0;
+					bottom:0;
+					left:0;
+					right:0;
+					margin: auto;
+					width: 100%;
+					height: 45px;
+					@include blueGrad;
+					transform: skewX(-30deg);
+				}
+				span{
+					color: #fff;
+				}
+			}
+		}
+	}
+	#apply{
+		#bread{
+			@include blueGrad;
+			.step01, .step02{
+				display: none;
+			}
+			.step03 {
+				background: none;
+				&::before{
+					display: none;
+				}
+			}
+		}
+	}
+}
 @media screen and (max-width: 720px){
 	#bread {
 		width: 100%;
@@ -124,11 +213,9 @@
 
 			.step {
 				ul {
-					@include flexSet;
+					display: block;
 
 					li {
-						position: relative;
-						width: calc(100% / 3);
 						line-height: 45px;
 						text-align: center;
 						font-size: 14px;
@@ -199,27 +286,14 @@
 	}
 	#apply{
 		#bread{
-			.inner{
-				@include indentLeft;
-				&::before{
-					background: $basicBlue02;
-				}
+			height: 35px;
+			.step01, .step02{
+				display: none;
 			}
 			.step03 {
-				background:linear-gradient(90deg, #f1f1f1 0%, #f1f1f1 50%, $basicBlue02 50%, $basicBlue02 100%);
+				line-height: 35px;
 				&::before{
-					display: block;
-					content: "";
-					position: absolute;
-					top:0;
-					bottom:0;
-					left:0;
-					right:0;
-					margin: auto;
-					width: 100%;
-					height: 45px;
-					@include blueGrad;
-					transform: skewX(-30deg);
+					display: none;
 				}
 				span{
 					color: #fff;
