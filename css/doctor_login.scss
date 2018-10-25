@@ -50,3 +50,37 @@
     }
   }
 }
+@media screen and (max-width: 720px){
+  #doctorLogin {
+    #loginForm {
+      padding: 20px 0;
+
+      .bg_wrap {
+        .form_wrap {
+          margin-bottom: 20px;
+        }
+
+        #submitWrap {
+          .form_wrap {
+            margin-bottom: 20px;
+
+            .form_radio {
+              @include flexSet;
+              justify-content: center;
+
+              .radio_item {
+                a {
+                  display: inline-block;
+                  padding-right: 0.4em;
+                  color: #068acc;
+                  @include hover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -66,3 +66,96 @@ footer{
     }
   }
 }
+
+@media screen and (max-width: 1080px){
+  footer{
+    .footer_inner{
+      .footer_logo{
+      }
+      .footer_nav{
+        ul{
+          li{
+            margin-bottom: 20px;
+            &:last-child, &:nth-child(3){
+              padding-right:0;
+              margin-right:0;
+              &::after{
+                display: none;
+              }
+            }
+            a{
+              span{
+              }
+            }
+          }
+        }
+      }
+      .footer_copy{
+        margin: 15px auto 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  footer{
+    padding: 20px 0 0;
+    &::after{
+        height: 3px;
+    }
+    .footer_inner{
+      width: 100%;
+      .footer_logo{
+        width: 200px;
+        margin: 0 auto 15px;
+      }
+      .footer_nav{
+        ul{
+          @include flexSet;
+          justify-content: center;
+          li{
+            width: 50%;
+            text-align: center;
+            position: relative;
+            padding: 12px 10px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ccc;
+            margin-right: 0px;
+            margin-bottom: 0;
+            &::after{
+              display: none;
+            }
+            &:nth-child(odd){
+              border-right: 1px solid #ccc;
+            }
+            &:nth-child(1), &:nth-child(2){
+              border-top: 1px solid #ccc;
+            }
+            &:last-child{
+              width: 100%;
+              padding-right:10px;
+              border-right: 0;
+              &::after{
+                display: none;
+              }
+            }
+            a{
+              font-size: 12px;
+              span{
+                display: block;
+                padding-right: 0;
+                @include poppins;
+                font-size: 20px;
+                margin-bottom: 2px;
+              }
+            }
+          }
+        }
+      }
+      .footer_copy{
+        margin: 20px auto;
+        font-size: 12px;
+      }
+    }
+  }
+}

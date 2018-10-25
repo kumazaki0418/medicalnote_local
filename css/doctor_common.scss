@@ -9,7 +9,7 @@
         bottom: 0;
         right: 0;
         margin: auto;
-        span{
+        span.alert_pc{
           display: block;
           height: 40px;
           line-height: 40px;
@@ -22,6 +22,9 @@
           background-position: left center;
           background-size: 25px;
           background-image: url(../img/common/alert_icon.png)
+        }
+        span.alert_sp{
+          display: none;
         }
       }
     }
@@ -95,10 +98,10 @@
     .table_contents{
       @include flexSet;
       &.mitaiou{
-        background: rgba(244, 218, 218, 0.5);
+        background: rgba($basicRed, 0.2);
       }
       &.monshin{
-        background: rgba(210, 244, 149, 0.2);
+        background: #f6fdea;
       }
       &.tyousei{
         background: #fff;
@@ -148,7 +151,9 @@
           box-sizing: border-box;
         }
         .checkbox{
-
+          .radio_label{
+            display: none;
+          }
         }
 
         .assign{
@@ -250,4 +255,363 @@
       }
     }
   }
+}
+@media screen and (max-width: 1100px){
+  #doctor{
+    section{
+      .bg_wrap{
+        padding: 25px;
+      }
+    }
+    .list_table{
+      margin: 15px auto;
+      border-radius: 5px;
+      .table_contents{
+        display: block;
+        .checkbox{
+          width: 100%;
+          border-right: 0;
+        }
+        .date{
+          width: 100%;
+          border-right: 0;
+          border-bottom: 1px dotted #ccc;
+          &::before{
+            display: inline-block;
+            content: "申し込み日時";
+            font-weight: bold;
+            font-size: 16px;
+            width: 50%;
+          }
+        }
+        .disease{
+          width: 100%;
+          border-right: 0;
+          border-bottom: 1px dotted #ccc;
+          &::before{
+            display: inline-block;
+            content: "疾患名";
+            font-weight: bold;
+            font-size: 16px;
+            width: 50%;
+          }
+        }
+        .assign{
+          width: 100%;
+          border-right: 0;
+          border-bottom: 1px dotted #ccc;
+          &::before{
+            display: inline-block;
+            content: "医療機関/担当医師";
+            font-weight: bold;
+            font-size: 16px;
+            width: 50%;
+            padding: 15px 10px 0px;
+          }
+        }
+        .status{
+          width: 100%;
+          border-right: 0;
+          border-bottom: 1px dotted #ccc;
+          &::before{
+            display: inline-block;
+            content: "対応ステータス";
+            font-weight: bold;
+            font-size: 16px;
+            width: 50%;
+            margin-bottom: 15px;
+          }
+        }
+        .edit{
+          width: 100%;
+          border-right: 0 !important;
+          &::before{
+            display: inline-block;
+            content: "編集・詳細";
+            font-weight: bold;
+            font-size: 16px;
+            width: 50%;
+            margin-bottom: 15px;
+          }
+        }
+        &.table_header{
+          display: none;
+          div{
+            text-align: center;
+            font-size: 14px;
+            padding: 15px 0;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+        }
+        &.table_row{
+          border-top: 0;
+          .checkbox, .date, .disease, .assign, .status, .edit{
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 15px 10px;
+            border-right: 1px dotted #d8d8d8;
+            box-sizing: border-box;
+          }
+
+          .checkbox{
+            .radio_label{
+              display: inline-block;
+              font-size: 14px;
+              font-weight: bold;
+              counter-reset: number 0;
+              &::before{
+                display: inline;
+                counter-increment: number 1;
+                content:"リストNo.";
+              }
+            }
+          }
+
+          .assign{
+            padding: 0;
+            .hospital_wrap{
+              ul{
+                li{
+                  display: block;
+                  padding: 15px 10px;
+                  border-bottom: 1px dotted #d8d8d8;
+                  &:last-child{
+                    border-bottom: 0;
+                  }
+                  .name{
+                    width: 100%;
+                    background: #f1f1f1;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    margin-right: 0px;
+                    margin-bottom: 15px;
+                    box-sizing: border-box;
+                  }
+                  .form_radio{
+                    width: 100%;
+                    .radio_item{
+                      width: auto;
+                      display: inline;
+                      margin-bottom: 10px;
+                      margin-left: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .status{
+            select{
+              font-size: 16px;
+              padding: 5px 10px;
+              background-size: 48px;
+            }
+
+          }
+          .edit{
+            .button_wrap{
+              ul{
+                @include flexSet;
+                li{
+                  width: 49%;
+                  margin-right: 2%;
+                  &:last-child{
+                    margin-right:0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px){
+  #doctor{
+    header{
+      .header_inner{
+        .header_alert{
+          height: 40px;
+          line-height: 40px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          span.alert_pc{
+            display: none;
+          }
+          span.alert_sp{
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #d45b54;
+            padding-left: 30px;
+            @include bgSet;
+            background-position: left center;
+            background-size: 25px;
+            background-image: url(../img/common/alert_icon.png)
+          }
+        }
+      }
+    }
+    #bread {
+      padding: 10px 0;
+    	.inner {
+        .bread_txt{
+          line-height: 1.6;
+          font-size: 18px;
+          letter-spacing: 1px;
+        }
+        .login_info{
+          line-height: 1.6;
+          font-size: 14px;
+          letter-spacing: 0.02em;
+          .houjin{
+            position: relative;
+            padding-right: 15px;
+            margin-right: 10px;
+            &::before{
+              padding-right: 0.2em;
+            }
+            &::after{
+              display: none;
+            }
+          }
+          .hospotal{
+            &::before{
+              padding-right: 0.2em;
+            }
+          }
+        }
+    	}
+    }
+    section{
+      .bg_wrap{
+        padding: 25px 15px;
+      }
+    }
+    .list_table{
+      width: 100%;
+      box-sizing: border-box;
+      margin: 15px auto;
+      background: #fff;
+      padding: 0px;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+      .table_contents{
+        @include flexSet;
+        .date{
+          &::before{
+            font-size: 14px;
+          }
+        }
+        .disease{
+          &::before{
+            font-size: 14px;
+          }
+        }
+        .assign{
+          &::before{
+            width: 100%;
+            font-size: 14px;
+          }
+        }
+        .status{
+          &::before{
+            content: "対応ステータス";
+            font-size: 14px;
+            width: 100%;
+          }
+        }
+        .edit{
+          width: 100%;
+          border-right: 0 !important;
+          &::before{
+            width: 100%;
+            font-size: 14px;
+          }
+        }
+        &.table_header{
+          div{
+            text-align: center;
+            font-size: 14px;
+            padding: 15px 0;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+        }
+        &.table_row{
+          border-top: 1px solid #ccc;
+          .checkbox, .date, .disease, .assign, .status, .edit{
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 15px 10px;
+            border-right: 1px dotted #d8d8d8;
+            box-sizing: border-box;
+          }
+          .checkbox{
+
+          }
+
+          .assign{
+            padding: 0;
+            .hospital_wrap{
+              ul{
+                li{
+                  padding: 15px 10px;
+                  border-bottom: 1px dotted #d8d8d8;
+                  &:last-child{
+                    border-bottom: 0;
+                  }
+                  .name{
+                    box-sizing: border-box;
+                  }
+                  .form_radio{
+                    .radio_item{
+                      margin-bottom: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .edit{
+            .button_wrap{
+              ul{
+                @include flexSet;
+                li{
+                  &:last-child{
+                    margin-right:0;
+                  }
+                  .detail{
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                    font-size: 12px;
+                    line-height: 1;
+                    padding: 10px 15px;
+                    box-sizing: border-box;
+                    color: #fff;
+                    border-radius: 50px;
+                    box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+                    border: solid 1px #ffffff;
+                    background-color: #222;
+                    @include hover;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
