@@ -377,7 +377,7 @@ $(function() {
         }
 
 
-      $('#searchDoctor').select2({
+    /*  $('#searchDoctor').select2({
         ajax: {
           url: 'https://raw.githubusercontent.com/kumazaki0418/medicalnote_local/master/sample_data/suggest_diseases.json',
           dataType: 'json'
@@ -395,6 +395,8 @@ $(function() {
           dataType: 'json'
         }
       });
+
+      */
 
 
       // LPのスライダー

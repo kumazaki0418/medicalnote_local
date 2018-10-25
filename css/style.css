@@ -263,6 +263,74 @@ header {
             right: 0;
             width: 100%;
             margin: auto; }
+      header #slideMenu .contents .inner .suggest_word {
+        border-radius: 5px;
+        overflow: hidden;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        background-color: #ffffff;
+        padding-bottom: 5px;
+        margin: 30px 0; }
+        header #slideMenu .contents .inner .suggest_word .search_ttl {
+          display: block;
+          padding: 10px;
+          background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+          background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+          background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+          background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+          color: #fff;
+          font-weight: bold;
+          font-size: 16px; }
+        header #slideMenu .contents .inner .suggest_word #suggestWord .item_ttl {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          padding: 15px 10px; }
+          header #slideMenu .contents .inner .suggest_word #suggestWord .item_ttl .disease_name {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px; }
+          header #slideMenu .contents .inner .suggest_word #suggestWord .item_ttl .doctor_num {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fc9792; }
+        header #slideMenu .contents .inner .suggest_word #suggestWord ul {
+          padding: 0 10px; }
+          header #slideMenu .contents .inner .suggest_word #suggestWord ul li {
+            padding: 5px 0;
+            border-bottom: 1px dotted #d8d8d8; }
+            header #slideMenu .contents .inner .suggest_word #suggestWord ul li:last-child {
+              border-bottom: 0px; }
+            header #slideMenu .contents .inner .suggest_word #suggestWord ul li a {
+              position: relative;
+              display: block;
+              color: #666;
+              font-size: 14px;
+              padding: 10px 0; }
+              header #slideMenu .contents .inner .suggest_word #suggestWord ul li a .num {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                border-radius: 80px;
+                background-color: #fc9792;
+                color: #fff;
+                font-size: 14px;
+                width: 70px;
+                height: 25px;
+                line-height: 25px;
+                text-align: center; }
       header #slideMenu .contents .inner .popular_word {
         margin-top: 30px; }
         header #slideMenu .contents .inner .popular_word .common_ttl {
@@ -1245,6 +1313,7 @@ form input[type="email"]:focus,
 form input[type="tel"]:focus,
 form input[type="number"]:focus,
 form input[type="submit"]:focus,
+form input[type="password"]:focus,
 form select:focus,
 form textarea:focus {
   outline: 0;
@@ -1253,7 +1322,8 @@ form textarea:focus {
 form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
-form input[type="number"] {
+form input[type="number"],
+form input[type="password"] {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

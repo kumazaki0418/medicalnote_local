@@ -134,6 +134,74 @@ header{
 						}
 					}
 				}
+				.suggest_word{
+					border-radius: 5px;
+					overflow: hidden;
+					box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+					background-color: #ffffff;
+					padding-bottom: 5px;
+					margin: 30px 0;
+					.search_ttl{
+						display: block;
+						padding: 10px;
+						@include blueGrad;
+						color: #fff;
+						font-weight: bold;
+						font-size: 16px;
+					}
+					#suggestWord{
+						.item_ttl{
+							@include flexSet;
+							justify-content: space-between;
+							align-items: center;
+							padding: 15px 10px;
+							.disease_name{
+								font-size: 16px;
+  							font-weight: bold;
+  							letter-spacing:1px;
+							}
+							.doctor_num{
+								font-size: 14px;
+  							font-weight: bold;
+  							letter-spacing: 1px;
+								color: $basicRed;
+							}
+						}
+						ul{
+								padding: 0 10px;
+							li{
+								padding: 5px 0;
+								border-bottom: 1px dotted #d8d8d8;
+								&:last-child{
+									border-bottom: 0px;
+								}
+								a{
+									position: relative;
+									display: block;
+									color: #666;
+									font-size: 14px;
+									padding: 10px 0;
+									.num{
+										display: inline-block;
+										position: absolute;
+										top:0;
+										bottom:0;
+										right:0;
+										margin: auto;
+										border-radius: 80px;
+  									background-color: $basicRed;
+										color: #fff;
+										font-size: 14px;
+										width: 70px;
+										height: 25px;
+										line-height: 25px;
+										text-align: center;
+									}
+								}
+							}
+						}
+					}
+				}
 				.popular_word{
 					margin-top: 30px;
 					.common_ttl{

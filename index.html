@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/layout.js"></script>
-	<script type="text/javascript" src="js/select2.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
 </head>
 
 <body id="user">
@@ -43,7 +43,7 @@
 				<div class="inner">
 					<div class="form_wrap">
 						<div class="search_word">
-							<select id="searchDoctor"></select>
+							<input type="text" id="searchDoctor" placeholder="疾患名を入力してください">
 							<div class="submit_wrap">
 								<span class="search_icon"></span>
 								<input type="submit">
@@ -51,6 +51,27 @@
 						</div>
 					</div>
 					<!-- form_wrap -->
+					<div class="suggest_word">
+						<span class="search_ttl">候補の疾患名</span>
+						<div id="suggestWord">
+							<div class="item_ttl">
+								<span class="disease_name">疾患名</span>
+								<span class="doctor_num">受診可能な医師数</span>
+							</div>
+							<ul>
+						<!--	<li><a href="aaaa">麻疹<span class="num">7</span></a></li>
+							<li><a href="aaaa">手足口病<span class="num">12</span></a></li>
+							<li><a href="aaaa">帯状疱疹<span class="num">9</span></a></li>
+							<li><a href="aaaa">うつ病<span class="num">5</span></a></li>
+							<li><a href="aaaa">子宮筋腫<span class="num">4</span></a></li>
+							<li><a href="aaaa">逆流性食道炎<span class="num">10</span></a></li>
+							<li><a href="aaaa">梅毒<span class="num">6</span></a></li>
+							<li><a href="aaaa">ギラン・バレー症候群<span class="num">6</span></a></li>
+							<li><a href="aaaa">大腸がん<span class="num">6</span></a></li>
+							<li><a href="aaaa">認知症<span class="num">6</span></a></li> -->
+							</ul>
+						</div>
+					</div>
 					<div class="popular_word">
 						<span class="common_ttl">よく検索されているワード</span>
 						<div class="word_list">
