@@ -165,23 +165,14 @@
 	}
 	#doctorList {
 		#bread{
+			@include blueGrad;
+			.step01, .step03{
+				display: none;
+			}
 			.step02 {
+				background: none;
 				&::before{
-					display: block;
-					content: "";
-					position: absolute;
-					top:0;
-					bottom:0;
-					left:0;
-					right:0;
-					margin: auto;
-					width: 100%;
-					height: 45px;
-					@include blueGrad;
-					transform: skewX(-30deg);
-				}
-				span{
-					color: #fff;
+					display: none;
 				}
 			}
 		}

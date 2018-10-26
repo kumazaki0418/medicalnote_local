@@ -336,9 +336,10 @@ $(function() {
       function checkNumControl(target){
         var itemNum = target.find('li').length;
         var tokyo = $('#tokyo');
-        var tokyoState = 1;
+        var tokyoState = 0;
         var fukuoka = $('#fukuoka');
-        var fukuokaState = 1;
+        var fukuokaState = 0;
+        checkWrap = [];
         var checkBox = [];
 
         function onCheckChange(){
@@ -346,25 +347,54 @@ $(function() {
           $('#selectedNum').text(num);
         }
 
+        function listChanger(e){
+          if(e == 1){
+            if(tokyoState == 0){
+              $('.tokyo').each(function() {
+                $(this).find('input').click();
+                $(this).addClass('disabled');
+              });
+              tokyoState = 1;
+            }else{
+              $('.tokyo').each(function() {
+                $(this).removeClass('disabled');
+                $(this).find('input').click();
+              });
+              tokyoState = 0;
+            }
+          }else if(e == 2){
+            if(fukuokaState == 0){
+            $('.fukuoka').each(function() {
+              $(this).find('input').click();
+              $(this).addClass('disabled');
+            });
+            fukuokaState = 1;
+          }else{
+            $('.fukuoka').each(function() {
+              $(this).removeClass('disabled');
+              $(this).find('input').click();
+            });
+            fukuokaState = 0;
+          }
+        }
+        }
+
         function init(){
           $('#totalNum').text(itemNum);
           $('#allNum').text(itemNum);
           $('#selectedNum').text(itemNum);
           $("li").each(function(index) {
+            checkWrap[index] = $(this);
             checkBox[index] = $(this).find('.checkbox')
             checkBox[index].change(function() {
               onCheckChange();
             });
           });
           tokyo.change(function() {
-            $('.tokyo').each(function(index) {
-              $(this).find('input').click();
-            });
+              listChanger(1);
           });
           fukuoka.change(function() {
-            $('.fukuoka').each(function(index) {
-              $(this).find('input').click();
-            });
+              listChanger(2);
           });
         }
 
@@ -495,7 +525,7 @@ $(function() {
       }
 
       //マッチングリストのナンバリング
-      
+
 
 
 

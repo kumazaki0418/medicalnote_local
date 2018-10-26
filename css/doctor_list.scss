@@ -19,7 +19,7 @@
 					margin-bottom: 90px;
 					box-sizing: border-box;
 					margin-right: 20px;
-					border-radius: 10px;
+					border-radius: 5px;
 					box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
 					border: solid 2px #4cbee0;
 					background-color: #ebf7fa;
@@ -143,6 +143,38 @@
 							}
 						}
 					}
+					&.disabled{
+						opacity: 0.3;
+						pointer-events: none;
+						border: solid 2px $basicGray01;
+						background-color: $basicGray03;
+						.info_wrap{
+							.area{
+								background-color: $basicBlack02 !important;
+							}
+						}
+						.form_wrap{
+							.form_radio{
+								@include flexSet;
+								justify-content: center;
+								label{
+									color: $basicBlack03;
+									.radio_label{
+										&::after{
+											display: inline-block;
+											content: "エリア外";
+										}
+									}
+								}
+							}
+							.detail_button{
+								margin-top: 20px;
+								a{
+									background: $basicBlack02;
+								}
+							}
+						}
+					}
 					&.tokyo{
 						.info_wrap{
 							.area{
@@ -206,6 +238,298 @@
 			}
 			.submit_wrap{
 				@include submitNext;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1100px){
+	#doctorList{
+		#main .main_content{
+			height: 85px;
+		}
+		#list{
+			margin: 40px 0 0;
+			.filter{
+				margin-top: 20px;
+				padding: 25px 20px;
+			}
+			#doctors{
+				ul{
+					margin-top: 80px;
+					li{
+						width: 32%;
+						margin-bottom: 70px;
+						margin-right: 2%;
+						padding: 70px 15px 15px 15px;
+						&:nth-child(4n){
+							margin-right: 2%;
+						}
+						&:nth-child(3n){
+							margin-right: 0;
+						}
+						.doctor_icon{
+							top: -50px;
+
+							div{
+								display: inline-block;
+								width: 100px;
+								height: 100px;
+							}
+						}
+						.info_wrap{
+							.hospital{
+								font-size: 14px;
+								margin-bottom: 10px;
+							}
+							.name{
+								font-size: 16px;
+								font-weight: bold;
+								span{
+									font-size: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 720px){
+	#doctorList{
+		#list{
+			margin: 20px 0 0;
+			.filter{
+				margin-top: 15px;
+				padding: 20px 15px;
+			}
+			#doctors{
+				ul{
+					@include flexSet;
+					margin-top: 60px;
+					li{
+						position: relative;
+						width: 49%;
+						margin-bottom: 50px;
+						margin-right: 2%;
+						padding: 50px 10px 20px 10px;
+						&:nth-child(3n){
+							margin-right: 2%;
+						}
+						&:nth-child(even){
+							margin-right: 0;
+						}
+
+						.doctor_icon{
+							top: -33px;
+
+							div{
+								display: inline-block;
+								width: 66px;
+								height: 66px;
+								border-radius: 50%;
+								background-color: #f1f1f1;
+								box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+								border: solid 2px #fff;
+								@include bgSet;
+								background-size: cover;
+							}
+						}
+						.info_wrap{
+							.hospital{
+								font-size: 11px;
+								margin-bottom: 10px;
+								line-height: 1.6;
+							}
+							.name{
+								font-size: 14px;
+								font-weight: bold;
+								&::after{
+									display: inline-block;
+									padding-left: 0.2em;
+									content: "先生";
+								}
+								span{
+									display: inline-block;
+									font-size: 22px;
+								}
+							}
+							.area{
+								display: inline-block;
+								margin: 15px 0;
+								padding: 5px 15px;
+								border-radius: 30px;
+								box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+								color: #fff;
+								font-size: 14px;
+								font-weight: bold;
+								transition: background .5s;
+							}
+						}
+						.form_wrap{
+							.form_radio{
+								@include flexSet;
+								justify-content: center;
+								label{
+									font-size: 18px;
+									font-weight: bold;
+									color: $basicBlue01;
+									margin: 0;
+									transition: color .5s;
+									.radio_label{
+										&::after{
+											display: inline-block;
+											content: "選択済み";
+										}
+									}
+								}
+							}
+							.detail_button{
+								margin-top: 20px;
+								a{
+									display: block;
+									padding: 10px 0;
+									@include blueGrad;
+									font-size: 18px;
+									font-weight: bold;
+									color: #fff;
+									border-radius: 100px;
+									transition: background .5s, background-image .5s, opacity .5s;
+									&:hover{
+										opacity: 0.7;
+									}
+								}
+							}
+						}
+						&.removed{
+							opacity: 0.6;
+							border: solid 2px $basicGray01;
+							background-color: $basicGray03;
+							.info_wrap{
+								.area{
+									background-color: $basicBlack02 !important;
+								}
+							}
+							.form_wrap{
+								.form_radio{
+									@include flexSet;
+									justify-content: center;
+									label{
+										color: $basicBlack03;
+										.radio_label{
+											&::after{
+												display: inline-block;
+												content: "未選択";
+											}
+										}
+									}
+								}
+								.detail_button{
+									margin-top: 20px;
+									a{
+										background: $basicBlack02;
+									}
+								}
+							}
+						}
+						&.disabled{
+							opacity: 0.3;
+							pointer-events: none;
+							border: solid 2px $basicGray01;
+							background-color: $basicGray03;
+							.info_wrap{
+								.area{
+									background-color: $basicBlack02 !important;
+								}
+							}
+							.form_wrap{
+								.form_radio{
+									@include flexSet;
+									justify-content: center;
+									label{
+										color: $basicBlack03;
+										.radio_label{
+											&::after{
+												display: inline-block;
+												content: "エリア外";
+											}
+										}
+									}
+								}
+								.detail_button{
+									margin-top: 20px;
+									a{
+										background: $basicBlack02;
+									}
+								}
+							}
+						}
+						&.tokyo{
+							.info_wrap{
+								.area{
+									background-color: $basicBlue01;
+									&::after{
+										display: inline-block;
+										content: "東京";
+									}
+								}
+							}
+						}
+						&.fukuoka{
+							.info_wrap{
+								.area{
+									background-color: $basicRed;
+									&::after{
+										display: inline-block;
+										content: "福岡";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			#submitWrap{
+				@include dotBg;
+				padding-bottom: 25px;
+				text-align: center;
+				background: #fff;
+					&.fixed{
+						position: fixed;
+						left:0;
+						right:0;
+						bottom:0;
+						margin: auto;
+						z-index: 100;
+						box-shadow: 0 -4px 4px 0 rgba(170, 170, 170, 0.5);
+					}
+				.submit_ttl{
+					font-size: 22px;
+					padding: 10px 0;
+					color: #fff;
+					background: $basicRed;
+				}
+				.current_state{
+					margin: 25px 0;
+					font-size: 22px;
+					#allNum{
+						display: inline-block;
+						padding: 0 0.2em;
+						font-weight: bold;
+					}
+					#selectedNum{
+						display: inline-block;
+						font-size: 30px;
+						padding: 0 0.2em;
+						font-weight: bold;
+						color: $basicRed;
+					}
+				}
+				.submit_wrap{
+					@include submitNext;
+				}
 			}
 		}
 	}

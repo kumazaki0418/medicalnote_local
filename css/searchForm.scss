@@ -82,3 +82,98 @@
     }
   }
 }
+
+@media screen and (max-width: 1100px){
+  #searchSection, #seachSection2{
+    .result{
+      span.txt{
+        font-size: 18px;
+      }
+      span#totalNum{
+        font-size: 30px;
+      }
+    }
+    .search_form{
+      padding: 30px 0;
+      #serchForm, #serchForm2{
+        @include basicForm;
+      }
+      .search_ttl{
+        margin-bottom: 30px;
+      }
+
+      .form_wrap{
+        width: 650px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px){
+  #searchSection, #seachSection2{
+    .result{
+      height: 50px;
+      span.txt{
+        font-size: 14px;
+      }
+      span#totalNum{
+        font-size: 25px;
+      }
+    }
+    .search_form{
+      padding: 20px 0;
+      #serchForm, #serchForm2{
+      }
+      .search_ttl{
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .form_wrap{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        .search_word{
+          width: 100%;
+        }
+        .submit_wrap{
+          position: relative !important;
+          margin: auto;
+          height: 40px;
+          &::before{
+            display: block;
+            content: "";
+            position: absolute;
+            z-index: 10;
+            width: 30px;
+            height: 30px;
+            top:0;
+            bottom:0;
+            left:10px;
+            margin: auto;
+            @include bgSet;
+            background-image: url(../img/common/search.png);
+            background-size: 20px;
+          }
+          .submit_word{
+            position: relative;
+            display: block;
+            width:100%;
+            @include blueGrad;
+            margin: 10px auto 0;
+            border-radius: 5px;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            @include bgSet;
+            box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

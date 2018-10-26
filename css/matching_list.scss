@@ -82,6 +82,24 @@
         }
       }
     }
+    .submit_wrap{
+      margin-top: 30px;
+      input[type="submit"]{
+        width: 200px;
+        appearance: none;
+        display: block;
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding: 7px 15px;
+        box-sizing: border-box;
+        color: #fff;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        background-color: #4cbee0;
+        @include hover;
+      }
+    }
   }
   #list{
     padding-bottom: 50px;
@@ -218,6 +236,14 @@
           color: #666;
           padding: 7px 10px;
           background-image: none;
+        }
+      }
+      .submit_wrap{
+        margin-top: 20px;
+        input[type="submit"]{
+          width: 100%;
+          font-size: 16px;
+          padding: 7px 0px;
         }
       }
     }

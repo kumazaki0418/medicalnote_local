@@ -40,6 +40,7 @@
         line-height: 45px;
         font-size: 14px;
         letter-spacing: 1px;
+        position: relative;
         .houjin{
           position: relative;
           padding-right: 15px;
@@ -68,6 +69,24 @@
             content: "医療機関名:";
             padding-right: 0.3em;
           }
+        }
+        .logout{
+          position: absolute;
+          right: 0;
+          top:0;
+          bottom:0;
+          margin: auto;
+          font-size: 14px;
+          text-align: center;
+          color: #fff;
+          display: block;
+          width: 100px;
+          background: $basicBlue01;
+          height: 30px;
+          line-height: 30px;
+          border-radius: 100px;
+          @include hover;
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
         }
       }
   	}
@@ -515,6 +534,20 @@
             &::before{
               padding-right: 0.2em;
             }
+          }
+          .logout{
+            position: static;
+            margin: 10px 0 0;
+            font-size: 14px;
+            text-align: left;
+            color: $basicBlue01;
+            display: block;
+            width: auto;
+            background: none;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 0px;
+            box-shadow: none;
           }
         }
     	}
