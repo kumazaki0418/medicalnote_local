@@ -21,53 +21,65 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/layout.js"></script>
-	<script type="text/javascript" src="js/select2.min.js"></script>
+	<script type="text/javascript" src="js/increment.js"></script>
 </head>
 <body id="user">
-<header>
-	<div class="header_inner">
-		<div class="header_logo">
-			<a href="/"></a>
-		</div>
-		<div id="headerNav">
-			<a href="javascript:void(0);"></a>
-		</div>
-	</div>
-	<div id="slideMenu">
-		<div id="slideBg"></div>
-		<div class="contents">
-			<div id="closeButton">
+	<header>
+		<div class="header_inner">
+			<div class="header_logo">
+				<a href="/"></a>
+			</div>
+			<div id="headerNav">
 				<a href="javascript:void(0);"></a>
 			</div>
-			<div class="inner">
-				<div class="form_wrap">
-					<div class="search_word">
-						<select id="searchDoctor"></select>
-						<div class="submit_wrap">
-							<span class="search_icon"></span>
-							<input type="submit">
+		</div>
+		<div id="slideMenu">
+			<div id="slideBg"></div>
+			<div class="contents">
+				<div class="inner">
+					<div id="closeButton">
+						<a href="javascript:void(0);"></a>
+					</div>
+					<div class="form_wrap">
+						<div class="search_word">
+							<input type="text" id="searchDoctor" placeholder="疾患名を入力してください">
+							<div class="submit_wrap">
+								<span class="search_icon"></span>
+								<input type="submit">
+							</div>
 						</div>
 					</div>
-				</div><!-- form_wrap -->
-				<div class="popular_word">
-					<span class="common_ttl">よく検索されているワード</span>
-					<div class="word_list">
-						<a href="aaaa">麻疹<span class="num">7</span></a>
-						<a href="aaaa">手足口病<span class="num">12</span></a>
-						<a href="aaaa">帯状疱疹<span class="num">9</span></a>
-						<a href="aaaa">うつ病<span class="num">5</span></a>
-						<a href="aaaa">子宮筋腫<span class="num">4</span></a>
-						<a href="aaaa">逆流性食道炎<span class="num">10</span></a>
-						<a href="aaaa">梅毒<span class="num">6</span></a>
-						<a href="aaaa">ギラン・バレー症候群<span class="num">6</span></a>
-						<a href="aaaa">大腸がん<span class="num">6</span></a>
-						<a href="aaaa">認知症<span class="num">6</span></a>
+					<!-- form_wrap -->
+					<div class="suggest_word">
+						<span class="search_ttl">候補の疾患名</span>
+						<div id="suggestWord">
+							<div class="item_ttl">
+								<span class="disease_name">疾患名</span>
+								<span class="doctor_num">受診可能な医師数</span>
+							</div>
+							<ul>
+							</ul>
+						</div>
+					</div>
+					<div class="popular_word">
+						<span class="common_ttl">よく検索されているワード</span>
+						<div class="word_list">
+							<a href="aaaa">麻疹<span class="num">7</span></a>
+							<a href="aaaa">手足口病<span class="num">12</span></a>
+							<a href="aaaa">帯状疱疹<span class="num">9</span></a>
+							<a href="aaaa">うつ病<span class="num">5</span></a>
+							<a href="aaaa">子宮筋腫<span class="num">4</span></a>
+							<a href="aaaa">逆流性食道炎<span class="num">10</span></a>
+							<a href="aaaa">梅毒<span class="num">6</span></a>
+							<a href="aaaa">ギラン・バレー症候群<span class="num">6</span></a>
+							<a href="aaaa">大腸がん<span class="num">6</span></a>
+							<a href="aaaa">認知症<span class="num">6</span></a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</header>
+	</header>
 <article id="apply" class="apply_complete">
 	<section id="bread">
 		<div class="inner">

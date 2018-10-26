@@ -1,5 +1,6 @@
-#searchSection, #seachSection2{
-  .result{
+#seachSection2,
+#searchSection {
+  .result {
     width: 100%;
     height: 60px;
     background: #fc9792;
@@ -10,24 +11,30 @@
     @include flexSet;
     align-items: center;
     justify-content: center;
-    span.txt{
+
+    span.txt {
       display: block;
       font-size: 22px;
     }
-    span#totalNum{
+
+    span#totalNum {
       display: block;
       font-size: 35px;
       height: 1.1em;
       padding: 0 0.2em 0 0;
     }
   }
-  .search_form{
+
+  .search_form {
     @include dotBg;
     padding: 40px 0;
-    #serchForm, #serchForm2{
+
+    #serchForm,
+    #serchForm2 {
       @include basicForm;
     }
-    .search_ttl{
+
+    .search_ttl {
       text-align: center;
       font-size: 22px;
       letter-spacing: 1px;
@@ -35,135 +42,235 @@
       margin-bottom: 30px;
     }
 
-    .form_wrap{
+    .form_wrap {
       width: 900px;
       margin: 0 auto;
       position: relative;
       text-align: center;
-      .search_word{
+
+      .search_word {
         width: 100%;
       }
-      .submit_wrap{
+
+      .submit_wrap {
         position: absolute !important;
-        top:0;
-        bottom:0;
-        right:0;
+        top: 0;
+        bottom: 0;
+        right: 0;
         margin: auto;
-        &::before{
+
+        &::before {
           display: block;
           content: "";
           position: absolute;
           z-index: 10;
           width: 30px;
           height: 30px;
-          top:0;
-          bottom:0;
-          left:10px;
+          top: 0;
+          bottom: 0;
+          left: 10px;
           margin: auto;
           @include bgSet;
-          background-image: url(../img/common/search.png);
+          background-image: url("../img/common/search.png");
           background-size: 20px;
         }
-        .submit_word{
-          height:40px;
+
+        .submit_word {
+          height: 40px;
           @include blueGrad;
+          appearance: none;
           border: 0;
+          margin: 0;
+          line-height: normal;
           box-shadow: 0;
           border-radius: 0 5px 5px 0;
           padding: 0 20px 0 45px;
           color: #fff;
           font-weight: bold;
           transition: opacity 1s;
-          &:hover{
+
+          &:hover {
             opacity: 0.7;
+          }
+        }
+      }
+    }
+    #suggestWord01, #suggestWord02 {
+      display: none;
+      @include waku;
+      overflow: hidden;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      background: #ffffff;
+      border-radius: 5px;
+      margin-top: 30px;
+
+      .suggest_ttl {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        @include blueGrad;
+        padding: 10px 0;
+        color: #fff;
+      }
+
+      .item_ttl {
+        padding: 20px 30px 10px;
+        @include flexSet;
+        justify-content: space-between;
+        align-items: center;
+
+        .disease_name {
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+
+        .doctor_num {
+          color: $basicRed;
+          font-weight: bold;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      }
+
+      ul {
+        padding: 0 30px 20px;
+
+        li {
+          padding: 15px 0;
+          border-bottom: 1px dotted #d8d8d8;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+
+          a {
+            display: block;
+            font-size: 16px;
+            color: #666;
+            position: relative;
+            @include hover;
+
+            .num {
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              margin: auto;
+              border-radius: 80px;
+              background-color: #fc9792;
+              color: #fff;
+              font-size: 14px;
+              width: 70px;
+              height: 25px;
+              line-height: 25px;
+              text-align: center;
+            }
           }
         }
       }
     }
   }
 }
-
-@media screen and (max-width: 1100px){
-  #searchSection, #seachSection2{
-    .result{
-      span.txt{
+@media screen and (max-width: 1100px) {
+  #seachSection2,
+  #searchSection {
+    .result {
+      span.txt {
         font-size: 18px;
       }
-      span#totalNum{
+
+      span#totalNum {
         font-size: 30px;
       }
     }
-    .search_form{
+
+    .search_form {
       padding: 30px 0;
-      #serchForm, #serchForm2{
+
+      #searchForm,
+      #searchForm2 {
         @include basicForm;
       }
-      .search_ttl{
+
+      .search_ttl {
         margin-bottom: 30px;
       }
 
-      .form_wrap{
+      .form_wrap {
         width: 650px;
       }
     }
   }
 }
-
-@media screen and (max-width: 730px){
-  #searchSection, #seachSection2{
-    .result{
+@media screen and (max-width: 730px) {
+  #seachSection2,
+  #searchSection {
+    .result {
       height: 50px;
-      span.txt{
+
+      span.txt {
         font-size: 14px;
       }
-      span#totalNum{
+
+      span#totalNum {
         font-size: 25px;
       }
     }
-    .search_form{
+
+    .search_form {
       padding: 20px 0;
-      #serchForm, #serchForm2{
-      }
-      .search_ttl{
+
+      #serchForm,
+      #serchForm2 {}
+
+      .search_ttl {
         font-size: 16px;
         line-height: 1.4;
         margin-bottom: 20px;
-        span{
+
+        span {
           display: block;
         }
       }
 
-      .form_wrap{
+      .form_wrap {
         width: 90%;
         margin: 0 auto;
         position: relative;
         text-align: center;
-        .search_word{
+
+        .search_word {
           width: 100%;
         }
-        .submit_wrap{
+
+        .submit_wrap {
           position: relative !important;
           margin: auto;
           height: 40px;
-          &::before{
+
+          &::before {
             display: block;
             content: "";
             position: absolute;
             z-index: 10;
             width: 30px;
             height: 30px;
-            top:0;
-            bottom:0;
-            left:10px;
+            top: 0;
+            bottom: 0;
+            left: 10px;
             margin: auto;
             @include bgSet;
-            background-image: url(../img/common/search.png);
+            background-image: url("../img/common/search.png");
             background-size: 20px;
           }
-          .submit_word{
+
+          .submit_word {
             position: relative;
             display: block;
-            width:100%;
+            width: 100%;
             @include blueGrad;
             margin: 10px auto 0;
             border-radius: 5px;
@@ -175,6 +282,45 @@
             @include bgSet;
             box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
             line-height: 20px;
+          }
+        }
+      }
+      #suggestWord01, #suggestWord02 {
+        margin-top: 10px;
+
+        .suggest_ttl {
+          font-size: 16px;
+        }
+
+        .item_ttl {
+          padding: 20px 10px 10px;
+
+          .disease_name {
+            font-size: 16px;
+          }
+
+          .doctor_num {
+            font-size: 12px;
+          }
+        }
+
+        ul {
+          padding: 0 10px 20px;
+
+          li {
+            padding: 15px 0;
+
+            a {
+              display: block;
+              font-size: 14px;
+
+              .num {
+                font-size: 10px;
+                width: 70px;
+                height: 20px;
+                line-height: 20px;
+              }
+            }
           }
         }
       }

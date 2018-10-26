@@ -223,7 +223,8 @@ header {
     header #slideMenu .contents .inner {
       padding: 80px 15px; }
       header #slideMenu .contents .inner .form_wrap .search_word {
-        position: relative; }
+        position: relative;
+        overflow: hidden; }
         header #slideMenu .contents .inner .form_wrap .search_word #searchDoctor {
           width: 100%;
           -webkit-box-sizing: border-box;
@@ -264,8 +265,13 @@ header {
             bottom: 0;
             right: 0;
             width: 100%;
-            margin: auto; }
+            margin: auto;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            line-height: normal; }
       header #slideMenu .contents .inner .suggest_word {
+        display: none;
         border-radius: 5px;
         overflow: hidden;
         -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -1478,7 +1484,8 @@ article {
           display: block; } }
 
 /*ワード検索部分*/
-#searchSection .result, #seachSection2 .result {
+#seachSection2 .result,
+#searchSection .result {
   width: 100%;
   height: 60px;
   background: #fc9792;
@@ -1497,19 +1504,23 @@ article {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  #searchSection .result span.txt, #seachSection2 .result span.txt {
+  #seachSection2 .result span.txt,
+  #searchSection .result span.txt {
     display: block;
     font-size: 22px; }
-  #searchSection .result span#totalNum, #seachSection2 .result span#totalNum {
+  #seachSection2 .result span#totalNum,
+  #searchSection .result span#totalNum {
     display: block;
     font-size: 35px;
     height: 1.1em;
     padding: 0 0.2em 0 0; }
 
-#searchSection .search_form, #seachSection2 .search_form {
+#seachSection2 .search_form,
+#searchSection .search_form {
   position: relative;
   padding: 40px 0; }
-  #searchSection .search_form::before, #seachSection2 .search_form::before {
+  #seachSection2 .search_form::before,
+  #searchSection .search_form::before {
     display: block;
     content: "";
     position: absolute;
@@ -1520,10 +1531,14 @@ article {
     opacity: 0.1;
     background-image: url(../img/common/dott_bg.png);
     background-size: 2px; }
-  #searchSection .search_form div, #seachSection2 .search_form div {
+  #seachSection2 .search_form div,
+  #searchSection .search_form div {
     position: relative;
     z-index: 10; }
-  #searchSection .search_form #serchForm, #searchSection .search_form #serchForm2, #seachSection2 .search_form #serchForm, #seachSection2 .search_form #serchForm2 {
+  #seachSection2 .search_form #serchForm,
+  #seachSection2 .search_form #serchForm2,
+  #searchSection .search_form #serchForm,
+  #searchSection .search_form #serchForm2 {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1537,26 +1552,31 @@ article {
     box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
     border: solid 1px #999;
     background: #ffffff; }
-  #searchSection .search_form .search_ttl, #seachSection2 .search_form .search_ttl {
+  #seachSection2 .search_form .search_ttl,
+  #searchSection .search_form .search_ttl {
     text-align: center;
     font-size: 22px;
     letter-spacing: 1px;
     color: #fc9792;
     margin-bottom: 30px; }
-  #searchSection .search_form .form_wrap, #seachSection2 .search_form .form_wrap {
+  #seachSection2 .search_form .form_wrap,
+  #searchSection .search_form .form_wrap {
     width: 900px;
     margin: 0 auto;
     position: relative;
     text-align: center; }
-    #searchSection .search_form .form_wrap .search_word, #seachSection2 .search_form .form_wrap .search_word {
+    #seachSection2 .search_form .form_wrap .search_word,
+    #searchSection .search_form .form_wrap .search_word {
       width: 100%; }
-    #searchSection .search_form .form_wrap .submit_wrap, #seachSection2 .search_form .form_wrap .submit_wrap {
+    #seachSection2 .search_form .form_wrap .submit_wrap,
+    #searchSection .search_form .form_wrap .submit_wrap {
       position: absolute !important;
       top: 0;
       bottom: 0;
       right: 0;
       margin: auto; }
-      #searchSection .search_form .form_wrap .submit_wrap::before, #seachSection2 .search_form .form_wrap .submit_wrap::before {
+      #seachSection2 .search_form .form_wrap .submit_wrap::before,
+      #searchSection .search_form .form_wrap .submit_wrap::before {
         display: block;
         content: "";
         position: absolute;
@@ -1569,15 +1589,21 @@ article {
         margin: auto;
         background-repeat: no-repeat;
         background-position: center center;
-        background-image: url(../img/common/search.png);
+        background-image: url("../img/common/search.png");
         background-size: 20px; }
-      #searchSection .search_form .form_wrap .submit_wrap .submit_word, #seachSection2 .search_form .form_wrap .submit_wrap .submit_word {
+      #seachSection2 .search_form .form_wrap .submit_wrap .submit_word,
+      #searchSection .search_form .form_wrap .submit_wrap .submit_word {
         height: 40px;
         background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
         background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
         background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
         background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         border: 0;
+        margin: 0;
+        line-height: normal;
         -webkit-box-shadow: 0;
         box-shadow: 0;
         border-radius: 0 5px 5px 0;
@@ -1587,17 +1613,132 @@ article {
         -webkit-transition: opacity 1s;
         -o-transition: opacity 1s;
         transition: opacity 1s; }
-        #searchSection .search_form .form_wrap .submit_wrap .submit_word:hover, #seachSection2 .search_form .form_wrap .submit_wrap .submit_word:hover {
+        #seachSection2 .search_form .form_wrap .submit_wrap .submit_word:hover,
+        #searchSection .search_form .form_wrap .submit_wrap .submit_word:hover {
           opacity: 0.7; }
+  #seachSection2 .search_form #suggestWord01, #seachSection2 .search_form #suggestWord02,
+  #searchSection .search_form #suggestWord01,
+  #searchSection .search_form #suggestWord02 {
+    display: none;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 30px; }
+    @media screen and (max-width: 1100px) {
+      #seachSection2 .search_form #suggestWord01, #seachSection2 .search_form #suggestWord02,
+      #searchSection .search_form #suggestWord01,
+      #searchSection .search_form #suggestWord02 {
+        max-width: 720px; } }
+    @media screen and (max-width: 750px) {
+      #seachSection2 .search_form #suggestWord01, #seachSection2 .search_form #suggestWord02,
+      #searchSection .search_form #suggestWord01,
+      #searchSection .search_form #suggestWord02 {
+        width: 90%; } }
+    #seachSection2 .search_form #suggestWord01 .suggest_ttl, #seachSection2 .search_form #suggestWord02 .suggest_ttl,
+    #searchSection .search_form #suggestWord01 .suggest_ttl,
+    #searchSection .search_form #suggestWord02 .suggest_ttl {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+      background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+      padding: 10px 0;
+      color: #fff; }
+    #seachSection2 .search_form #suggestWord01 .item_ttl, #seachSection2 .search_form #suggestWord02 .item_ttl,
+    #searchSection .search_form #suggestWord01 .item_ttl,
+    #searchSection .search_form #suggestWord02 .item_ttl {
+      padding: 20px 30px 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      #seachSection2 .search_form #suggestWord01 .item_ttl .disease_name, #seachSection2 .search_form #suggestWord02 .item_ttl .disease_name,
+      #searchSection .search_form #suggestWord01 .item_ttl .disease_name,
+      #searchSection .search_form #suggestWord02 .item_ttl .disease_name {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px; }
+      #seachSection2 .search_form #suggestWord01 .item_ttl .doctor_num, #seachSection2 .search_form #suggestWord02 .item_ttl .doctor_num,
+      #searchSection .search_form #suggestWord01 .item_ttl .doctor_num,
+      #searchSection .search_form #suggestWord02 .item_ttl .doctor_num {
+        color: #fc9792;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 1px; }
+    #seachSection2 .search_form #suggestWord01 ul, #seachSection2 .search_form #suggestWord02 ul,
+    #searchSection .search_form #suggestWord01 ul,
+    #searchSection .search_form #suggestWord02 ul {
+      padding: 0 30px 20px; }
+      #seachSection2 .search_form #suggestWord01 ul li, #seachSection2 .search_form #suggestWord02 ul li,
+      #searchSection .search_form #suggestWord01 ul li,
+      #searchSection .search_form #suggestWord02 ul li {
+        padding: 15px 0;
+        border-bottom: 1px dotted #d8d8d8; }
+        #seachSection2 .search_form #suggestWord01 ul li:last-child, #seachSection2 .search_form #suggestWord02 ul li:last-child,
+        #searchSection .search_form #suggestWord01 ul li:last-child,
+        #searchSection .search_form #suggestWord02 ul li:last-child {
+          border-bottom: 0; }
+        #seachSection2 .search_form #suggestWord01 ul li a, #seachSection2 .search_form #suggestWord02 ul li a,
+        #searchSection .search_form #suggestWord01 ul li a,
+        #searchSection .search_form #suggestWord02 ul li a {
+          display: block;
+          font-size: 16px;
+          color: #666;
+          position: relative;
+          -webkit-transition: opacity .5s;
+          -o-transition: opacity .5s;
+          transition: opacity .5s; }
+          #seachSection2 .search_form #suggestWord01 ul li a:hover, #seachSection2 .search_form #suggestWord02 ul li a:hover,
+          #searchSection .search_form #suggestWord01 ul li a:hover,
+          #searchSection .search_form #suggestWord02 ul li a:hover {
+            opacity: 0.7; }
+          #seachSection2 .search_form #suggestWord01 ul li a .num, #seachSection2 .search_form #suggestWord02 ul li a .num,
+          #searchSection .search_form #suggestWord01 ul li a .num,
+          #searchSection .search_form #suggestWord02 ul li a .num {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 80px;
+            background-color: #fc9792;
+            color: #fff;
+            font-size: 14px;
+            width: 70px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center; }
 
 @media screen and (max-width: 1100px) {
-  #searchSection .result span.txt, #seachSection2 .result span.txt {
+  #seachSection2 .result span.txt,
+  #searchSection .result span.txt {
     font-size: 18px; }
-  #searchSection .result span#totalNum, #seachSection2 .result span#totalNum {
+  #seachSection2 .result span#totalNum,
+  #searchSection .result span#totalNum {
     font-size: 30px; }
-  #searchSection .search_form, #seachSection2 .search_form {
+  #seachSection2 .search_form,
+  #searchSection .search_form {
     padding: 30px 0; }
-    #searchSection .search_form #serchForm, #searchSection .search_form #serchForm2, #seachSection2 .search_form #serchForm, #seachSection2 .search_form #serchForm2 {
+    #seachSection2 .search_form #searchForm,
+    #seachSection2 .search_form #searchForm2,
+    #searchSection .search_form #searchForm,
+    #searchSection .search_form #searchForm2 {
       width: 100%;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -1611,38 +1752,50 @@ article {
       box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
       border: solid 1px #999;
       background: #ffffff; }
-    #searchSection .search_form .search_ttl, #seachSection2 .search_form .search_ttl {
+    #seachSection2 .search_form .search_ttl,
+    #searchSection .search_form .search_ttl {
       margin-bottom: 30px; }
-    #searchSection .search_form .form_wrap, #seachSection2 .search_form .form_wrap {
+    #seachSection2 .search_form .form_wrap,
+    #searchSection .search_form .form_wrap {
       width: 650px; } }
 
 @media screen and (max-width: 730px) {
-  #searchSection .result, #seachSection2 .result {
+  #seachSection2 .result,
+  #searchSection .result {
     height: 50px; }
-    #searchSection .result span.txt, #seachSection2 .result span.txt {
+    #seachSection2 .result span.txt,
+    #searchSection .result span.txt {
       font-size: 14px; }
-    #searchSection .result span#totalNum, #seachSection2 .result span#totalNum {
+    #seachSection2 .result span#totalNum,
+    #searchSection .result span#totalNum {
       font-size: 25px; }
-  #searchSection .search_form, #seachSection2 .search_form {
+  #seachSection2 .search_form,
+  #searchSection .search_form {
     padding: 20px 0; }
-    #searchSection .search_form .search_ttl, #seachSection2 .search_form .search_ttl {
+    #seachSection2 .search_form .search_ttl,
+    #searchSection .search_form .search_ttl {
       font-size: 16px;
       line-height: 1.4;
       margin-bottom: 20px; }
-      #searchSection .search_form .search_ttl span, #seachSection2 .search_form .search_ttl span {
+      #seachSection2 .search_form .search_ttl span,
+      #searchSection .search_form .search_ttl span {
         display: block; }
-    #searchSection .search_form .form_wrap, #seachSection2 .search_form .form_wrap {
+    #seachSection2 .search_form .form_wrap,
+    #searchSection .search_form .form_wrap {
       width: 90%;
       margin: 0 auto;
       position: relative;
       text-align: center; }
-      #searchSection .search_form .form_wrap .search_word, #seachSection2 .search_form .form_wrap .search_word {
+      #seachSection2 .search_form .form_wrap .search_word,
+      #searchSection .search_form .form_wrap .search_word {
         width: 100%; }
-      #searchSection .search_form .form_wrap .submit_wrap, #seachSection2 .search_form .form_wrap .submit_wrap {
+      #seachSection2 .search_form .form_wrap .submit_wrap,
+      #searchSection .search_form .form_wrap .submit_wrap {
         position: relative !important;
         margin: auto;
         height: 40px; }
-        #searchSection .search_form .form_wrap .submit_wrap::before, #seachSection2 .search_form .form_wrap .submit_wrap::before {
+        #seachSection2 .search_form .form_wrap .submit_wrap::before,
+        #searchSection .search_form .form_wrap .submit_wrap::before {
           display: block;
           content: "";
           position: absolute;
@@ -1655,9 +1808,10 @@ article {
           margin: auto;
           background-repeat: no-repeat;
           background-position: center center;
-          background-image: url(../img/common/search.png);
+          background-image: url("../img/common/search.png");
           background-size: 20px; }
-        #searchSection .search_form .form_wrap .submit_wrap .submit_word, #seachSection2 .search_form .form_wrap .submit_wrap .submit_word {
+        #seachSection2 .search_form .form_wrap .submit_wrap .submit_word,
+        #searchSection .search_form .form_wrap .submit_wrap .submit_word {
           position: relative;
           display: block;
           width: 100%;
@@ -1676,7 +1830,47 @@ article {
           background-position: center center;
           -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
           box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-          line-height: 20px; } }
+          line-height: 20px; }
+    #seachSection2 .search_form #suggestWord01, #seachSection2 .search_form #suggestWord02,
+    #searchSection .search_form #suggestWord01,
+    #searchSection .search_form #suggestWord02 {
+      margin-top: 10px; }
+      #seachSection2 .search_form #suggestWord01 .suggest_ttl, #seachSection2 .search_form #suggestWord02 .suggest_ttl,
+      #searchSection .search_form #suggestWord01 .suggest_ttl,
+      #searchSection .search_form #suggestWord02 .suggest_ttl {
+        font-size: 16px; }
+      #seachSection2 .search_form #suggestWord01 .item_ttl, #seachSection2 .search_form #suggestWord02 .item_ttl,
+      #searchSection .search_form #suggestWord01 .item_ttl,
+      #searchSection .search_form #suggestWord02 .item_ttl {
+        padding: 20px 10px 10px; }
+        #seachSection2 .search_form #suggestWord01 .item_ttl .disease_name, #seachSection2 .search_form #suggestWord02 .item_ttl .disease_name,
+        #searchSection .search_form #suggestWord01 .item_ttl .disease_name,
+        #searchSection .search_form #suggestWord02 .item_ttl .disease_name {
+          font-size: 16px; }
+        #seachSection2 .search_form #suggestWord01 .item_ttl .doctor_num, #seachSection2 .search_form #suggestWord02 .item_ttl .doctor_num,
+        #searchSection .search_form #suggestWord01 .item_ttl .doctor_num,
+        #searchSection .search_form #suggestWord02 .item_ttl .doctor_num {
+          font-size: 12px; }
+      #seachSection2 .search_form #suggestWord01 ul, #seachSection2 .search_form #suggestWord02 ul,
+      #searchSection .search_form #suggestWord01 ul,
+      #searchSection .search_form #suggestWord02 ul {
+        padding: 0 10px 20px; }
+        #seachSection2 .search_form #suggestWord01 ul li, #seachSection2 .search_form #suggestWord02 ul li,
+        #searchSection .search_form #suggestWord01 ul li,
+        #searchSection .search_form #suggestWord02 ul li {
+          padding: 15px 0; }
+          #seachSection2 .search_form #suggestWord01 ul li a, #seachSection2 .search_form #suggestWord02 ul li a,
+          #searchSection .search_form #suggestWord01 ul li a,
+          #searchSection .search_form #suggestWord02 ul li a {
+            display: block;
+            font-size: 14px; }
+            #seachSection2 .search_form #suggestWord01 ul li a .num, #seachSection2 .search_form #suggestWord02 ul li a .num,
+            #searchSection .search_form #suggestWord01 ul li a .num,
+            #searchSection .search_form #suggestWord02 ul li a .num {
+              font-size: 10px;
+              width: 70px;
+              height: 20px;
+              line-height: 20px; } }
 
 /*フォーム部分共通*/
 form select {
@@ -1741,6 +1935,7 @@ form input[type="password"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  line-height: normal;
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
