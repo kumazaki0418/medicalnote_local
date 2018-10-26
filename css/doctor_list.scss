@@ -329,43 +329,31 @@
 								display: inline-block;
 								width: 66px;
 								height: 66px;
-								border-radius: 50%;
-								background-color: #f1f1f1;
-								box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-								border: solid 2px #fff;
-								@include bgSet;
-								background-size: cover;
+								border: solid 1px #fff;
 							}
 						}
 						.info_wrap{
 							.hospital{
 								font-size: 11px;
-								margin-bottom: 10px;
+								margin-bottom: 5px;
 								line-height: 1.6;
 							}
 							.name{
 								font-size: 14px;
 								font-weight: bold;
 								&::after{
-									display: inline-block;
-									padding-left: 0.2em;
-									content: "先生";
+									padding-left: 0.1em;
 								}
 								span{
 									display: inline-block;
-									font-size: 22px;
+									font-size: 18px;
 								}
 							}
 							.area{
 								display: inline-block;
 								margin: 15px 0;
 								padding: 5px 15px;
-								border-radius: 30px;
-								box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-								color: #fff;
 								font-size: 14px;
-								font-weight: bold;
-								transition: background .5s;
 							}
 						}
 						.form_wrap{
@@ -373,118 +361,18 @@
 								@include flexSet;
 								justify-content: center;
 								label{
-									font-size: 18px;
-									font-weight: bold;
-									color: $basicBlue01;
+									font-size: 14px;
 									margin: 0;
 									transition: color .5s;
 									.radio_label{
-										&::after{
-											display: inline-block;
-											content: "選択済み";
-										}
 									}
 								}
 							}
 							.detail_button{
 								margin-top: 20px;
 								a{
-									display: block;
 									padding: 10px 0;
-									@include blueGrad;
-									font-size: 18px;
-									font-weight: bold;
-									color: #fff;
-									border-radius: 100px;
-									transition: background .5s, background-image .5s, opacity .5s;
-									&:hover{
-										opacity: 0.7;
-									}
-								}
-							}
-						}
-						&.removed{
-							opacity: 0.6;
-							border: solid 2px $basicGray01;
-							background-color: $basicGray03;
-							.info_wrap{
-								.area{
-									background-color: $basicBlack02 !important;
-								}
-							}
-							.form_wrap{
-								.form_radio{
-									@include flexSet;
-									justify-content: center;
-									label{
-										color: $basicBlack03;
-										.radio_label{
-											&::after{
-												display: inline-block;
-												content: "未選択";
-											}
-										}
-									}
-								}
-								.detail_button{
-									margin-top: 20px;
-									a{
-										background: $basicBlack02;
-									}
-								}
-							}
-						}
-						&.disabled{
-							opacity: 0.3;
-							pointer-events: none;
-							border: solid 2px $basicGray01;
-							background-color: $basicGray03;
-							.info_wrap{
-								.area{
-									background-color: $basicBlack02 !important;
-								}
-							}
-							.form_wrap{
-								.form_radio{
-									@include flexSet;
-									justify-content: center;
-									label{
-										color: $basicBlack03;
-										.radio_label{
-											&::after{
-												display: inline-block;
-												content: "エリア外";
-											}
-										}
-									}
-								}
-								.detail_button{
-									margin-top: 20px;
-									a{
-										background: $basicBlack02;
-									}
-								}
-							}
-						}
-						&.tokyo{
-							.info_wrap{
-								.area{
-									background-color: $basicBlue01;
-									&::after{
-										display: inline-block;
-										content: "東京";
-									}
-								}
-							}
-						}
-						&.fukuoka{
-							.info_wrap{
-								.area{
-									background-color: $basicRed;
-									&::after{
-										display: inline-block;
-										content: "福岡";
-									}
+									font-size: 14px;
 								}
 							}
 						}
@@ -506,29 +394,24 @@
 						box-shadow: 0 -4px 4px 0 rgba(170, 170, 170, 0.5);
 					}
 				.submit_ttl{
-					font-size: 22px;
+					font-size: 16px;
 					padding: 10px 0;
 					color: #fff;
 					background: $basicRed;
 				}
 				.current_state{
-					margin: 25px 0;
-					font-size: 22px;
+					margin: 20px 0;
+					font-size: 16px;
 					#allNum{
-						display: inline-block;
-						padding: 0 0.2em;
-						font-weight: bold;
+						padding: 0 0.1em;
 					}
 					#selectedNum{
-						display: inline-block;
-						font-size: 30px;
-						padding: 0 0.2em;
-						font-weight: bold;
-						color: $basicRed;
+						font-size: 20px;
+						padding: 0 0.1em;
 					}
 				}
 				.submit_wrap{
-					@include submitNext;
+					@include waku;
 				}
 			}
 		}

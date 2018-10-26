@@ -2435,6 +2435,228 @@ form input[type="button"] {
       #doctorList #popUp .popContents .pop_text .pop_inner .pop_right {
         width: 480px; }
 
+@media screen and (max-width: 1100px) {
+  #apply #popUp .popContents .pop_ttl_wrap {
+    position: relative;
+    text-align: center; }
+    #apply #popUp .popContents .pop_ttl_wrap .pop_ttl {
+      font-size: 18px; }
+    #apply #popUp .popContents .pop_ttl_wrap #popClose {
+      height: 25px;
+      background-size: 20px; }
+  #apply #popUp .popContents .pop_text {
+    padding: 30px 25px; }
+  #doctorList #popUp .popContents .doctor_profile {
+    position: relative;
+    text-align: center;
+    padding: 25px 20px 20px; }
+    #doctorList #popUp .popContents .doctor_profile::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 10px;
+      background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+      background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+      border-radius: 5px 5px 0 0; }
+    #doctorList #popUp .popContents .doctor_profile .profile_wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      #doctorList #popUp .popContents .doctor_profile .profile_wrap .doctor_icon {
+        width: 120px;
+        height: 120px;
+        margin-right: 20px;
+        border-radius: 50%;
+        background: #ccc;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+        border: solid 3px #ffffff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+      #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt {
+        width: calc(100% - 140px);
+        text-align: left; }
+        #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .hospital {
+          font-size: 14px;
+          margin-bottom: 10px; }
+        #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .name {
+          font-size: 22px;
+          font-weight: bold;
+          letter-spacing: 0.9px;
+          margin-bottom: 10px; }
+          #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .name::after {
+            display: inline-block;
+            content: "先生";
+            padding-left: 0.3em;
+            font-weight: normal;
+            font-size: 14px; }
+        #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .area {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 2.2px;
+          color: #ffffff;
+          padding: 7px 15px;
+          border-radius: 30px;
+          -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5); }
+          #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .area.tokyo {
+            background-color: #4cbee0; }
+            #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .area.tokyo::after {
+              content: "東京"; }
+          #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .area.fukuoka {
+            background-color: #fc9792; }
+            #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .area.fukuoka::after {
+              content: "福岡"; }
+    #doctorList #popUp .popContents .doctor_profile #popClose {
+      background-size: 20px; }
+  #doctorList #popUp .popContents .pop_text .pop_inner {
+    display: block; }
+    #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap {
+      margin-bottom: 30px; }
+    #doctorList #popUp .popContents .pop_text .pop_inner .pop_left {
+      width: 100%;
+      margin-right: 0px; }
+    #doctorList #popUp .popContents .pop_text .pop_inner .pop_right {
+      width: 100%; } }
+
+@media screen and (max-width: 730px) {
+  #popUp .popContents {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 480px; } }
+  @media screen and (max-width: 730px) and (max-width: 1100px) {
+    #popUp .popContents {
+      max-width: 720px; } }
+  @media screen and (max-width: 730px) and (max-width: 750px) {
+    #popUp .popContents {
+      width: 90%; } }
+
+@media screen and (max-width: 730px) {
+  #apply #popUp .popContents .pop_ttl_wrap {
+    position: relative;
+    text-align: center; }
+    #apply #popUp .popContents .pop_ttl_wrap .pop_ttl {
+      font-size: 16px;
+      padding: 15px 0;
+      background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
+      background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
+      background-image: linear-gradient(to left, #79e0f2, #4cbee0);
+      border-radius: 5px 5px 0 0; }
+    #apply #popUp .popContents .pop_ttl_wrap #popClose {
+      background-size: 20px; }
+  #apply #popUp .popContents .pop_text {
+    padding: 20px 15px; }
+    #apply #popUp .popContents .pop_text .pop_item {
+      max-height: 380px; }
+      #apply #popUp .popContents .pop_text .pop_item::-webkit-scrollbar {
+        display: none; }
+      #apply #popUp .popContents .pop_text .pop_item .pop_wrap {
+        margin-bottom: 25px; }
+        #apply #popUp .popContents .pop_text .pop_item .pop_wrap h4 {
+          font-size: 16px;
+          color: #4cbee0;
+          padding-bottom: 10px;
+          margin-bottom: 10px; }
+        #apply #popUp .popContents .pop_text .pop_item .pop_wrap p {
+          font-size: 14px; }
+  #doctorList #popUp .popContents .doctor_profile {
+    position: relative;
+    text-align: center;
+    padding: 25px 10px 20px; }
+    #doctorList #popUp .popContents .doctor_profile .profile_wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      #doctorList #popUp .popContents .doctor_profile .profile_wrap .doctor_icon {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border: solid 3px #ffffff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+      #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt {
+        width: calc(100% - 100px); }
+        #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .hospital {
+          font-size: 12px;
+          margin-bottom: 10px; }
+        #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .name {
+          font-size: 18px;
+          margin-bottom: 10px; }
+          #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .name::after {
+            padding-left: 0.2em;
+            font-size: 12px; }
+        #doctorList #popUp .popContents .doctor_profile .profile_wrap .profile_txt .area {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 2.2px;
+          color: #ffffff;
+          padding: 7px 15px;
+          border-radius: 30px;
+          -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5); }
+    #doctorList #popUp .popContents .doctor_profile #popClose {
+      position: absolute;
+      top: 20px;
+      right: 0px;
+      margin: auto;
+      width: 35px;
+      height: 15px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/doctor_list/pop_close.png);
+      background-size: 15px; }
+    #doctorList #popUp .popContents .doctor_profile .relation {
+      width: 80%;
+      margin: 10px auto 0;
+      display: block;
+      position: static;
+      padding: 7px 15px;
+      text-align: left;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 15px; }
+  #doctorList #popUp .popContents .pop_text {
+    width: calc(100% - 20px);
+    margin: 0px auto 10px;
+    height: 300px; }
+    #doctorList #popUp .popContents .pop_text .pop_inner {
+      padding: 20px 15px;
+      height: 300px; }
+      #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap {
+        margin-bottom: 30px; }
+        #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .tag_list span {
+          font-size: 12px; }
+        #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt {
+          font-size: 12px;
+          line-height: 1.6; } }
+
 /*トップページ*/
 #index #indexMain {
   width: 100%;
@@ -3273,41 +3495,24 @@ form input[type="button"] {
             display: inline-block;
             width: 66px;
             height: 66px;
-            border-radius: 50%;
-            background-color: #f1f1f1;
-            -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-            box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-            border: solid 2px #fff;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover; }
+            border: solid 1px #fff; }
         #doctorList #list #doctors ul li .info_wrap .hospital {
           font-size: 11px;
-          margin-bottom: 10px;
+          margin-bottom: 5px;
           line-height: 1.6; }
         #doctorList #list #doctors ul li .info_wrap .name {
           font-size: 14px;
           font-weight: bold; }
           #doctorList #list #doctors ul li .info_wrap .name::after {
-            display: inline-block;
-            padding-left: 0.2em;
-            content: "先生"; }
+            padding-left: 0.1em; }
           #doctorList #list #doctors ul li .info_wrap .name span {
             display: inline-block;
-            font-size: 22px; }
+            font-size: 18px; }
         #doctorList #list #doctors ul li .info_wrap .area {
           display: inline-block;
           margin: 15px 0;
           padding: 5px 15px;
-          border-radius: 30px;
-          -webkit-box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-          box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
-          color: #fff;
-          font-size: 14px;
-          font-weight: bold;
-          -webkit-transition: background .5s;
-          -o-transition: background .5s;
-          transition: background .5s; }
+          font-size: 14px; }
         #doctorList #list #doctors ul li .form_wrap .form_radio {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -3318,93 +3523,16 @@ form input[type="button"] {
           -ms-flex-pack: center;
           justify-content: center; }
           #doctorList #list #doctors ul li .form_wrap .form_radio label {
-            font-size: 18px;
-            font-weight: bold;
-            color: #4cbee0;
+            font-size: 14px;
             margin: 0;
             -webkit-transition: color .5s;
             -o-transition: color .5s;
             transition: color .5s; }
-            #doctorList #list #doctors ul li .form_wrap .form_radio label .radio_label::after {
-              display: inline-block;
-              content: "選択済み"; }
         #doctorList #list #doctors ul li .form_wrap .detail_button {
           margin-top: 20px; }
           #doctorList #list #doctors ul li .form_wrap .detail_button a {
-            display: block;
             padding: 10px 0;
-            background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
-            background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
-            background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
-            background-image: linear-gradient(to left, #79e0f2, #4cbee0);
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-            border-radius: 100px;
-            -webkit-transition: background .5s, background-image .5s, opacity .5s;
-            -o-transition: background .5s, background-image .5s, opacity .5s;
-            transition: background .5s, background-image .5s, opacity .5s; }
-            #doctorList #list #doctors ul li .form_wrap .detail_button a:hover {
-              opacity: 0.7; }
-        #doctorList #list #doctors ul li.removed {
-          opacity: 0.6;
-          border: solid 2px #e6e6e6;
-          background-color: #f8f8f8; }
-          #doctorList #list #doctors ul li.removed .info_wrap .area {
-            background-color: #666 !important; }
-          #doctorList #list #doctors ul li.removed .form_wrap .form_radio {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center; }
-            #doctorList #list #doctors ul li.removed .form_wrap .form_radio label {
-              color: #999; }
-              #doctorList #list #doctors ul li.removed .form_wrap .form_radio label .radio_label::after {
-                display: inline-block;
-                content: "未選択"; }
-          #doctorList #list #doctors ul li.removed .form_wrap .detail_button {
-            margin-top: 20px; }
-            #doctorList #list #doctors ul li.removed .form_wrap .detail_button a {
-              background: #666; }
-        #doctorList #list #doctors ul li.disabled {
-          opacity: 0.3;
-          pointer-events: none;
-          border: solid 2px #e6e6e6;
-          background-color: #f8f8f8; }
-          #doctorList #list #doctors ul li.disabled .info_wrap .area {
-            background-color: #666 !important; }
-          #doctorList #list #doctors ul li.disabled .form_wrap .form_radio {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center; }
-            #doctorList #list #doctors ul li.disabled .form_wrap .form_radio label {
-              color: #999; }
-              #doctorList #list #doctors ul li.disabled .form_wrap .form_radio label .radio_label::after {
-                display: inline-block;
-                content: "エリア外"; }
-          #doctorList #list #doctors ul li.disabled .form_wrap .detail_button {
-            margin-top: 20px; }
-            #doctorList #list #doctors ul li.disabled .form_wrap .detail_button a {
-              background: #666; }
-        #doctorList #list #doctors ul li.tokyo .info_wrap .area {
-          background-color: #4cbee0; }
-          #doctorList #list #doctors ul li.tokyo .info_wrap .area::after {
-            display: inline-block;
-            content: "東京"; }
-        #doctorList #list #doctors ul li.fukuoka .info_wrap .area {
-          background-color: #fc9792; }
-          #doctorList #list #doctors ul li.fukuoka .info_wrap .area::after {
-            display: inline-block;
-            content: "福岡"; }
+            font-size: 14px; }
     #doctorList #list #submitWrap {
       position: relative;
       padding-bottom: 25px;
@@ -3434,92 +3562,28 @@ form input[type="button"] {
         -webkit-box-shadow: 0 -4px 4px 0 rgba(170, 170, 170, 0.5);
         box-shadow: 0 -4px 4px 0 rgba(170, 170, 170, 0.5); }
       #doctorList #list #submitWrap .submit_ttl {
-        font-size: 22px;
+        font-size: 16px;
         padding: 10px 0;
         color: #fff;
         background: #fc9792; }
       #doctorList #list #submitWrap .current_state {
-        margin: 25px 0;
-        font-size: 22px; }
+        margin: 20px 0;
+        font-size: 16px; }
         #doctorList #list #submitWrap .current_state #allNum {
-          display: inline-block;
-          padding: 0 0.2em;
-          font-weight: bold; }
+          padding: 0 0.1em; }
         #doctorList #list #submitWrap .current_state #selectedNum {
-          display: inline-block;
-          font-size: 30px;
-          padding: 0 0.2em;
-          font-weight: bold;
-          color: #fc9792; }
+          font-size: 20px;
+          padding: 0 0.1em; }
       #doctorList #list #submitWrap .submit_wrap {
-        width: 800px;
-        margin: 0 auto;
-        position: relative; }
-        #doctorList #list #submitWrap .submit_wrap .submit_label {
-          width: 100%;
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-          padding: 15px 0;
-          border-radius: 100px;
-          background-image: -webkit-gradient(linear, right top, left top, from(#79e0f2), to(#4cbee0));
-          background-image: -webkit-linear-gradient(right, #79e0f2, #4cbee0);
-          background-image: -o-linear-gradient(right, #79e0f2, #4cbee0);
-          background-image: linear-gradient(to left, #79e0f2, #4cbee0);
-          text-align: center;
-          display: inline-block;
-          font-size: 22px;
-          font-weight: bold;
-          letter-spacing: 1px;
-          color: #fff;
-          pointer-events: none; }
-          #doctorList #list #submitWrap .submit_wrap .submit_label span.arrow {
-            position: relative;
-            display: inline-block;
-            padding-right: 100px; }
-            #doctorList #list #submitWrap .submit_wrap .submit_label span.arrow::after {
-              display: block;
-              content: "";
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              right: 0;
-              margin: auto;
-              background-repeat: no-repeat;
-              background-position: center center;
-              background-image: url(../img/common/arrow.png);
-              background-size: 70px;
-              width: 70px;
-              height: 12px;
-              -webkit-transition: right .5s;
-              -o-transition: right .5s;
-              transition: right .5s; }
-        #doctorList #list #submitWrap .submit_wrap input[type="submit"] {
-          opacity: 0;
-          display: block;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto; }
-        #doctorList #list #submitWrap .submit_wrap:hover .submit_label span.arrow::after {
-          right: -15px; } }
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto; } }
       @media screen and (max-width: 720px) and (max-width: 1100px) {
         #doctorList #list #submitWrap .submit_wrap {
-          width: 600px; } }
-      @media screen and (max-width: 720px) and (max-width: 720px) {
+          max-width: 720px; } }
+      @media screen and (max-width: 720px) and (max-width: 750px) {
         #doctorList #list #submitWrap .submit_wrap {
-          width: 100%; }
-          #doctorList #list #submitWrap .submit_wrap .submit_label {
-            padding: 15px 0;
-            font-size: 18px;
-            letter-spacing: 1px; }
-            #doctorList #list #submitWrap .submit_wrap .submit_label span.arrow {
-              padding-right: 0px; }
-              #doctorList #list #submitWrap .submit_wrap .submit_label span.arrow::after {
-                display: none; } }
+          width: 90%; } }
 
 /*受診申し込みページ*/
 .apply_section {

@@ -255,3 +255,269 @@
     }
   }
 }
+
+@media screen and (max-width: 1100px){
+  #apply{
+    #popUp{
+      .popContents{
+        .pop_ttl_wrap{
+          position: relative;
+          text-align: center;
+          .pop_ttl{
+            font-size: 18px;
+          }
+          #popClose{
+            height: 25px;
+            background-size: 20px;
+          }
+        }
+        .pop_text{
+          padding: 30px 25px;
+        }
+      }
+    }
+  }
+
+  #doctorList{
+    #popUp{
+      .popContents{
+        .doctor_profile{
+          position: relative;
+          text-align: center;
+          padding: 25px 20px 20px;
+          &::before{
+            display: block;
+            content: "";
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            margin: auto;
+            width: 100%;
+            height: 10px;
+            @include blueGrad;
+            border-radius: 5px 5px 0 0;
+          }
+          .profile_wrap{
+            @include flexSet;
+            align-items:center;
+            .doctor_icon{
+              width: 120px;
+              height: 120px;
+              margin-right: 20px;
+              border-radius: 50%;
+              background: #ccc;
+              @include bgSet;
+              background-size: cover;
+              box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+              border: solid 3px #ffffff;
+              box-sizing: border-box;
+            }
+            .profile_txt{
+              width: calc(100% - 140px);
+              text-align: left;
+              .hospital{
+                font-size: 14px;
+                margin-bottom: 10px;
+              }
+              .name{
+                font-size: 22px;
+                font-weight: bold;
+                letter-spacing: 0.9px;
+                margin-bottom: 10px;
+                &::after{
+                  display: inline-block;
+                  content: "先生";
+                  padding-left: 0.3em;
+                  font-weight: normal;
+                  font-size: 14px;
+                }
+              }
+              .area{
+                display: inline-block;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 2.2px;
+                color: #ffffff;
+                padding: 7px 15px;
+                border-radius: 30px;
+                box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+                &.tokyo{
+                  background-color: $basicBlue01;
+                  &::after{
+                    content: "東京";
+                  }
+                }
+                &.fukuoka{
+                  background-color: $basicRed;
+                  &::after{
+                    content: "福岡";
+                  }
+                }
+              }
+            }
+          }
+          #popClose{
+            background-size: 20px;
+          }
+        }
+        .pop_text{
+          .pop_inner{
+            display: block;
+            .pop_content_wrap{
+              margin-bottom: 30px;
+            }
+            .pop_left{
+              width: 100%;
+              margin-right: 0px;
+            }
+            .pop_right{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px){
+  #popUp{
+    .popContents{
+      @include waku;
+      height: 480px;
+    }
+  }
+
+  #apply{
+    #popUp{
+      .popContents{
+        .pop_ttl_wrap{
+          position: relative;
+          text-align: center;
+          .pop_ttl{
+            font-size: 16px;
+            padding: 15px 0;
+            @include blueGrad;
+            border-radius: 5px 5px 0 0;
+          }
+          #popClose{
+            background-size: 20px;
+          }
+        }
+        .pop_text{
+          padding: 20px 15px;
+          .pop_item{
+            max-height: 380px;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            .pop_wrap{
+              margin-bottom: 25px;
+              h4{
+                font-size: 16px;
+                color: $basicBlue01;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+              }
+              p{
+                 font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #doctorList{
+    #popUp{
+      .popContents{
+        .doctor_profile{
+          position: relative;
+          text-align: center;
+          padding: 25px 10px 20px;
+          .profile_wrap{
+            @include flexSet;
+            align-items:center;
+            .doctor_icon{
+              width: 80px;
+              height: 80px;
+              margin-right: 20px;
+              @include bgSet;
+              background-size: cover;
+              border: solid 3px #ffffff;
+              box-sizing: border-box;
+            }
+            .profile_txt{
+              width: calc(100% - 100px);
+              .hospital{
+                font-size: 12px;
+                margin-bottom: 10px;
+              }
+              .name{
+                font-size: 18px;
+                margin-bottom: 10px;
+                &::after{
+                  padding-left: 0.2em;
+                  font-size: 12px;
+                }
+              }
+              .area{
+                display: inline-block;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 2.2px;
+                color: #ffffff;
+                padding: 7px 15px;
+                border-radius: 30px;
+                box-shadow: 0 2px 4px 0 rgba(170, 170, 170, 0.5);
+              }
+            }
+          }
+          #popClose{
+            position: absolute;
+            top: 20px;
+            right: 0px;
+            margin: auto;
+            width: 35px;
+            height: 15px;
+            @include bgSet;
+            background-image: url(../img/doctor_list/pop_close.png);
+            background-size: 15px;
+          }
+          .relation{
+            width: 80%;
+            margin: 10px auto 0;
+            display: block;
+            position: static;
+            padding: 7px 15px;
+            text-align: left;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 15px;
+          }
+        }
+        .pop_text{
+          width: calc(100% - 20px);
+          margin: 0px auto 10px;
+          height: 300px;
+          .pop_inner{
+            padding: 20px 15px;
+            height: 300px;
+            .pop_content_wrap{
+              margin-bottom: 30px;
+              .tag_list span{
+                font-size: 12px;
+              }
+              .content_txt{
+                font-size: 12px;
+                line-height: 1.6;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
