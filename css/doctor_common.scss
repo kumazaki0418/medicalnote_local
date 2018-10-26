@@ -72,6 +72,34 @@
       }
   	}
   }
+  #pankuzu{
+    @include waku;
+    overflow: hidden;
+    padding-top: 30px;
+    ul{
+      display: flex;
+      flex-wrap: nowrap;
+      li{
+        font-size: 14px;
+        &::after{
+          display: inline-block;
+          content: "▶︎";
+          padding: 0 10px;
+          color: #aaa;
+        }
+        &:last-child{
+          &::after{
+            display: none;
+          }
+        }
+        a{
+          color: $basicBlue01;
+          @include hover;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
   section{
     .bg_wrap{
       @include waku;
@@ -490,6 +518,16 @@
           }
         }
     	}
+    }
+    #pankuzu{
+      padding-top: 20px;
+      ul{
+        display: flex;
+        flex-wrap: nowrap;
+        li{
+          font-size: 12px;
+        }
+      }
     }
     section{
       .bg_wrap{

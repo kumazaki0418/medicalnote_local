@@ -1,6 +1,18 @@
 #matchingDetail{
+  .back_list{
+    margin: 30px auto 0;
+    a{
+      display: inline-block;
+      color: $basicBlue01;
+      border-radius: 10px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      @include hover;
+
+    }
+  }
   #detail{
-    padding: 40px 0;
+    padding: 30px 0 40px;
     .detail_inner{
       width: 100%;
       border-radius: 5px;
@@ -250,7 +262,7 @@
 @media screen and (max-width: 1100px){
   #matchingDetail{
     #detail{
-      padding: 40px 0;
+      padding: 30px 0;
       .detail_inner{
         .detail_ttl{
           font-size: 18px;
@@ -320,7 +332,9 @@
     #detail{
       padding: 20px 0 30px;
       .bg_wrap{
-        padding-bottom: 0;
+        .back_list{
+          margin: 0;
+        }
       }
       .detail_inner{
         width: 100%;

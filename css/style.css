@@ -3769,6 +3769,42 @@ form input[type="button"] {
     content: "医療機関名:";
     padding-right: 0.3em; }
 
+#doctor #pankuzu {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding-top: 30px; }
+  @media screen and (max-width: 1100px) {
+    #doctor #pankuzu {
+      max-width: 720px; } }
+  @media screen and (max-width: 750px) {
+    #doctor #pankuzu {
+      width: 90%; } }
+  #doctor #pankuzu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
+    #doctor #pankuzu ul li {
+      font-size: 14px; }
+      #doctor #pankuzu ul li::after {
+        display: inline-block;
+        content: "▶︎";
+        padding: 0 10px;
+        color: #aaa; }
+      #doctor #pankuzu ul li:last-child::after {
+        display: none; }
+      #doctor #pankuzu ul li a {
+        color: #4cbee0;
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+        text-decoration: underline; }
+        #doctor #pankuzu ul li a:hover {
+          opacity: 0.7; }
+
 #doctor section .bg_wrap {
   max-width: 1080px;
   margin-left: auto;
@@ -4122,6 +4158,16 @@ form input[type="button"] {
           display: none; }
       #doctor #bread .inner .login_info .hospotal::before {
         padding-right: 0.2em; }
+  #doctor #pankuzu {
+    padding-top: 20px; }
+    #doctor #pankuzu ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+      #doctor #pankuzu ul li {
+        font-size: 12px; }
   #doctor section .bg_wrap {
     padding: 25px 15px; }
   #doctor .list_table {
@@ -4220,6 +4266,14 @@ form input[type="button"] {
   padding: 40px 0; }
   #doctorLogin #loginForm .bg_wrap .form_wrap {
     margin-bottom: 30px; }
+    #doctorLogin #loginForm .bg_wrap .form_wrap .form_text .alert_msg {
+      display: none;
+      padding: 15px 0 0;
+      color: red;
+      font-size: 14px;
+      letter-spacing: 1px; }
+    #doctorLogin #loginForm .bg_wrap .form_wrap .form_text.alert .alert_msg {
+      display: block; }
   #doctorLogin #loginForm .bg_wrap #submitWrap .form_wrap {
     text-align: center;
     margin-bottom: 30px; }
@@ -4608,8 +4662,22 @@ form input[type="button"] {
           box-sizing: border-box; } }
 
 /*医師側マッチング詳細画面*/
+#matchingDetail .back_list {
+  margin: 30px auto 0; }
+  #matchingDetail .back_list a {
+    display: inline-block;
+    color: #4cbee0;
+    border-radius: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s; }
+    #matchingDetail .back_list a:hover {
+      opacity: 0.7; }
+
 #matchingDetail #detail {
-  padding: 40px 0; }
+  padding: 30px 0 40px; }
   #matchingDetail #detail .detail_inner {
     width: 100%;
     border-radius: 5px;
@@ -4873,7 +4941,7 @@ form input[type="button"] {
 
 @media screen and (max-width: 1100px) {
   #matchingDetail #detail {
-    padding: 40px 0; }
+    padding: 30px 0; }
     #matchingDetail #detail .detail_inner .detail_ttl {
       font-size: 18px;
       margin-bottom: 20px; }
@@ -4916,8 +4984,8 @@ form input[type="button"] {
 @media screen and (max-width: 720px) {
   #matchingDetail #detail {
     padding: 20px 0 30px; }
-    #matchingDetail #detail .bg_wrap {
-      padding-bottom: 0; }
+    #matchingDetail #detail .bg_wrap .back_list {
+      margin: 0; }
     #matchingDetail #detail .detail_inner {
       width: 100%;
       -webkit-box-shadow: none;

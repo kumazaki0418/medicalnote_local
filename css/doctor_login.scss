@@ -5,6 +5,20 @@
     .bg_wrap {
       .form_wrap {
         margin-bottom: 30px;
+        .form_text{
+          .alert_msg{
+            display: none;
+            padding: 15px 0 0;
+            color: red;
+            font-size: 14px;
+            letter-spacing: 1px;
+          }
+          &.alert{
+            .alert_msg{
+              display: block;
+            }
+          }
+        }
       }
 
       #submitWrap {
