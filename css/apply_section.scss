@@ -109,7 +109,7 @@
 					}
 				}
 			}
-			.form_text{
+			.form_text, .form_radio{
 				input[name="age"]{
 					display: inline-block;
     			width: 100px;
@@ -117,6 +117,19 @@
 				}
 				input[name="phone"]{
 					width: 380px;
+				}
+				.alert_msg{
+					display: none;
+					width: 100%;
+					padding: 15px 0 0;
+					color: red;
+					font-size: 14px;
+					letter-spacing: 1px;
+				}
+				&.alert{
+					.alert_msg{
+						display: block;
+					}
 				}
 			}
 		}
@@ -145,6 +158,13 @@
 			position: relative;
 			.submit_wrap{
 				@include submitNext;
+				&.disable {
+					pointer-events: none;
+					.submit_label {
+						opacity: 0.7;
+						background: #aaa;
+					}
+				}
 			}
 		}
 	}

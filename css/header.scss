@@ -135,7 +135,9 @@ header{
 								width: 100%;
 								margin: auto;
 								appearance: none;
-								line-height: normal; 
+								line-height: normal;
+								z-index: 30;
+								cursor: pointer;
 							}
 						}
 					}

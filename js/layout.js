@@ -524,6 +524,10 @@ $(function() {
         agreePolicy();
       }
 
+      if (document.getElementById('apply')) {
+        agreePolicy();
+      }
+
       //マッチングリストのナンバリング
 
 

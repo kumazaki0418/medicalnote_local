@@ -116,11 +116,12 @@
 					<h3 class="common_ttl"><span>診断状況</span></h3>
 					<a class="help" href="javascript:void(0);" popup="form01" popTitle="診断状況"></a>
 				</div><!-- form_ttl -->
-				<div class="form_radio">
+				<div class="form_radio alert">
 				<span class="radio_item first">
-							<label><input type="checkbox" value="過去に診察を受けている" checked="" class="checkbox"><span class="radio_label">過去に診察を受けている</span>
+							<label><input required type="checkbox" value="過去に診察を受けている" class="checkbox"><span class="radio_label">過去に診察を受けている</span>
 							</label>
 				</span>
+				<span class="alert_msg">項目にチェックを入れてください</span>
 			</div>
 			</div><!-- form_wrap -->
 			<div class="form_wrap">
@@ -128,8 +129,9 @@
 					<h3 class="common_ttl"><span>診断を受けた医療機関名</span></h3>
 					<a class="help" href="javascript:void(0);" popup="form02" popTitle="診断を受けた医療機関名"></a>
 				</div><!-- form_ttl -->
-				<div class="form_text">
-					<input type="text" placeholder="Medical Note病院">
+				<div class="form_text alert">
+					<input type="text" required placeholder="Medical Note病院">
+					<span class="alert_msg">必須項目に入力してください</span>
 			</div>
 			</div><!-- form_wrap -->
 			<div class="form_wrap">
@@ -137,15 +139,16 @@
 					<h3 class="common_ttl"><span>ご相談対象者の性別</span></h3>
 					<a class="help" href="javascript:void(0);" popup="form03" popTitle="ご相談対象者の性別"></a>
 				</div><!-- form_ttl -->
-				<div class="form_radio">
+				<div class="form_radio alert">
 				<span class="radio_item first">
-							<label><input type="radio" name="sex" value="男性"  class="radiobutton"><span class="radio_label">男性</span>
+							<label><input type="radio" name="sex" value="男性"  class="radiobutton" required><span class="radio_label">男性</span>
 							</label>
 				</span>
 				<span class="radio_item first">
-							<label><input type="radio" name="sex" id="tokyo" value="女性"  class="radiobutton"><span class="radio_label">女性</span>
+							<label><input type="radio" name="sex" id="tokyo" value="女性"  class="radiobutton"><span class="radio_label" required>女性</span>
 							</label>
 				</span>
+				<span class="alert_msg">項目にチェックを入れてください</span>
 			</div>
 			</div><!-- form_wrap -->
 			<div class="form_wrap">
@@ -153,8 +156,9 @@
 					<h3 class="common_ttl"><span>ご相談対象者の年齢</span></h3>
 					<a class="help" href="javascript:void(0);" popup="form04" popTitle="ご相談対象者の年齢"></a>
 				</div><!-- form_ttl -->
-				<div class="form_text">
-					<input type="number" name="age">歳
+				<div class="form_text alert">
+					<input required type="number" name="age">歳
+					<span class="alert_msg">必須項目に入力してください</span>
 			</div>
 			</div><!-- form_wrap -->
 			<div class="form_wrap">
@@ -162,19 +166,20 @@
 					<h3 class="common_ttl"><span>ご相談対象者との関係</span></h3>
 					<a class="help" href="javascript:void(0);" popup="form05" popTitle="ご相談対象者との関係"></a>
 				</div><!-- form_ttl -->
-				<div class="form_radio">
+				<div class="form_radio alert">
 				<span class="radio_item first">
-							<label><input type="radio" name="user" value="本人" class="radiobutton"><span class="radio_label">本人</span>
+							<label><input type="radio" name="user" value="本人" class="radiobutton"><span class="radio_label" required>本人</span>
 							</label>
 				</span>
 				<span class="radio_item first">
-							<label><input type="radio" name="user" value="家族" class="radiobutton"><span class="radio_label">家族</span>
+							<label><input type="radio" name="user" value="家族" class="radiobutton"><span class="radio_label" required>家族</span>
 							</label>
 				</span>
 				<span class="radio_item first">
-							<label><input type="radio" name="user" value="その他" class="radiobutton"><span class="radio_label">その他</span>
+							<label><input type="radio" name="user" value="その他" class="radiobutton"><span class="radio_label" required>その他</span>
 							</label>
 				</span>
+				<span class="alert_msg">いずれかの項目をチェクしてください</span>
 			</div>
 			</div><!-- form_wrap -->
 			<div class="form_wrap">
@@ -182,8 +187,9 @@
 					<h3 class="common_ttl"><span>ご連絡が可能な電話番号</span></h3>
 					<a class="help" href="javascript:void(0);" popup="form06" popTitle="ご連絡が可能な電話番号"></a>
 				</div><!-- form_ttl -->
-				<div class="form_text">
-					<input type="tel" name="phone" placeholder="例) 0312345678(ハイフン無し)">
+				<div class="form_text alert">
+					<input required type="tel" name="phone" placeholder="例) 0312345678(ハイフン無し)">
+					<span class="alert_msg">必須項目に入力してください</span>
 			</div>
 			</div><!-- form_wrap -->
 		</div>
