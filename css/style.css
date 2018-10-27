@@ -4042,6 +4042,11 @@ form input[type="button"] {
               padding-right: 0px; }
               #doctorList #list #submitWrap .submit_wrap .submit_label span.arrow::after {
                 display: none; } }
+      #doctorList #list #submitWrap .submit_wrap.disable {
+        pointer-events: none; }
+        #doctorList #list #submitWrap .submit_wrap.disable .submit_label {
+          opacity: 0.7;
+          background: #aaa; }
 
 @media screen and (max-width: 1100px) {
   #doctorList #main .main_content {
@@ -5480,15 +5485,15 @@ form input[type="button"] {
               padding-right: 0px; }
               #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap .submit_label span.arrow::after {
                 display: none; } }
-      #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap .submit_label {
-        -webkit-transition: background 0.5s, opacity 0.5s;
-        -o-transition: background 0.5s, opacity 0.5s;
-        transition: background 0.5s, opacity 0.5s; }
       #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap.disable {
         pointer-events: none; }
         #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap.disable .submit_label {
           opacity: 0.7;
           background: #aaa; }
+      #doctorLogin #loginForm .bg_wrap #submitWrap .submit .submit_wrap .submit_label {
+        -webkit-transition: background 0.5s, opacity 0.5s;
+        -o-transition: background 0.5s, opacity 0.5s;
+        transition: background 0.5s, opacity 0.5s; }
 
 @media screen and (max-width: 720px) {
   #doctorLogin #loginForm {

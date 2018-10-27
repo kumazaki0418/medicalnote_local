@@ -50,14 +50,6 @@
             .submit_label {
               transition: background 0.5s, opacity 0.5s;
             }
-
-            &.disable {
-              pointer-events: none;
-              .submit_label {
-                opacity: 0.7;
-                background: #aaa;
-              }
-            }
           }
         }
       }

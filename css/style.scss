@@ -143,6 +143,14 @@ $basicGreen: #00381f;
       }
     }
 
+    &.disable {
+      pointer-events: none;
+      .submit_label {
+        opacity: 0.7;
+        background: #aaa;
+      }
+    }
+
 }
 @mixin dotBg{
   position: relative;

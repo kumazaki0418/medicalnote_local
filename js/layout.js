@@ -1,5 +1,4 @@
 $(function() {
-      console.log('layout.js');
 
       // スクロール系のイベントまとめ
       function scrollArrow(target) {
@@ -342,10 +341,22 @@ $(function() {
         var fukuokaState = 0;
         checkWrap = [];
         var checkBox = [];
+        var submitWrap = $('#submitWrap .submit_wrap');
+        var submitButton = $('#submitButton');
 
         function onCheckChange(){
           var num = target.find('.selected').length;
           $('#selectedNum').text(num);
+          if(num < 1){
+            console.log('zero');
+            submitButton.attr('disabled', true);
+            submitWrap.addClass('disable');
+          }else{
+            console.log('zeroじゃない');
+            submitButton.attr('disabled', false);
+            submitWrap.removeClass('disable');
+
+          }
         }
 
         function listChanger(e){
@@ -406,29 +417,6 @@ $(function() {
         if (document.getElementById('doctorList')) {
             checkNumControl($('#doctors'));
         }
-
-
-    /*  $('#searchDoctor').select2({
-        ajax: {
-          url: 'https://raw.githubusercontent.com/kumazaki0418/medicalnote_local/master/sample_data/suggest_diseases.json',
-          dataType: 'json'
-        }
-      });
-      $('#serchForm').select2({
-        ajax: {
-          url: 'https://raw.githubusercontent.com/kumazaki0418/medicalnote_local/master/sample_data/suggest_diseases.json',
-          dataType: 'json'
-        }
-      });
-      $('#serchForm2').select2({
-        ajax: {
-          url: 'https://raw.githubusercontent.com/kumazaki0418/medicalnote_local/master/sample_data/suggest_diseases.json',
-          dataType: 'json'
-        }
-      });
-
-      */
-
 
       // LPのスライダー
 
