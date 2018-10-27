@@ -555,37 +555,39 @@ $(function() {
         });
       }
 
+      if (document.getElementById('matchingList')) {
       // 医師側管理画面 医師一覧 読み込み
-      $('.js_loadApplications').click(function () {
-        var page = $(this).attr('data-page');
-        if (!page) {
-          page = 1;
-        }
-        var nextPage = parseInt(page) + 1;
-        var $form = $($(this).data('form'));
-        $(this).attr('data-page', nextPage);
-        $(this).prop('disabled', true);
-
-        $form.append($('<input type="hidden" name="page" value="'+nextPage+'">'));
-        $.ajax({
-          url:  $form.attr('action'),
-          type: $form.attr('method'),
-          data: $form.serialize()
-        })
-        .done((data) => {
-          if (data.length > 0) {
-            $('#js_applicatoins').append(data);
-          } else {
-            $('.js_loadApplications').hide();
+        $('.js_loadApplications').click(function () {
+          var page = $(this).attr('data-page');
+          if (!page) {
+            page = 1;
           }
-        })
-        .fail((data) => {
-          console.log(data);
-        })
-        .always((data) => {
-          $(this).prop('disabled', false);
-          $('input[name="page"]').remove();
+          var nextPage = parseInt(page) + 1;
+          var $form = $($(this).data('form'));
+          $(this).attr('data-page', nextPage);
+          $(this).prop('disabled', true);
+
+          $form.append($('<input type="hidden" name="page" value="'+nextPage+'">'));
+          $.ajax({
+            url:  $form.attr('action'),
+            type: $form.attr('method'),
+            data: $form.serialize()
+          })
+          .done((data) => {
+            if (data.length > 0) {
+              $('#js_applicatoins').append(data);
+            } else {
+              $('.js_loadApplications').hide();
+            }
+          })
+          .fail((data) => {
+            console.log(data);
+          })
+          .always((data) => {
+            $(this).prop('disabled', false);
+            $('input[name="page"]').remove();
+          });
         });
-      });
+      }
 
 });
