@@ -268,17 +268,20 @@ $(function() {
 
       // ラジオボタンの変更を取得
       function radioChange(target) {
+        var radioWrap = [];
 
-        function onCatChange() {
-          var val = $('.radiobutton:checked').val();
-          console.log(val);
-          $('.selected').removeClass('selected');
-          $('.radiobutton:checked').parent('label').addClass('selected')
+        function onCatChange(e) {
+          console.log(e);
+          radioWrap[e].find('.selected').removeClass('selected');
+          radioWrap[e].find('.radiobutton:checked').parent('label').addClass('selected');
         }
 
         function init() {
-          $('.radiobutton').change(function() {
-            onCatChange();
+          $('.form_radio').each(function(index) {
+            radioWrap[index] = $(this);
+            $(this).find('.radiobutton').change(function() {
+              onCatChange(index);
+            });
           });
         }
 
@@ -520,18 +523,8 @@ $(function() {
 
       }
 
-      if (document.getElementById('loginFirst')) {
+      if (document.getElementById('agree')) {
         agreePolicy();
       }
-
-      if (document.getElementById('apply')) {
-        agreePolicy();
-      }
-
-      //マッチングリストのナンバリング
-
-
-
-
 
 });
