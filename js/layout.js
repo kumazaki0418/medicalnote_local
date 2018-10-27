@@ -208,10 +208,8 @@ $(function() {
             });
           }
 
-          closeBtn.on({
-            'click': function() {
-              popMenuShift();
-            }
+          $(document).on('click', '#popClose', function () {
+            popMenuShift();
           });
           menuBg.on({
             'click': function() {
@@ -526,5 +524,68 @@ $(function() {
       if (document.getElementById('agree')) {
         agreePolicy();
       }
+
+      if (document.getElementById('apply')) {
+        // 入力内容修正
+        $('.js_modify_apply_form').click(function () {
+          var $form = $($(this).data('form'));
+          $form.attr('action', '/apply');
+          $form.submit();
+        });
+      }
+
+      if (document.getElementById('doctorList')) {
+        // ユーザー側 医師詳細表示
+        $('.js_show_doctor').click(function () {
+          var doctorId = $(this).data('id');
+          $('#js_doctor_detail').empty();
+          $.ajax({
+            url:  '/doctors/' + doctorId,
+            type: 'GET',
+            data: {}
+          })
+          .done((data) => {
+            $('#js_doctor_detail').append(data);
+          })
+          .fail((data) => {
+            console.log(data);
+          })
+          .always((data) => {
+          });
+        });
+      }
+
+      // 医師側管理画面 医師一覧 読み込み
+      $('.js_loadApplications').click(function () {
+        var page = $(this).attr('data-page');
+        if (!page) {
+          page = 1;
+        }
+        var nextPage = parseInt(page) + 1;
+        var $form = $($(this).data('form'));
+        $(this).attr('data-page', nextPage);
+        $(this).prop('disabled', true);
+
+        $form.append($('<input type="hidden" name="page" value="'+nextPage+'">'));
+        $.ajax({
+          url:  $form.attr('action'),
+          type: $form.attr('method'),
+          data: $form.serialize()
+        })
+        .done((data) => {
+          if (data.length > 0) {
+            $('#js_applicatoins').append(data);
+          } else {
+            $('.js_loadApplications').hide();
+          }
+        })
+        .fail((data) => {
+          console.log(data);
+        })
+        .always((data) => {
+          $(this).prop('disabled', false);
+          $('input[name="page"]').remove();
+        });
+      });
 
 });
