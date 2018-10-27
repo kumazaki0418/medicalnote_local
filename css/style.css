@@ -4305,11 +4305,11 @@ form input[type="button"] {
             color: #fff;
             margin-left: 15px;
             font-size: 14px; }
-      .apply_section .form_block .form_wrap .form_text input[name="age"], .apply_section .form_block .form_wrap .form_radio input[name="age"] {
+      .apply_section .form_block .form_wrap .form_text input[type="number"], .apply_section .form_block .form_wrap .form_radio input[type="number"] {
         display: inline-block;
         width: 100px;
         margin-right: 1em; }
-      .apply_section .form_block .form_wrap .form_text input[name="phone"], .apply_section .form_block .form_wrap .form_radio input[name="phone"] {
+      .apply_section .form_block .form_wrap .form_text input[type="tel"], .apply_section .form_block .form_wrap .form_radio input[type="tel"] {
         width: 380px; }
       .apply_section .form_block .form_wrap .form_text .alert_msg, .apply_section .form_block .form_wrap .form_radio .alert_msg {
         display: none;
@@ -4507,7 +4507,7 @@ form input[type="button"] {
               padding: 5px 15px;
               margin-left: 15px;
               font-size: 12px; }
-        .apply_section .form_block .form_wrap .form_text input[name="phone"] {
+        .apply_section .form_block .form_wrap .form_text input[type="tel"] {
           width: 100%; }
   #apply #submitWrap {
     padding: 30px 0; }

@@ -110,12 +110,12 @@
 				}
 			}
 			.form_text, .form_radio{
-				input[name="age"]{
+				input[type="number"]{
 					display: inline-block;
     			width: 100px;
     			margin-right: 1em;
 				}
-				input[name="phone"]{
+				input[type="tel"]{
 					width: 380px;
 				}
 				.alert_msg{
@@ -267,7 +267,7 @@
 					}
 				}
 				.form_text{
-					input[name="phone"]{
+					input[type="tel"]{
 						width: 100%;
 					}
 				}
