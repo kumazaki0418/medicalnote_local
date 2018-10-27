@@ -556,7 +556,7 @@ $(function() {
       }
 
       if (document.getElementById('matchingList')) {
-      // 医師側管理画面 医師一覧 読み込み
+        // 医師側管理画面 医師一覧 読み込み
         $('.js_loadApplications').click(function () {
           var page = $(this).attr('data-page');
           if (!page) {
