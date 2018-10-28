@@ -348,11 +348,9 @@ $(function() {
           var num = target.find('.selected').length;
           $('#selectedNum').text(num);
           if(num < 1){
-            console.log('zero');
             submitButton.attr('disabled', true);
             submitWrap.addClass('disable');
           }else{
-            console.log('zeroじゃない');
             submitButton.attr('disabled', false);
             submitWrap.removeClass('disable');
 
@@ -414,9 +412,9 @@ $(function() {
 
       }
 
-        if (document.getElementById('doctorList')) {
-            checkNumControl($('#doctors'));
-        }
+      if (document.getElementById('doctorList')) {
+          checkNumControl($('#doctors'));
+      }
 
       // LPのスライダー
 
@@ -473,7 +471,29 @@ $(function() {
         })(jQuery);
         $(window).on("load resize", function() {
           $("#slickSlider .item_box").tile();
-        })
+        });
+
+        $(document).on('click', '.js_increment_disease_search_count', function (e) {
+          var diseaseId = $(e.target).data('id');
+          var diseaseName = $(e.target).data('name');
+          incrementDiseaseSearchCount(diseaseId);
+          var url = '/doctors/search?q=' + diseaseName;
+          window.location.href = url;
+        });
+
+        function incrementDiseaseSearchCount(diseaseId) {
+          $.ajax({
+            url:  '/diseases/increment_search_count',
+            type: 'POST',
+            data: { id: diseaseId }
+          })
+          .done((data) => {
+            console.log(data);
+          })
+          .fail((data) => {
+            console.log(data);
+          });
+        }
       }
 
 
