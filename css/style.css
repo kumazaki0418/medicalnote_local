@@ -325,7 +325,8 @@ header {
               display: block;
               color: #666;
               font-size: 14px;
-              padding: 10px 0; }
+              padding: 10px 0;
+              cursor: pointer; }
               header #slideMenu .contents .inner .suggest_word #suggestWord ul li a .num {
                 display: inline-block;
                 position: absolute;
@@ -1702,6 +1703,7 @@ article {
           font-size: 16px;
           color: #666;
           position: relative;
+          cursor: pointer;
           -webkit-transition: opacity .5s;
           -o-transition: opacity .5s;
           transition: opacity .5s; }
