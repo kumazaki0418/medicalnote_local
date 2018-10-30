@@ -1,6 +1,29 @@
 #matchingList{
   #filter{
+    @include waku;
     padding: 50px 0;
+    position: relative;
+    &.success{
+      &::before{
+        display: block;
+        content: "ステータスを変更しました。";
+        padding-bottom: 20px;
+        color: $basicBlue01;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+    &.error{
+      &::before{
+        display: block;
+        content: "ステータスの変更ができませんでした。";
+        padding-bottom: 20px;
+        color: $basicRed;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+
     label{
       display: block;
       font-size: 16px;
@@ -163,6 +186,7 @@
   #matchingList{
     #filter{
       padding: 50px 0;
+
       .filter_wrap{
         display: block;
         margin: 15px auto 30px;
