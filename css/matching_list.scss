@@ -3,10 +3,12 @@
     @include waku;
     padding: 50px 0;
     position: relative;
+    .sucess_txt, .error_txt{
+      display: none;
+    }
     &.success{
-      &::before{
+      .sucess_txt{
         display: block;
-        content: "ステータスを変更しました。";
         padding-bottom: 20px;
         color: $basicBlue01;
         font-weight: bold;
@@ -14,9 +16,8 @@
       }
     }
     &.error{
-      &::before{
+      .error_txt{
         display: block;
-        content: "ステータスの変更ができませんでした。";
         padding-bottom: 20px;
         color: $basicRed;
         font-weight: bold;

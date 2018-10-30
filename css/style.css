@@ -5536,16 +5536,16 @@ form input[type="button"] {
   @media screen and (max-width: 750px) {
     #matchingList #filter {
       width: 90%; } }
-  #matchingList #filter.success::before {
+  #matchingList #filter .sucess_txt, #matchingList #filter .error_txt {
+    display: none; }
+  #matchingList #filter.success .sucess_txt {
     display: block;
-    content: "ステータスを変更しました。";
     padding-bottom: 20px;
     color: #4cbee0;
     font-weight: bold;
     font-size: 16px; }
-  #matchingList #filter.error::before {
+  #matchingList #filter.error .error_txt {
     display: block;
-    content: "ステータスの変更ができませんでした。";
     padding-bottom: 20px;
     color: #fc9792;
     font-weight: bold;
