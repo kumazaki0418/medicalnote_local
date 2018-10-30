@@ -1,4 +1,29 @@
 #doctor{
+  .sucess_txt{
+    @include waku;
+    box-sizing: border-box;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    background: $basicBlue01;
+    padding:10px;
+    border-radius: 5px;
+    margin:0 auto 20px;
+  }
+  .error_txt{
+    @include waku;
+    box-sizing: border-box;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    background: #d45b54;
+    padding:10px;
+    border-radius: 5px;
+    margin:0 auto 20px;
+  }
+
   header{
     .header_inner{
       .header_alert{
@@ -297,9 +322,15 @@
                 }
               }
             }
+            .error_txt{
+              padding-top: 10px;
+              font-size: 12px;
+              line-height: 1.4;
+            }
           }
         }
       }
+
     }
   }
 }

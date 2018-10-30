@@ -4795,6 +4795,48 @@ form input[type="button"] {
         margin-bottom: 20px; } }
 
 /*医師側画面共通*/
+#doctor .sucess_txt {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  background: #4cbee0;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 auto 20px; }
+  @media screen and (max-width: 1100px) {
+    #doctor .sucess_txt {
+      max-width: 720px; } }
+  @media screen and (max-width: 750px) {
+    #doctor .sucess_txt {
+      width: 90%; } }
+
+#doctor .error_txt {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  background: #d45b54;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 auto 20px; }
+  @media screen and (max-width: 1100px) {
+    #doctor .error_txt {
+      max-width: 720px; } }
+  @media screen and (max-width: 750px) {
+    #doctor .error_txt {
+      width: 90%; } }
+
 #doctor header .header_inner .header_alert {
   height: 40px;
   line-height: 40px;
@@ -5089,6 +5131,10 @@ form input[type="button"] {
             transition: opacity .5s; }
             #doctor .list_table .table_contents.table_row .edit .button_wrap ul li .detail:hover {
               opacity: 0.7; }
+      #doctor .list_table .table_contents.table_row .edit .button_wrap .error_txt {
+        padding-top: 10px;
+        font-size: 12px;
+        line-height: 1.4; }
 
 @media screen and (max-width: 1100px) {
   #doctor section .bg_wrap {
@@ -5525,29 +5571,8 @@ form input[type="button"] {
 
 /*医師側マッチング一覧画面*/
 #matchingList #filter {
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 50px 0;
   position: relative; }
-  @media screen and (max-width: 1100px) {
-    #matchingList #filter {
-      max-width: 720px; } }
-  @media screen and (max-width: 750px) {
-    #matchingList #filter {
-      width: 90%; } }
-  #matchingList #filter .sucess_txt {
-    display: block;
-    padding-bottom: 20px;
-    color: #4cbee0;
-    font-weight: bold;
-    font-size: 16px; }
-  #matchingList #filter .error_txt {
-    display: block;
-    padding-bottom: 20px;
-    color: #fc9792;
-    font-weight: bold;
-    font-size: 16px; }
   #matchingList #filter label {
     display: block;
     font-size: 16px;
