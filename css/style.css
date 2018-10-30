@@ -6084,7 +6084,7 @@ form input[type="button"] {
         margin-bottom: 10px; }
     #matchingDetail #comment .add_comment .submit_wrap {
       padding: 10px 20px 20px; }
-      #matchingDetail #comment .add_comment .submit_wrap input[type="button"] {
+      #matchingDetail #comment .add_comment .submit_wrap #addComment {
         width: 400px;
         padding: 10px 0;
         text-align: center;
@@ -6101,9 +6101,9 @@ form input[type="button"] {
         -webkit-transition: opacity .5s;
         -o-transition: opacity .5s;
         transition: opacity .5s; }
-        #matchingDetail #comment .add_comment .submit_wrap input[type="button"]:hover {
+        #matchingDetail #comment .add_comment .submit_wrap #addComment:hover {
           opacity: 0.7; }
-        #matchingDetail #comment .add_comment .submit_wrap input[type="button"]:focus {
+        #matchingDetail #comment .add_comment .submit_wrap #addComment:focus {
           outline: none; }
   #matchingDetail #comment .pager {
     max-width: 1080px;
