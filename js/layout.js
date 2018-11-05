@@ -393,6 +393,7 @@ $(function() {
           $('#totalNum').text(itemNum);
           $('#allNum').text(itemNum);
           $('#selectedNum').text(itemNum);
+          onCheckChange();
           $("li").each(function(index) {
             checkWrap[index] = $(this);
             checkBox[index] = $(this).find('.checkbox')
