@@ -473,7 +473,9 @@ $(function() {
         $(window).on("load resize", function() {
           $("#slickSlider .item_box").tile();
         });
+      }
 
+      if (document.getElementById('index') || document.getElementById('doctorList')) {
         $(document).on('click', '.js_increment_disease_search_count', function (e) {
           var diseaseId = $(e.target).data('id');
           var diseaseName = $(e.target).data('name');
@@ -496,7 +498,6 @@ $(function() {
           });
         }
       }
-
 
       //医師側ログイン画面の利用規約同意制御
 
