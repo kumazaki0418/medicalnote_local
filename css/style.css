@@ -1521,7 +1521,7 @@ article {
 #seachSection2 .search_form,
 #searchSection .search_form {
   position: relative;
-  padding: 40px 0; }
+  padding: 60px 0; }
   #seachSection2 .search_form::before,
   #searchSection .search_form::before {
     display: block;
@@ -1738,7 +1738,7 @@ article {
     font-size: 30px; }
   #seachSection2 .search_form,
   #searchSection .search_form {
-    padding: 30px 0; }
+    padding: 40px 0; }
     #seachSection2 .search_form #searchForm,
     #seachSection2 .search_form #searchForm2,
     #searchSection .search_form #searchForm,
@@ -1775,7 +1775,7 @@ article {
       font-size: 25px; }
   #seachSection2 .search_form,
   #searchSection .search_form {
-    padding: 20px 0; }
+    padding: 30px 0; }
     #seachSection2 .search_form .search_ttl,
     #searchSection .search_form .search_ttl {
       font-size: 16px;
@@ -2761,7 +2761,7 @@ form input[type="button"] {
 /*トップページ*/
 #index #indexMain {
   width: 100%;
-  height: calc(100vh - 280px);
+  height: calc(100vh - 330px);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2781,7 +2781,7 @@ form input[type="button"] {
   #index #indexMain .main_content {
     position: absolute;
     width: 100%;
-    height: 120px;
+    height: 110px;
     top: 0;
     bottom: 0;
     left: 0;
@@ -2792,9 +2792,13 @@ form input[type="button"] {
     color: #fff; }
     #index #indexMain .main_content .main_ttl {
       font-size: 25px;
+      line-height: 2;
       letter-spacing: 0.9px;
       color: #ffffff;
       margin-bottom: 30px; }
+      #index #indexMain .main_content .main_ttl span {
+        display: block;
+        font-size: 30px; }
     #index #indexMain .main_content .service_logo {
       width: 450px;
       margin: 0 auto; }
@@ -3244,12 +3248,12 @@ form input[type="button"] {
 
 @media screen and (max-width: 1100px) {
   #index #indexMain {
-    height: 400px; }
+    height: 350px; }
     #index #indexMain .main_content {
-      height: 160px; }
+      height: 110px; }
       #index #indexMain .main_content .main_ttl {
         font-size: 25px;
-        line-height: 1.6;
+        line-height: 2;
         margin-bottom: 20px; }
         #index #indexMain .main_content .main_ttl span {
           display: block; }
@@ -3450,15 +3454,17 @@ form input[type="button"] {
 
 @media screen and (max-width: 730px) {
   #index #indexMain {
-    height: 350px;
+    height: 300px;
     display: block;
     background-position: right 10% center; }
     #index #indexMain .main_content {
-      height: 140px; }
+      height: 110px; }
       #index #indexMain .main_content .main_ttl {
         font-size: 16px;
         margin-bottom: 15px;
-        line-height: 1.8; }
+        line-height: 2; }
+        #index #indexMain .main_content .main_ttl span {
+          font-size: 24px; }
         #index #indexMain .main_content .main_ttl font {
           display: block; }
       #index #indexMain .main_content .service_logo {
