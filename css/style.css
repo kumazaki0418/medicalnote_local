@@ -2530,6 +2530,32 @@ form input[type="button"] {
           letter-spacing: 1px; }
           #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt span {
             display: block; }
+          #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul {
+            padding: 0 3px; }
+            #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul li {
+              padding: 10px 0;
+              border-bottom: 1px dotted #d8d8d8; }
+              #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul li:first-child {
+                padding: 0 0 10px; }
+              #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul li:last-child {
+                border-bottom: 0; }
+              #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul li a {
+                color: #068acc;
+                -webkit-transition: opacity .5s;
+                -o-transition: opacity .5s;
+                transition: opacity .5s; }
+                #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul li a:hover {
+                  opacity: 0.7; }
+                #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul li a::after {
+                  display: inline-block;
+                  content: "";
+                  width: 12px;
+                  height: 12px;
+                  padding-left: 0.5em;
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                  background-image: url(../img/common/link_icon.png);
+                  background-size: 12px; }
       #doctorList #popUp .popContents .pop_text .pop_inner .pop_left {
         width: 480px;
         margin-right: 30px; }
@@ -2756,7 +2782,13 @@ form input[type="button"] {
           font-size: 12px; }
         #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt {
           font-size: 12px;
-          line-height: 1.6; } }
+          line-height: 1.6; }
+          #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul {
+            padding: 0; }
+            #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul li {
+              padding: 10px 0; }
+              #doctorList #popUp .popContents .pop_text .pop_inner .pop_content_wrap .content_txt ul li:first-child {
+                padding: 0 0 10px; } }
 
 /*トップページ*/
 #index #indexMain {
