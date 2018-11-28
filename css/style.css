@@ -1870,31 +1870,31 @@ article {
               line-height: 20px; } }
 
 /*フォーム部分共通*/
-form select {
+form select, .search_section select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   font-size: 16px; }
 
-form :placeholder-shown {
+form :placeholder-shown, .search_section :placeholder-shown {
   color: #e6e6e6;
   font-size: 16px; }
 
-form ::-webkit-input-placeholder {
+form ::-webkit-input-placeholder, .search_section ::-webkit-input-placeholder {
   color: #e6e6e6; }
 
-form :-moz-placeholder {
+form :-moz-placeholder, .search_section :-moz-placeholder {
   color: #e6e6e6;
   opacity: 1; }
 
-form ::-moz-placeholder {
+form ::-moz-placeholder, .search_section ::-moz-placeholder {
   color: #e6e6e6;
   opacity: 1; }
 
-form :-ms-input-placeholder {
+form :-ms-input-placeholder, .search_section :-ms-input-placeholder {
   color: #e6e6e6; }
 
-form textarea {
+form textarea, .search_section textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px;
@@ -1905,7 +1905,7 @@ form textarea {
   font-size: 16px;
   line-height: 1.5; }
 
-form input {
+form input, .search_section input {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
@@ -1917,7 +1917,14 @@ form input[type="number"]:focus,
 form input[type="submit"]:focus,
 form input[type="password"]:focus,
 form select:focus,
-form textarea:focus {
+form textarea:focus, .search_section input[type="text"]:focus,
+.search_section input[type="email"]:focus,
+.search_section input[type="tel"]:focus,
+.search_section input[type="number"]:focus,
+.search_section input[type="submit"]:focus,
+.search_section input[type="password"]:focus,
+.search_section select:focus,
+.search_section textarea:focus {
   outline: 0;
   border-color: #4cbee0 !important; }
 
@@ -1925,7 +1932,11 @@ form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
 form input[type="number"],
-form input[type="password"] {
+form input[type="password"], .search_section input[type="text"],
+.search_section input[type="email"],
+.search_section input[type="tel"],
+.search_section input[type="number"],
+.search_section input[type="password"] {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1942,10 +1953,10 @@ form input[type="password"] {
   background: #ffffff;
   color: #666; }
 
-form input[type="submit"] {
+form input[type="submit"], .search_section input[type="submit"] {
   cursor: pointer; }
 
-form textarea {
+form textarea, .search_section textarea {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1963,7 +1974,8 @@ form textarea {
   color: #666; }
 
 form input[type="submit"],
-form input[type="button"] {
+form input[type="button"], .search_section input[type="submit"],
+.search_section input[type="button"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
